@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.shf.stock.mapper.StockRtInfoMapper">
+
+    <resultMap id="BaseResultMap" type="com.shf.stock.pojo.StockRtInfo">
+            <id property="id" column="id" jdbcType="VARCHAR"/>
+            <result property="stockCode" column="stock_code" jdbcType="CHAR"/>
+            <result property="curTime" column="cur_time" jdbcType="TIMESTAMP"/>
+            <result property="stockName" column="stock_name" jdbcType="VARCHAR"/>
+            <result property="openPrice" column="open_price" jdbcType="DECIMAL"/>
+            <result property="preClosePrice" column="pre_close_price" jdbcType="DECIMAL"/>
+            <result property="curPrice" column="cur_price" jdbcType="DECIMAL"/>
+            <result property="maxPrice" column="max_price" jdbcType="DECIMAL"/>
+            <result property="minPrice" column="min_price" jdbcType="DECIMAL"/>
+            <result property="tradeAmount" column="trade_amount" jdbcType="BIGINT"/>
+            <result property="tradeVolume" column="trade_volume" jdbcType="DECIMAL"/>
+    </resultMap>
+
+    <sql id="Base_Column_List">
+        id,stock_code,cur_time,
+        stock_name,open_price,pre_close_price,
+        cur_price,max_price,min_price,
+        trade_amount,trade_volume
+    </sql>
+
+    <select id="selectByPrimaryKey" parameterType="java.lang.Long" resultMap="BaseResultMap">
+        select
+        <include refid="Base_Column_List" />
+        from stock_rt_info
+        where  id = #{id,jdbcType=VARCHAR} 
+    </select>
+
+    <delete id="deleteByPrimaryKey" parameterType="java.lang.Long">
+        delete from stock_rt_info
+        where  id = #{id,jdbcType=VARCHAR} 
+    </delete>
+    <insert id="insert" keyColumn="id" keyProperty="id" parameterType="com.shf.stock.pojo.StockRtInfo" useGeneratedKeys="true">
+        insert into stock_rt_info
+        ( id,stock_code,cur_time
+        ,stock_name,open_price,pre_close_price
+        ,cur_price,max_price,min_price
+        ,trade_amount,trade_volume)
+        values (#{id,jdbcType=VARCHAR},#{stockCode,jdbcType=CHAR},#{curTime,jdbcType=TIMESTAMP}
+        ,#{stockName,jdbcType=VARCHAR},#{openPrice,jdbcType=DECIMAL},#{preClosePrice,jdbcType=DECIMAL}
+        ,#{curPrice,jdbcType=DECIMAL},#{maxPrice,jdbcType=DECIMAL},#{minPrice,jdbcType=DECIMAL}
+        ,#{tradeAmount,jdbcType=BIGINT},#{tradeVolume,jdbcType=DECIMAL})
+    </insert>
+    <insert id="insertSelective" keyColumn="id" keyProperty="id" parameterType="com.shf.stock.pojo.StockRtInfo" useGeneratedKeys="true">
+        insert into stock_rt_info
+        <trim prefix="(" suffix=")" suffixOverrides=",">
+                <if test="id != null">id,</if>
+                <if test="stockCode != null">stock_code,</if>
+                <if test="curTime != null">cur_time,</if>
+                <if test="stockName != null">stock_name,</if>
+                <if test="openPrice != null">open_price,</if>
+                <if test="preClosePrice != null">pre_close_price,</if>
+                <if test="curPrice != null">cur_price,</if>
+                <if test="maxPrice != null">max_price,</if>
+                <if test="minPrice != null">min_price,</if>
+                <if test="tradeAmount != null">trade_amount,</if>
+                <if test="tradeVolume != null">trade_volume,</if>
+        </trim>
+        <trim prefix="values (" suffix=")" suffixOverrides=",">
+                <if test="id != null">#{id,jdbcType=VARCHAR},</if>
+                <if test="stockCode != null">#{stockCode,jdbcType=CHAR},</if>
+                <if test="curTime != null">#{curTime,jdbcType=TIMESTAMP},</if>
+                <if test="stockName != null">#{stockName,jdbcType=VARCHAR},</if>
+                <if test="openPrice != null">#{openPrice,jdbcType=DECIMAL},</if>
+                <if test="preClosePrice != null">#{preClosePrice,jdbcType=DECIMAL},</if>
+                <if test="curPrice != null">#{curPrice,jdbcType=DECIMAL},</if>
+                <if test="maxPrice != null">#{maxPrice,jdbcType=DECIMAL},</if>
+                <if test="minPrice != null">#{minPrice,jdbcType=DECIMAL},</if>
+                <if test="tradeAmount != null">#{tradeAmount,jdbcType=BIGINT},</if>
+                <if test="tradeVolume != null">#{tradeVolume,jdbcType=DECIMAL},</if>
+        </trim>
+    </insert>
+    <update id="updateByPrimaryKeySelective" parameterType="com.shf.stock.pojo.StockRtInfo">
+        update stock_rt_info
+        <set>
+                <if test="stockCode != null">
+                    stock_code = #{stockCode,jdbcType=CHAR},
+                </if>
+                <if test="curTime != null">
+                    cur_time = #{curTime,jdbcType=TIMESTAMP},
+                </if>
+                <if test="stockName != null">
+                    stock_name = #{stockName,jdbcType=VARCHAR},
+                </if>
+                <if test="openPrice != null">
+                    open_price = #{openPrice,jdbcType=DECIMAL},
+                </if>
+                <if test="preClosePrice != null">
+                    pre_close_price = #{preClosePrice,jdbcType=DECIMAL},
+                </if>
+                <if test="curPrice != null">
+                    cur_price = #{curPrice,jdbcType=DECIMAL},
+                </if>
+                <if test="maxPrice != null">
+                    max_price = #{maxPrice,jdbcType=DECIMAL},
+                </if>
+                <if test="minPrice != null">
+                    min_price = #{minPrice,jdbcType=DECIMAL},
+                </if>
+                <if test="tradeAmount != null">
+                    trade_amount = #{tradeAmount,jdbcType=BIGINT},
+                </if>
+                <if test="tradeVolume != null">
+                    trade_volume = #{tradeVolume,jdbcType=DECIMAL},
+                </if>
+        </set>
+        where   id = #{id,jdbcType=VARCHAR} 
+    </update>
+    <update id="updateByPrimaryKey" parameterType="com.shf.stock.pojo.StockRtInfo">
+        update stock_rt_info
+        set 
+            stock_code =  #{stockCode,jdbcType=CHAR},
+            cur_time =  #{curTime,jdbcType=TIMESTAMP},
+            stock_name =  #{stockName,jdbcType=VARCHAR},
+            open_price =  #{openPrice,jdbcType=DECIMAL},
+            pre_close_price =  #{preClosePrice,jdbcType=DECIMAL},
+            cur_price =  #{curPrice,jdbcType=DECIMAL},
+            max_price =  #{maxPrice,jdbcType=DECIMAL},
+            min_price =  #{minPrice,jdbcType=DECIMAL},
+            trade_amount =  #{tradeAmount,jdbcType=BIGINT},
+            trade_volume =  #{tradeVolume,jdbcType=DECIMAL}
+        where   id = #{id,jdbcType=VARCHAR} 
+    </update>
+</mapper>

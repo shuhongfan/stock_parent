@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="fastRequestCurrentParamGroup">
+    <option name="className" value="com.shf.stock.controller.StockController" />
+    <option name="method" value="getAllBusiness" />
+    <option name="module" value="stock_backend" />
+    <option name="originUrl" value="/api/quot/stock/business/all" />
+    <option name="returnDocument" value="[&#10;&#9;{&#10;&#9;&#9;&quot;secCode&quot;:&quot;股票编码&quot;,&#10;&#9;&#9;&quot;secName&quot;:&quot;股票名称&quot;,&#10;&#9;&#9;&quot;sectorCode&quot;:&quot;行业板块代码&quot;,&#10;&#9;&#9;&quot;sectorName&quot;:&quot;行业板块名称&quot;,&#10;&#9;&#9;&quot;business&quot;:&quot;主营业务&quot;,&#10;&#9;&#9;&quot;updateTime&quot;:&quot;更新时间&quot;&#10;&#9;}&#10;]" />
+    <option name="url" value="/api/quot/stock/business/all" />
+  </component>
+</project>

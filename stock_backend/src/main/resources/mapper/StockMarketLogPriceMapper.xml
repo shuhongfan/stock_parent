@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.shf.stock.mapper.StockMarketLogPriceMapper">
+
+    <resultMap id="BaseResultMap" type="com.shf.stock.pojo.StockMarketLogPrice">
+            <id property="id" column="id" jdbcType="VARCHAR"/>
+            <result property="marketCode" column="market_code" jdbcType="CHAR"/>
+            <result property="curDate" column="cur_date" jdbcType="DATE"/>
+            <result property="preClosePrice" column="pre_close_price" jdbcType="DECIMAL"/>
+            <result property="openPrice" column="open_price" jdbcType="DECIMAL"/>
+    </resultMap>
+
+    <sql id="Base_Column_List">
+        id,market_code,cur_date,
+        pre_close_price,open_price
+    </sql>
+
+    <select id="selectByPrimaryKey" parameterType="java.lang.Long" resultMap="BaseResultMap">
+        select
+        <include refid="Base_Column_List" />
+        from stock_market_log_price
+        where  id = #{id,jdbcType=VARCHAR} 
+    </select>
+
+    <delete id="deleteByPrimaryKey" parameterType="java.lang.Long">
+        delete from stock_market_log_price
+        where  id = #{id,jdbcType=VARCHAR} 
+    </delete>
+    <insert id="insert" keyColumn="id" keyProperty="id" parameterType="com.shf.stock.pojo.StockMarketLogPrice" useGeneratedKeys="true">
+        insert into stock_market_log_price
+        ( id,market_code,cur_date
+        ,pre_close_price,open_price)
+        values (#{id,jdbcType=VARCHAR},#{marketCode,jdbcType=CHAR},#{curDate,jdbcType=DATE}
+        ,#{preClosePrice,jdbcType=DECIMAL},#{openPrice,jdbcType=DECIMAL})
+    </insert>
+    <insert id="insertSelective" keyColumn="id" keyProperty="id" parameterType="com.shf.stock.pojo.StockMarketLogPrice" useGeneratedKeys="true">
+        insert into stock_market_log_price
+        <trim prefix="(" suffix=")" suffixOverrides=",">
+                <if test="id != null">id,</if>
+                <if test="marketCode != null">market_code,</if>
+                <if test="curDate != null">cur_date,</if>
+                <if test="preClosePrice != null">pre_close_price,</if>
+                <if test="openPrice != null">open_price,</if>
+        </trim>
+        <trim prefix="values (" suffix=")" suffixOverrides=",">
+                <if test="id != null">#{id,jdbcType=VARCHAR},</if>
+                <if test="marketCode != null">#{marketCode,jdbcType=CHAR},</if>
+                <if test="curDate != null">#{curDate,jdbcType=DATE},</if>
+                <if test="preClosePrice != null">#{preClosePrice,jdbcType=DECIMAL},</if>
+                <if test="openPrice != null">#{openPrice,jdbcType=DECIMAL},</if>
+        </trim>
+    </insert>
+    <update id="updateByPrimaryKeySelective" parameterType="com.shf.stock.pojo.StockMarketLogPrice">
+        update stock_market_log_price
+        <set>
+                <if test="marketCode != null">
+                    market_code = #{marketCode,jdbcType=CHAR},
+                </if>
+                <if test="curDate != null">
+                    cur_date = #{curDate,jdbcType=DATE},
+                </if>
+                <if test="preClosePrice != null">
+                    pre_close_price = #{preClosePrice,jdbcType=DECIMAL},
+                </if>
+                <if test="openPrice != null">
+                    open_price = #{openPrice,jdbcType=DECIMAL},
+                </if>
+        </set>
+        where   id = #{id,jdbcType=VARCHAR} 
+    </update>
+    <update id="updateByPrimaryKey" parameterType="com.shf.stock.pojo.StockMarketLogPrice">
+        update stock_market_log_price
+        set 
+            market_code =  #{marketCode,jdbcType=CHAR},
+            cur_date =  #{curDate,jdbcType=DATE},
+            pre_close_price =  #{preClosePrice,jdbcType=DECIMAL},
+            open_price =  #{openPrice,jdbcType=DECIMAL}
+        where   id = #{id,jdbcType=VARCHAR} 
+    </update>
+</mapper>

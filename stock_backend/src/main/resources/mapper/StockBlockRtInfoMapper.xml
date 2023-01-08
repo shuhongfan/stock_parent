@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.shf.stock.mapper.StockBlockRtInfoMapper">
+
+    <resultMap id="BaseResultMap" type="com.shf.stock.pojo.StockBlockRtInfo">
+            <id property="id" column="id" jdbcType="VARCHAR"/>
+            <result property="label" column="label" jdbcType="VARCHAR"/>
+            <result property="blockName" column="block_name" jdbcType="VARCHAR"/>
+            <result property="companyNum" column="company_num" jdbcType="INTEGER"/>
+            <result property="avgPrice" column="avg_price" jdbcType="DECIMAL"/>
+            <result property="updownRate" column="updown_rate" jdbcType="DECIMAL"/>
+            <result property="tradeAmount" column="trade_amount" jdbcType="BIGINT"/>
+            <result property="tradeVolume" column="trade_volume" jdbcType="DECIMAL"/>
+            <result property="curTime" column="cur_time" jdbcType="TIMESTAMP"/>
+    </resultMap>
+
+    <sql id="Base_Column_List">
+        id,label,block_name,
+        company_num,avg_price,updown_rate,
+        trade_amount,trade_volume,cur_time
+    </sql>
+
+    <select id="selectByPrimaryKey" parameterType="java.lang.Long" resultMap="BaseResultMap">
+        select
+        <include refid="Base_Column_List" />
+        from stock_block_rt_info
+        where  id = #{id,jdbcType=VARCHAR} 
+    </select>
+
+    <delete id="deleteByPrimaryKey" parameterType="java.lang.Long">
+        delete from stock_block_rt_info
+        where  id = #{id,jdbcType=VARCHAR} 
+    </delete>
+    <insert id="insert" keyColumn="id" keyProperty="id" parameterType="com.shf.stock.pojo.StockBlockRtInfo" useGeneratedKeys="true">
+        insert into stock_block_rt_info
+        ( id,label,block_name
+        ,company_num,avg_price,updown_rate
+        ,trade_amount,trade_volume,cur_time
+        )
+        values (#{id,jdbcType=VARCHAR},#{label,jdbcType=VARCHAR},#{blockName,jdbcType=VARCHAR}
+        ,#{companyNum,jdbcType=INTEGER},#{avgPrice,jdbcType=DECIMAL},#{updownRate,jdbcType=DECIMAL}
+        ,#{tradeAmount,jdbcType=BIGINT},#{tradeVolume,jdbcType=DECIMAL},#{curTime,jdbcType=TIMESTAMP}
+        )
+    </insert>
+    <insert id="insertSelective" keyColumn="id" keyProperty="id" parameterType="com.shf.stock.pojo.StockBlockRtInfo" useGeneratedKeys="true">
+        insert into stock_block_rt_info
+        <trim prefix="(" suffix=")" suffixOverrides=",">
+                <if test="id != null">id,</if>
+                <if test="label != null">label,</if>
+                <if test="blockName != null">block_name,</if>
+                <if test="companyNum != null">company_num,</if>
+                <if test="avgPrice != null">avg_price,</if>
+                <if test="updownRate != null">updown_rate,</if>
+                <if test="tradeAmount != null">trade_amount,</if>
+                <if test="tradeVolume != null">trade_volume,</if>
+                <if test="curTime != null">cur_time,</if>
+        </trim>
+        <trim prefix="values (" suffix=")" suffixOverrides=",">
+                <if test="id != null">#{id,jdbcType=VARCHAR},</if>
+                <if test="label != null">#{label,jdbcType=VARCHAR},</if>
+                <if test="blockName != null">#{blockName,jdbcType=VARCHAR},</if>
+                <if test="companyNum != null">#{companyNum,jdbcType=INTEGER},</if>
+                <if test="avgPrice != null">#{avgPrice,jdbcType=DECIMAL},</if>
+                <if test="updownRate != null">#{updownRate,jdbcType=DECIMAL},</if>
+                <if test="tradeAmount != null">#{tradeAmount,jdbcType=BIGINT},</if>
+                <if test="tradeVolume != null">#{tradeVolume,jdbcType=DECIMAL},</if>
+                <if test="curTime != null">#{curTime,jdbcType=TIMESTAMP},</if>
+        </trim>
+    </insert>
+    <update id="updateByPrimaryKeySelective" parameterType="com.shf.stock.pojo.StockBlockRtInfo">
+        update stock_block_rt_info
+        <set>
+                <if test="label != null">
+                    label = #{label,jdbcType=VARCHAR},
+                </if>
+                <if test="blockName != null">
+                    block_name = #{blockName,jdbcType=VARCHAR},
+                </if>
+                <if test="companyNum != null">
+                    company_num = #{companyNum,jdbcType=INTEGER},
+                </if>
+                <if test="avgPrice != null">
+                    avg_price = #{avgPrice,jdbcType=DECIMAL},
+                </if>
+                <if test="updownRate != null">
+                    updown_rate = #{updownRate,jdbcType=DECIMAL},
+                </if>
+                <if test="tradeAmount != null">
+                    trade_amount = #{tradeAmount,jdbcType=BIGINT},
+                </if>
+                <if test="tradeVolume != null">
+                    trade_volume = #{tradeVolume,jdbcType=DECIMAL},
+                </if>
+                <if test="curTime != null">
+                    cur_time = #{curTime,jdbcType=TIMESTAMP},
+                </if>
+        </set>
+        where   id = #{id,jdbcType=VARCHAR} 
+    </update>
+    <update id="updateByPrimaryKey" parameterType="com.shf.stock.pojo.StockBlockRtInfo">
+        update stock_block_rt_info
+        set 
+            label =  #{label,jdbcType=VARCHAR},
+            block_name =  #{blockName,jdbcType=VARCHAR},
+            company_num =  #{companyNum,jdbcType=INTEGER},
+            avg_price =  #{avgPrice,jdbcType=DECIMAL},
+            updown_rate =  #{updownRate,jdbcType=DECIMAL},
+            trade_amount =  #{tradeAmount,jdbcType=BIGINT},
+            trade_volume =  #{tradeVolume,jdbcType=DECIMAL},
+            cur_time =  #{curTime,jdbcType=TIMESTAMP}
+        where   id = #{id,jdbcType=VARCHAR} 
+    </update>
+</mapper>

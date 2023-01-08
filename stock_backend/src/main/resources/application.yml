@@ -1,0 +1,59 @@
+# web定义
+server:
+  port: 8081
+
+spring:
+  # 配置mysql数据源
+  datasource:
+    druid:
+      username: root
+      password: root
+      url: jdbc:mysql://127.0.0.1:3307/stock?useUnicode=true&characterEncoding=UTF-8&allowMultiQueries=true&useSSL=false&serverTimezone=Asia/Shanghai
+      driver-class-name: com.mysql.jdbc.Driver
+      # 初始化时建立物理连接的个数。初始化发生在显示调用 init 方法，或者第一次 getConnection 时
+      initialSize: 6
+      # 最小连接池数量
+      minIdle: 2
+      # 最大连接池数量
+      maxActive: 20
+      # 获取连接时最大等待时间，单位毫秒。配置了 maxWait 之后，缺省启用公平锁，
+      # 并发效率会有所下降，如果需要可以通过配置 useUnfairLock 属性为 true 使用非公平锁。
+      maxWait: 60000
+      # 配置间隔多久才进行一次检测，检测需要关闭的空闲连接，单位是毫秒
+      timeBetweenEvictionRunsMillis: 60000
+      # 配置一个连接在池中最小生存的时间，单位是毫秒
+      minEvictableIdleTimeMillis: 300000
+      # 用来检测连接是否有效的 sql 因数据库方言而差, 例如 oracle 应该写成 SELECT 1 FROM DUAL
+      validationQuery: SELECT 1 FROM DUAL
+      # 建议配置为 true，不影响性能，并且保证安全性。申请连接的时候检测，
+      # 如果空闲时间大于 timeBetweenEvictionRunsMillis，执行 validationQuery 检测连接是否有效。
+      testWhileIdle: true
+      # 申请连接时执行 validationQuery 检测连接是否有效，做了这个配置会降低性能。
+      testOnBorrow: false
+      # 归还连接时执行 validationQuery 检测连接是否有效，做了这个配置会降低性能。
+      testOnReturn: false
+      # 是否自动回收超时连接
+      poolPreparedStatements: true
+      maxPoolPreparedStatementPerConnectionSize: 20
+      # 配置监控统计拦截的filters，去掉后监控界面sql无法统计，'wall'用于防火墙
+      filters: stat,wall
+      # 通过connectProperties属性来打开mergeSql功能；慢SQL记录
+      connectionProperties: druid.stat.mergeSql=true;druid.stat.slowSqlMillis=5000
+
+# 配置mybatis
+mybatis:
+  type-aliases-package: com.itheima.stock.pojo
+  mapper-locations: classpath:mapper/*.xml
+  configuration:
+    map-underscore-to-camel-case: true
+    cache-enabled: false #使全局的映射器启用或禁用缓存。
+    lazy-loading-enabled: false #全局启用或禁用延迟加载。当禁用时，所有关联对象都会即时加载。
+    aggressive-lazy-loading: true #当启用时，有延迟加载属性的对象在被调用时将会完全加载任意属性。否则，每种属性将会按需要加载。
+
+# pagehelper配置
+pagehelper:
+  helper-dialect: mysql #指定分页数据库类型（方言）
+  reasonable: true #合理查询超过最大也，则查询最后一页
+  support-methods-arguments: true # 支持通过Mapper接口参数来传递分页参数，默认false
+  params: pacount=countSql # POJO或者Map中发现了countSql属性，就会作为count参数使用
+  returnPageInfo: check # always总是返回PageInfo类型,check检查返回类型是否为PageInfo,none返回Page

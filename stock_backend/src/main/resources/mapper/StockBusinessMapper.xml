@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.shf.stock.mapper.StockBusinessMapper">
+
+    <resultMap id="BaseResultMap" type="com.shf.stock.pojo.StockBusiness">
+            <id property="secCode" column="sec_code" jdbcType="CHAR"/>
+            <result property="secName" column="sec_name" jdbcType="VARCHAR"/>
+            <result property="sectorCode" column="sector_code" jdbcType="VARCHAR"/>
+            <result property="sectorName" column="sector_name" jdbcType="VARCHAR"/>
+            <result property="business" column="business" jdbcType="VARCHAR"/>
+            <result property="updateTime" column="update_time" jdbcType="TIMESTAMP"/>
+    </resultMap>
+
+    <sql id="Base_Column_List">
+        sec_code,sec_name,sector_code,
+        sector_name,business,update_time
+    </sql>
+
+    <select id="selectByPrimaryKey" parameterType="java.lang.Long" resultMap="BaseResultMap">
+        select
+        <include refid="Base_Column_List" />
+        from stock_business
+        where  sec_code = #{secCode,jdbcType=CHAR} 
+    </select>
+    <select id="getAll" resultType="com.shf.stock.pojo.StockBusiness">
+        select
+        <include refid="Base_Column_List" />
+        from stock_business
+    </select>
+
+    <delete id="deleteByPrimaryKey" parameterType="java.lang.Long">
+        delete from stock_business
+        where  sec_code = #{secCode,jdbcType=CHAR} 
+    </delete>
+    <insert id="insert" keyColumn="sec_code" keyProperty="secCode" parameterType="com.shf.stock.pojo.StockBusiness" useGeneratedKeys="true">
+        insert into stock_business
+        ( sec_code,sec_name,sector_code
+        ,sector_name,business,update_time
+        )
+        values (#{secCode,jdbcType=CHAR},#{secName,jdbcType=VARCHAR},#{sectorCode,jdbcType=VARCHAR}
+        ,#{sectorName,jdbcType=VARCHAR},#{business,jdbcType=VARCHAR},#{updateTime,jdbcType=TIMESTAMP}
+        )
+    </insert>
+    <insert id="insertSelective" keyColumn="sec_code" keyProperty="secCode" parameterType="com.shf.stock.pojo.StockBusiness" useGeneratedKeys="true">
+        insert into stock_business
+        <trim prefix="(" suffix=")" suffixOverrides=",">
+                <if test="secCode != null">sec_code,</if>
+                <if test="secName != null">sec_name,</if>
+                <if test="sectorCode != null">sector_code,</if>
+                <if test="sectorName != null">sector_name,</if>
+                <if test="business != null">business,</if>
+                <if test="updateTime != null">update_time,</if>
+        </trim>
+        <trim prefix="values (" suffix=")" suffixOverrides=",">
+                <if test="secCode != null">#{secCode,jdbcType=CHAR},</if>
+                <if test="secName != null">#{secName,jdbcType=VARCHAR},</if>
+                <if test="sectorCode != null">#{sectorCode,jdbcType=VARCHAR},</if>
+                <if test="sectorName != null">#{sectorName,jdbcType=VARCHAR},</if>
+                <if test="business != null">#{business,jdbcType=VARCHAR},</if>
+                <if test="updateTime != null">#{updateTime,jdbcType=TIMESTAMP},</if>
+        </trim>
+    </insert>
+    <update id="updateByPrimaryKeySelective" parameterType="com.shf.stock.pojo.StockBusiness">
+        update stock_business
+        <set>
+                <if test="secName != null">
+                    sec_name = #{secName,jdbcType=VARCHAR},
+                </if>
+                <if test="sectorCode != null">
+                    sector_code = #{sectorCode,jdbcType=VARCHAR},
+                </if>
+                <if test="sectorName != null">
+                    sector_name = #{sectorName,jdbcType=VARCHAR},
+                </if>
+                <if test="business != null">
+                    business = #{business,jdbcType=VARCHAR},
+                </if>
+                <if test="updateTime != null">
+                    update_time = #{updateTime,jdbcType=TIMESTAMP},
+                </if>
+        </set>
+        where   sec_code = #{secCode,jdbcType=CHAR} 
+    </update>
+    <update id="updateByPrimaryKey" parameterType="com.shf.stock.pojo.StockBusiness">
+        update stock_business
+        set 
+            sec_name =  #{secName,jdbcType=VARCHAR},
+            sector_code =  #{sectorCode,jdbcType=VARCHAR},
+            sector_name =  #{sectorName,jdbcType=VARCHAR},
+            business =  #{business,jdbcType=VARCHAR},
+            update_time =  #{updateTime,jdbcType=TIMESTAMP}
+        where   sec_code = #{secCode,jdbcType=CHAR} 
+    </update>
+</mapper>
