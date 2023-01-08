@@ -1,6 +1,7 @@
 package com.shf.stock.mapper;
 
 import com.shf.stock.pojo.SysUser;
+import org.apache.ibatis.annotations.Param;
 
 /**
 * @author shuho
@@ -22,4 +23,11 @@ public interface SysUserMapper {
 
     int updateByPrimaryKey(SysUser record);
 
+    /**
+     * 根据用户名查询用户是否存在
+     *
+     * @param username
+     * @return
+     */
+    SysUser findUserInfoByUserName(@Param("username") String username);
 }
