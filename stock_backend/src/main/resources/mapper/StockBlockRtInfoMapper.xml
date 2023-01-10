@@ -28,6 +28,21 @@
         from stock_block_rt_info
         where  id = #{id,jdbcType=VARCHAR} 
     </select>
+    <select id="sectorAllLimit" resultType="com.shf.stock.common.domain.StockBlockDomain">
+        select
+            sbr.company_num  as companyNum,
+            sbr.trade_amount as tradeAmt,
+            sbr.label        as code,
+            sbr.avg_price    as avgPrice,
+            sbr.block_name   as name,
+            date_format(sbr.cur_time,'%Y%m%d') as curDate,
+            sbr.trade_volume as tradeVol,
+            sbr.updown_rate  as updownRate
+        from stock_block_rt_info as sbr
+        where sbr.cur_time='2021-12-21 09:30:00'
+        order by sbr.cur_time desc ,sbr.trade_volume desc
+        limit 10
+    </select>
 
     <delete id="deleteByPrimaryKey" parameterType="java.lang.Long">
         delete from stock_block_rt_info

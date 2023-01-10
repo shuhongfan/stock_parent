@@ -1,6 +1,7 @@
 package com.shf.stock.mapper;
 
 import com.shf.stock.pojo.StockBusiness;
+import org.apache.ibatis.annotations.Mapper;
 
 import java.util.List;
 
@@ -10,6 +11,7 @@ import java.util.List;
 * @createDate 2023-01-08 19:06:44
 * @Entity com.shf.stock.pojo.StockBusiness
 */
+@Mapper
 public interface StockBusinessMapper {
 
     int deleteByPrimaryKey(Long id);

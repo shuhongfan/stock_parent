@@ -2,7 +2,7 @@
 <project version="4">
   <component name="fastRequestCurrentProjectConfig">
     <option name="domain" value="127.0.0.1:8081" />
-    <option name="enableEnv" value="s" />
-    <option name="enableProject" value="8081" />
+    <option name="enableEnv" value="port" />
+    <option name="enableProject" value="local" />
   </component>
 </project>

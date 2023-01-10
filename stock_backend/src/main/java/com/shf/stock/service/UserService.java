@@ -4,6 +4,8 @@ import com.shf.stock.vo.req.LoginReqVo;
 import com.shf.stock.vo.resp.LoginRespVo;
 import com.shf.stock.vo.resp.R;
 
+import java.util.Map;
+
 /**
  * 用户服务接口
  */
@@ -15,4 +17,10 @@ public interface UserService {
      * @return
      */
     R<LoginRespVo> login(LoginReqVo vo);
+
+    /**
+     * 生成登录校验码
+     * @return
+     */
+    R<Map> getCaptchaCode();
 }

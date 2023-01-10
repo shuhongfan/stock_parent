@@ -39,6 +39,18 @@ spring:
       filters: stat,wall
       # 通过connectProperties属性来打开mergeSql功能；慢SQL记录
       connectionProperties: druid.stat.mergeSql=true;druid.stat.slowSqlMillis=5000
+  # 配置缓存
+  redis:
+    host: 127.0.0.1
+    port: 6379
+    database: 0 #Redis数据库索引（默认为0）
+    lettuce:
+      pool:
+        max-active: 8 # 连接池最大连接数（使用负值表示没有限制）
+        max-wait: -1ms # 连接池最大阻塞等待时间（使用负值表示没有限制）
+        max-idle: 8 # 连接池中的最大空闲连接
+        min-idle: 1  # 连接池中的最小空闲连接
+    timeout: PT10S # 连接超时时间（毫秒）
 
 # 配置mybatis
 mybatis:
@@ -57,3 +69,16 @@ pagehelper:
   support-methods-arguments: true # 支持通过Mapper接口参数来传递分页参数，默认false
   params: pacount=countSql # POJO或者Map中发现了countSql属性，就会作为count参数使用
   returnPageInfo: check # always总是返回PageInfo类型,check检查返回类型是否为PageInfo,none返回Page
+
+# 配置股票相关的参数
+stock:
+  inner: # A股
+    - s_sh000001 # 上证ID
+    - s_sz399001 #  深证ID
+  outer: # 外盘
+    - int_dji # 道琼斯
+    - int_nasdaq # 纳斯达克
+    - int_hangseng # 恒生
+    - int_nikkei # 日经指数
+    - b_TWSE # 台湾加权
+    - b_FSSTI # 新加坡

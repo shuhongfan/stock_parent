@@ -6,27 +6,522 @@
         <ResponseHistory>
           <option name="className" value="com.shf.stock.controller.StockController" />
           <option name="code" value="200" />
-          <option name="enableEnv" value="s" />
-          <option name="enableProject" value="8081" />
-          <option name="method" value="getAllBusiness" />
+          <option name="enableEnv" value="port" />
+          <option name="enableProject" value="local" />
+          <option name="method" value="sectorAll" />
           <option name="methodType" value="GET" />
+          <option name="name" value="沪深两市板块分时行情数据查询，以交易时间和交易总金额降序查询，取前10条数据" />
           <option name="paramGroup">
             <ParamGroupCollection>
               <option name="className" value="com.shf.stock.controller.StockController" />
-              <option name="method" value="getAllBusiness" />
-              <option name="methodDescription" value="New Request" />
+              <option name="method" value="sectorAll" />
+              <option name="methodDescription" value="沪深两市板块分时行情数据查询，以交易时间和交易总金额降序查询，取前10条数据" />
               <option name="multipartKeyValueListJson" value="[]" />
-              <option name="originUrl" value="/api/quot/stock/business/all" />
+              <option name="originUrl" value="/api/quot/search/all" />
               <option name="pathParamsKeyValueListJson" value="[]" />
-              <option name="returnDocument" value="[&#10;&#9;{&#10;&#9;&#9;&quot;secCode&quot;:&quot;股票编码&quot;,&#10;&#9;&#9;&quot;secName&quot;:&quot;股票名称&quot;,&#10;&#9;&#9;&quot;sectorCode&quot;:&quot;行业板块代码&quot;,&#10;&#9;&#9;&quot;sectorName&quot;:&quot;行业板块名称&quot;,&#10;&#9;&#9;&quot;business&quot;:&quot;主营业务&quot;,&#10;&#9;&#9;&quot;updateTime&quot;:&quot;更新时间&quot;&#10;&#9;}&#10;]" />
-              <option name="url" value="/api/quot/stock/business/all" />
+              <option name="returnDocument" value="{&#10;&#9;&quot;code&quot;:&quot;No comment,Type =Number&quot;,&#10;&#9;&quot;msg&quot;:&quot;No comment,Type =String&quot;,&#10;&#9;&quot;data&quot;:{}&#10;}" />
+              <option name="url" value="/api/quot/search/all" />
               <option name="urlEncodedKeyValueListJson" value="[]" />
               <option name="urlParamsKeyValueListJson" value="[]" />
             </ParamGroupCollection>
           </option>
-          <option name="requestInfo" value="Request Url: http://127.0.0.1:8081/api/quot/stock/business/all&#13;&#10;Request Headers: &#13;&#10;    Accept: application/json,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8&#13;&#10;    User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.142 Safari/537.36 Hutool&#13;&#10;    Accept-Encoding: gzip, deflate&#13;&#10;    Accept-Language: zh-CN,zh;q=0.8&#13;&#10;Request Body: &#13;&#10;    null&#13;&#10;" />
-          <option name="response" value="[{&quot;secCode&quot;:&quot;000001&quot;,&quot;secName&quot;:&quot;平安银行&quot;,&quot;sectorCode&quot;:&quot;856024&quot;,&quot;sectorName&quot;:&quot;银行 &quot;,&quot;business&quot;:&quot;经有关监管机构批准的各项商业银行业务&quot;,&quot;updateTime&quot;:&quot;2020-08-09T23:35:30.000+00:00&quot;},{&quot;secCode&quot;:&quot;000002&quot;,&quot;secName&quot;:&quot;万科Ａ&quot;,&quot;sectorCode&quot;:&quot;856004&quot;,&quot;sectorName&quot;:&quot;房地产  &quot;,&quot;business&quot;:&quot;房地产开发和物业服务&quot;,&quot;updateTime&quot;:&quot;2020-06-05T11:39:53.000+00:00&quot;},{&quot;secCode&quot;:&quot;000004&quot;,&quot;secName&quot;:&quot;国农科技&quot;,&quot;sectorCode&quot;:&quot;856011&quot;,&quot;sectorName&quot;:&quot;计算机\t &quot;,&quot;business&quot;:&quot;通讯、计算机、软件、新材料、生物技术和生物特征识别技术、新药、生物制品、医用检测试剂和设备的研究与开发；信息咨询；计算机软件及生物技术的培训（以上各项不含限制项目）、兴办实业（具体项目另行申报）、房地产开发与经营。&quot;,&quot;updateTime&quot;:&quot;2020-06-05T11:39:53.000+00:00&quot;},{&quot;secCode&quot;:&quot;000005&quot;,&quot;secName&quot;:&quot;世纪星源&quot;,&quot;sectorCode&quot;:&quot;856004&quot;,&quot;sectorName&quot;:&quot;房地产  &quot;,&quot;business&quot;:&quot;绿色低碳城市社区建设相关的服务业务&quot;,&quot;updateTime&quot;:&quot;2020-06-05T11:39:53.000+00:00&quot;},{&quot;secCode&quot;:&quot;000006&quot;,&quot;secName&quot;:&quot;深振业Ａ&quot;,&quot;sectorCode&quot;:&quot;856004&quot;,&quot;sectorName&quot;:&quot;房地产  &quot;,&quot;business&quot;:&quot;土地开发、房产销售及租赁、物业管理。&quot;,&quot;updateTime&quot;:&quot;2020-06-05T11:39:53.000+00:00&quot;},{&quot;secCode&quot;:&quot;000007&quot;,&quot;secName&quot;:&quot;全新好&quot;,&quot;sectorCode&quot;:&quot;856004&quot;,&quot;sectorName&quot;:&quot;房地产  &quot;,&quot;business&quot;:&quot;物业管理和房屋租赁业等&quot;,&quot;updateTime&quot;:&quot;2020-06-05T11:39:53.000+00:00&quot;},{&quot;secCode&quot;:&quot;000008&quot;,&quot;secName&quot;:&quot;神州高铁&quot;,&quot;sectorCode&quot;:&quot;856014&quot;,&quot;sectorName&quot;:&quot;交通运输&quot;,&quot;business&quot;:&quot;专业致力于为轨道交通安全运营提供监测、检测、维修、保养设备和服务及整体解决方案&quot;,&quot;updateTime&quot;:&quot;2020-06-05T11:39:53.000+00:00&quot;},{&quot;secCode&quot;:&quot;000009&quot;,&quot;secName&quot;:&quot;中国宝安&quot;,&quot;sectorCode&quot;:&quot;856004&quot;,&quot;sectorName&quot;:&quot;房地产  &quot;,&quot;business&quot;:&quot;新能源、新材料及其它高新技术产业、生物医药业、房地产业以及其他行业&quot;,&quot;updateTime&quot;:&quot;2020-06-05T11:39:53.000+00:00&quot;},{&quot;secCode&quot;:&quot;000011&quot;,&quot;secName&quot;:&quot;深物业A&quot;,&quot;sectorCode&quot;:&quot;856004&quot;,&quot;sectorName&quot;:&quot;房地产\t &quot;,&quot;business&quot;:&quot;房地产开发及商品房销售,商品楼宇的建筑、管理,房屋租赁,建设监理。国内商业、物资供销业(不含专营专卖专控商品)。兼营:物业租赁及管理、商业、运输业、饮食旅游业等。&quot;,&quot;updateTime&quot;:&quot;2020-06-05T11:39:53.000+00:00&quot;},{&quot;secCode&quot;:&quot;000012&quot;,&quot;secName&quot;:&quot;南玻Ａ&quot;,&quot;sectorCode&quot;:&quot;856013&quot;,&quot;sectorName&quot;:&quot;建筑材料&quot;,&quot;business&quot;:&quot;平板玻璃、工程玻璃等节能建筑材料,硅材料、光伏组件等可再生能源产品及超薄电子玻璃等新型材料和高科技产品的生产、制造和销售&quot;,&quot;updateTime&quot;:&quot;2020-06-05T11:39:53.000+00:00&quot;},{&quot;secCode&quot;:&quot;000014&quot;,&quot;secName&quot;:&quot;沙河股份&quot;,&quot;sectorCode&quot;:&quot;856004&quot;,&quot;sectorName&quot;:&quot;房地产  &quot;,&quot;business&quot;:&quot;房地产开发和销售&quot;,&quot;updateTime&quot;:&quot;2020-06-05T11:39:53.000+00:00&quot;},{&quot;secCode&quot;:&quot;000016&quot;,&quot;secName&quot;:&quot;深康佳Ａ&quot;,&quot;sectorCode&quot;:&quot;856012&quot;,&quot;sectorName&quot;:&quot;家用电器&quot;,&quot;business&quot;:&quot;研究开发、生产经营电视机、冰箱、洗衣机、日用小家电等家用电器产品,家庭视听设备,IPTV机顶盒,数字电视接收器(含卫星电视广播地面接收设备),数码产品,移动通信设备及终端产品,日用电子产品,汽车电子产品,卫星导航系统,智能交通系统,防火防盗报警系统,办公设备,电子计算机,显示器,大屏幕显示设备的制造和应用服务&quot;,&quot;updateTime&quot;:&quot;2020-06-05T11:39:53.000+00:00&quot;},{&quot;secCode&quot;:&quot;000017&quot;,&quot;secName&quot;:&quot;深中华A&quot;,&quot;sectorCode&quot;:&quot;856010&quot;,&quot;sectorName&quot;:&quot;机械设备&quot;,&quot;business&quot;:&quot;生产装配各种类型的自行车及自行车零件、部件、配件、机械产品、运动器械、精细化工、碳纤维复合材料、家用小电器及配套原件等。&quot;,&quot;updateTime&quot;:&quot;2020-06-05T11:39:53.000+00:00&quot;},{&quot;secCode&quot;:&quot;000019&quot;,&quot;secName&quot;:&quot;深粮控股&quot;,&quot;sectorCode&quot;:&quot;856020&quot;,&quot;sectorName&quot;:&quot;食品饮料&quot;,&quot;business&quot;:&quot;茶及天然植物精深加工为主的食品原料(配料)生产研发和销售业务;粮油储备粮油贸易粮油加工等粮油流通及粮油储备服务业&quot;,&quot;updateTime&quot;:&quot;2020-06-05T11:39:53.000+00:00&quot;},{&quot;secCode&quot;:&quot;000020&quot;,&quot;secName&quot;:&quot;深华发Ａ&quot;,&quot;sectorCode&quot;:&quot;856012&quot;,&quot;sectorName&quot;:&quot;家用电器&quot;,&quot;business&quot;:&quot;生产经营各种彩色电视机、液晶显示器、液晶显示屏(在分支机构生产经营)、收录机、音响设备、电子表、电子游戏机、电脑等各类电子产品及配套的印刷线路板、精密注塑件、轻型包装材料(在武汉生产经营)、五金件(含工模具),电镀及表面处理、焊锡丝,房地产开发经营(深房地字第7226760号),物业管理。&quot;,&quot;updateTime&quot;:&quot;2020-06-05T11:39:53.000+00:00&quot;},{&quot;secCode&quot;:&quot;000021&quot;,&quot;secName&quot;:&quot;深科技&quot;,&quot;sectorCode&quot;:&quot;856003&quot;,&quot;sectorName&quot;:&quot;电子    &quot;,&quot;business&quot;:&quot;开发、生产、经营计算机软、硬件系统及其外部设备、通讯设备、电子仪器仪表及其零部件、原器件、接插件和原材料,生产、经营家用商品电脑及电子玩具(以上生产项目均不含限制项目);金融计算机软件模型的制作和设计、精密模具CAD/CAM 技术、节能型自动化机电产品和智能自动化控制系统&quot;,&quot;updateTime&quot;:&quot;2020-06-05T11:39:53.000+00:00&quot;},{&quot;secCode&quot;:&quot;000023&quot;,&quot;secName&quot;:&quot;深天地Ａ&quot;,&quot;sectorCode&quot;:&quot;856026&quot;,&quot;sectorName&quot;:&quot;综合    &quot;,&quot;business&quot;:&quot;商品混凝土及其原材料的生产、销售(具体生产场地执照另行申办);水泥制品的生产、销售(具体生产场地执照另行申办);在合法取得土地使用权的地块上从事房地产开发;物流服务;普通货运,货物专用运输(罐式)(道路运输经营许可证有效期至2014年12月31);机电设备维修;物业管理;投资兴办实业(具体项目另行申报);国内商业、物资供销业(不含专营、专控、专卖商品及限制项目);经营进出口业务(按深府办函[1994]278号文执行)。&quot;,&quot;updateTime&quot;:&quot;2020-06-05T11:39:53.000+00:00&quot;},{&quot;secCode&quot;:&quot;000025&quot;,&quot;secName&quot;:&quot;特力Ａ&quot;,&quot;sectorCode&quot;:&quot;856017&quot;,&quot;sectorName&quot;:&quot;汽车    &quot;,&quot;business&quot;:&quot;投资兴办实业(具体项目另行申报);经营在已合法取得的土地使用权范围内的房地产开发。国内商业、物资供销业(不含专营、专控、专卖商品)、物业租赁与管理。自营本公司及所属企业自产产品、自用生产材料、金属加工机械、通用零件的进出口业务。进出口业务按深贸管证字第098号外贸审查证书办理。&quot;,&quot;updateTime&quot;:&quot;2020-06-05T11:39:53.000+00:00&quot;},{&quot;secCode&quot;:&quot;000026&quot;,&quot;secName&quot;:&quot;飞亚达&quot;,&quot;sectorCode&quot;:&quot;856003&quot;,&quot;sectorName&quot;:&quot;电子    &quot;,&quot;business&quot;:&quot;生产经营各种指针式石英表及其机芯、零部件、各种计时仪器、加工批发Ｋ金手饰表（生产场地另行申报）；国内商业、物资供销业（不含专营、专控、专卖商品）；物业管理、物业租赁；自营进出口业务（按深贸管登证字第2000-072号文执行）。&quot;,&quot;updateTime&quot;:&quot;2020-06-05T11:39:53.000+00:00&quot;},{&quot;secCode&quot;:&quot;000027&quot;,&quot;secName&quot;:&quot;深圳能源&quot;,&quot;sectorCode&quot;:&quot;856009&quot;,&quot;sectorName&quot;:&quot;化工    &quot;,&quot;business&quot;:&quot;各种常规能源和新能源的开发、生产、购销；投资和经营能提高能源使用效益的高科技产业；投资和经营与能源相关的化工原材料的开发和运输、港口、码头和仓储工业等；&quot;,&quot;updateTime&quot;:&quot;2020-06-05T11:39:53.000+00:00&quot;},{&quot;secCode&quot;:&quot;600000&quot;,&quot;secName&quot;:&quot;浦发银行&quot;,&quot;sectorCode&quot;:&quot;856024&quot;,&quot;sectorName&quot;:&quot;银行&quot;,&quot;business&quot;:&quot;提供银行及相关金融服务&quot;,&quot;updateTime&quot;:&quot;2020-06-06T12:24:11.000+00:00&quot;},{&quot;secCode&quot;:&quot;600004&quot;,&quot;secName&quot;:&quot;白云机场&quot;,&quot;sectorCode&quot;:&quot;856014&quot;,&quot;sectorName&quot;:&quot;交通运输&quot;,&quot;business&quot;:&quot;以航空器、旅客和货物、邮件为对象，提供飞机起降与停场、旅客综合服务、安全检查以及航空地面保障等航空服务业务，和货邮代理服务、航站楼内商业场地租赁服务、特许经营服务、地面运输服务和广告服务等航空性延伸服务业务。&quot;,&quot;updateTime&quot;:&quot;2020-06-05T11:39:53.000+00:00&quot;},{&quot;secCode&quot;:&quot;600006&quot;,&quot;secName&quot;:&quot;东风汽车&quot;,&quot;sectorCode&quot;:&quot;856017&quot;,&quot;sectorName&quot;:&quot;汽车    &quot;,&quot;business&quot;:&quot;全系列轻型商用车整车和动力总成的设计、制造和销售。&quot;,&quot;updateTime&quot;:&quot;2020-06-05T11:39:53.000+00:00&quot;},{&quot;secCode&quot;:&quot;600007&quot;,&quot;secName&quot;:&quot;中国国贸&quot;,&quot;sectorCode&quot;:&quot;856019&quot;,&quot;sectorName&quot;:&quot;商业贸易&quot;,&quot;business&quot;:&quot;从事商务服务设施的投资、经营和管理&quot;,&quot;updateTime&quot;:&quot;2020-06-05T11:39:53.000+00:00&quot;},{&quot;secCode&quot;:&quot;600008&quot;,&quot;secName&quot;:&quot;首创股份&quot;,&quot;sectorCode&quot;:&quot;856026&quot;,&quot;sectorName&quot;:&quot;综合    &quot;,&quot;business&quot;:&quot;水务固废等环保业务&quot;,&quot;updateTime&quot;:&quot;2020-06-05T11:39:53.000+00:00&quot;},{&quot;secCode&quot;:&quot;600009&quot;,&quot;secName&quot;:&quot;上海机场&quot;,&quot;sectorCode&quot;:&quot;856014&quot;,&quot;sectorName&quot;:&quot;交通运输&quot;,&quot;business&quot;:&quot;航空地面保障服务及其配套服务&quot;,&quot;updateTime&quot;:&quot;2020-06-05T11:39:53.000+00:00&quot;},{&quot;secCode&quot;:&quot;600010&quot;,&quot;secName&quot;:&quot;包钢股份&quot;,&quot;sectorCode&quot;:&quot;856006&quot;,&quot;sectorName&quot;:&quot;钢铁    &quot;,&quot;business&quot;:&quot;矿产资源开发利用、钢铁产品的生产与销售&quot;,&quot;updateTime&quot;:&quot;2020-06-05T11:39:53.000+00:00&quot;},{&quot;secCode&quot;:&quot;600011&quot;,&quot;secName&quot;:&quot;华能国际&quot;,&quot;sectorCode&quot;:&quot;856002&quot;,&quot;sectorName&quot;:&quot;电气设备&quot;,&quot;business&quot;:&quot;电力及热力销售、港口服务及运输服务等&quot;,&quot;updateTime&quot;:&quot;2020-06-05T11:39:53.000+00:00&quot;},{&quot;secCode&quot;:&quot;600012&quot;,&quot;secName&quot;:&quot;皖通高速&quot;,&quot;sectorCode&quot;:&quot;856014&quot;,&quot;sectorName&quot;:&quot;交通运输&quot;,&quot;business&quot;:&quot;投资、建设、运营及管理安徽省境内外的收费公路&quot;,&quot;updateTime&quot;:&quot;2020-06-05T11:39:53.000+00:00&quot;},{&quot;secCode&quot;:&quot;600015&quot;,&quot;secName&quot;:&quot;华夏银行&quot;,&quot;sectorCode&quot;:&quot;856024&quot;,&quot;sectorName&quot;:&quot;银行    &quot;,&quot;business&quot;:&quot;吸收存款;发放贷款;办理国内外结算;发行金融债券;同业拆借等业务&quot;,&quot;updateTime&quot;:&quot;2020-06-05T11:39:53.000+00:00&quot;},{&quot;secCode&quot;:&quot;600016&quot;,&quot;secName&quot;:&quot;民生银行&quot;,&quot;sectorCode&quot;:&quot;856024&quot;,&quot;sectorName&quot;:&quot;银行    &quot;,&quot;business&quot;:&quot;从事公司及个人银行业务、资金业务、融资租赁业务、资产管理业务及提供其他相关金融服务。&quot;,&quot;updateTime&quot;:&quot;2020-06-05T11:39:53.000+00:00&quot;},{&quot;secCode&quot;:&quot;600017&quot;,&quot;secName&quot;:&quot;日照港&quot;,&quot;sectorCode&quot;:&quot;856014&quot;,&quot;sectorName&quot;:&quot;交通运输&quot;,&quot;business&quot;:&quot;装卸业务、堆存业务和港务管理业务&quot;,&quot;updateTime&quot;:&quot;2020-06-05T11:39:53.000+00:00&quot;},{&quot;secCode&quot;:&quot;600018&quot;,&quot;secName&quot;:&quot;上港集团&quot;,&quot;sectorCode&quot;:&quot;856014&quot;,&quot;sectorName&quot;:&quot;交通运输&quot;,&quot;business&quot;:&quot;集装箱装卸业务、散杂货装卸业务、港口服务业务和港口物流业务。&quot;,&quot;updateTime&quot;:&quot;2020-06-05T11:39:53.000+00:00&quot;},{&quot;secCode&quot;:&quot;600019&quot;,&quot;secName&quot;:&quot;宝钢股份&quot;,&quot;sectorCode&quot;:&quot;856006&quot;,&quot;sectorName&quot;:&quot;钢铁    &quot;,&quot;business&quot;:&quot;钢铁产品的制造和销售以及钢铁产销过程中产生的副产品的销售与服务。&quot;,&quot;updateTime&quot;:&quot;2020-06-05T11:39:53.000+00:00&quot;},{&quot;secCode&quot;:&quot;600020&quot;,&quot;secName&quot;:&quot;中原高速&quot;,&quot;sectorCode&quot;:&quot;856014&quot;,&quot;sectorName&quot;:&quot;交通运输&quot;,&quot;business&quot;:&quot;经营性收费公路的投资、建设、运营管理等。&quot;,&quot;updateTime&quot;:&quot;2020-06-05T11:39:53.000+00:00&quot;},{&quot;secCode&quot;:&quot;600021&quot;,&quot;secName&quot;:&quot;上海电力&quot;,&quot;sectorCode&quot;:&quot;856002&quot;,&quot;sectorName&quot;:&quot;电气设备&quot;,&quot;business&quot;:&quot;从事电力、热力产品的生产和销售&quot;,&quot;updateTime&quot;:&quot;2020-06-05T11:39:53.000+00:00&quot;},{&quot;secCode&quot;:&quot;600022&quot;,&quot;secName&quot;:&quot;山东钢铁&quot;,&quot;sectorCode&quot;:&quot;856006&quot;,&quot;sectorName&quot;:&quot;钢铁    &quot;,&quot;business&quot;:&quot;以生产、销售钢材、钢坯等钢铁产品为主。&quot;,&quot;updateTime&quot;:&quot;2020-06-05T11:39:53.000+00:00&quot;},{&quot;secCode&quot;:&quot;600023&quot;,&quot;secName&quot;:&quot;浙能电力&quot;,&quot;sectorCode&quot;:&quot;856002&quot;,&quot;sectorName&quot;:&quot;电气设备&quot;,&quot;business&quot;:&quot;从事火力发电业务&quot;,&quot;updateTime&quot;:&quot;2020-06-05T11:39:53.000+00:00&quot;},{&quot;secCode&quot;:&quot;600025&quot;,&quot;secName&quot;:&quot;华能水电&quot;,&quot;sectorCode&quot;:&quot;856002&quot;,&quot;sectorName&quot;:&quot;电气设备&quot;,&quot;business&quot;:&quot;水力发电项目的开发、投资、建设、运营与管理&quot;,&quot;updateTime&quot;:&quot;2020-06-05T11:39:53.000+00:00&quot;},{&quot;secCode&quot;:&quot;600026&quot;,&quot;secName&quot;:&quot;中远海能&quot;,&quot;sectorCode&quot;:&quot;856014&quot;,&quot;sectorName&quot;:&quot;交通运输&quot;,&quot;business&quot;:&quot;中国沿海地区和全球的成品油及原油运输，中国沿海地区和全球的煤炭和铁矿石运输。&quot;,&quot;updateTime&quot;:&quot;2020-06-05T11:39:53.000+00:00&quot;}]" />
-          <option name="url" value="/api/quot/stock/business/all" />
+          <option name="requestInfo" value="Request Url: http://127.0.0.1:8081/api/quot/search/all&#13;&#10;Request Headers: &#13;&#10;    Accept: application/json,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8&#13;&#10;    User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.142 Safari/537.36 Hutool&#13;&#10;    Accept-Encoding: gzip, deflate&#13;&#10;    Accept-Language: zh-CN,zh;q=0.8&#13;&#10;Request Body: &#13;&#10;    null&#13;&#10;" />
+          <option name="response" value="{&quot;code&quot;:1,&quot;data&quot;:[{&quot;companyNum&quot;:247,&quot;tradeAmt&quot;:49729784,&quot;code&quot;:&quot;new_dzxx&quot;,&quot;avgPrice&quot;:14.463,&quot;name&quot;:&quot;电子信息&quot;,&quot;curDate&quot;:&quot;20211221&quot;,&quot;tradeVol&quot;:538547506.000,&quot;updownRate&quot;:&quot;0.007&quot;},{&quot;companyNum&quot;:65,&quot;tradeAmt&quot;:38786837,&quot;code&quot;:&quot;new_fdsb&quot;,&quot;avgPrice&quot;:12.655,&quot;name&quot;:&quot;发电设备&quot;,&quot;curDate&quot;:&quot;20211221&quot;,&quot;tradeVol&quot;:330659267.000,&quot;updownRate&quot;:&quot;0.001&quot;},{&quot;companyNum&quot;:155,&quot;tradeAmt&quot;:36225708,&quot;code&quot;:&quot;new_swzz&quot;,&quot;avgPrice&quot;:21.451,&quot;name&quot;:&quot;生物制药&quot;,&quot;curDate&quot;:&quot;20211221&quot;,&quot;tradeVol&quot;:308152783.000,&quot;updownRate&quot;:&quot;-0.028&quot;},{&quot;companyNum&quot;:103,&quot;tradeAmt&quot;:42455982,&quot;code&quot;:&quot;new_qczz&quot;,&quot;avgPrice&quot;:17.293,&quot;name&quot;:&quot;汽车制造&quot;,&quot;curDate&quot;:&quot;20211221&quot;,&quot;tradeVol&quot;:306231113.000,&quot;updownRate&quot;:&quot;0.016&quot;},{&quot;companyNum&quot;:76,&quot;tradeAmt&quot;:9932401,&quot;code&quot;:&quot;new_stock&quot;,&quot;avgPrice&quot;:51.031,&quot;name&quot;:&quot;次新股&quot;,&quot;curDate&quot;:&quot;20211221&quot;,&quot;tradeVol&quot;:288729792.000,&quot;updownRate&quot;:&quot;-0.608&quot;},{&quot;companyNum&quot;:211,&quot;tradeAmt&quot;:31886994,&quot;code&quot;:&quot;new_jxhy&quot;,&quot;avgPrice&quot;:13.350,&quot;name&quot;:&quot;机械行业&quot;,&quot;curDate&quot;:&quot;20211221&quot;,&quot;tradeVol&quot;:287993013.000,&quot;updownRate&quot;:&quot;-0.019&quot;},{&quot;companyNum&quot;:152,&quot;tradeAmt&quot;:21166627,&quot;code&quot;:&quot;new_dzqj&quot;,&quot;avgPrice&quot;:23.818,&quot;name&quot;:&quot;电子器件&quot;,&quot;curDate&quot;:&quot;20211221&quot;,&quot;tradeVol&quot;:279570855.000,&quot;updownRate&quot;:&quot;-0.017&quot;},{&quot;companyNum&quot;:58,&quot;tradeAmt&quot;:23202627,&quot;code&quot;:&quot;new_dqhy&quot;,&quot;avgPrice&quot;:16.824,&quot;name&quot;:&quot;电器行业&quot;,&quot;curDate&quot;:&quot;20211221&quot;,&quot;tradeVol&quot;:255162351.000,&quot;updownRate&quot;:&quot;0.045&quot;},{&quot;companyNum&quot;:123,&quot;tradeAmt&quot;:55633374,&quot;code&quot;:&quot;new_fdc&quot;,&quot;avgPrice&quot;:8.118,&quot;name&quot;:&quot;房地产&quot;,&quot;curDate&quot;:&quot;20211221&quot;,&quot;tradeVol&quot;:243390676.000,&quot;updownRate&quot;:&quot;0.038&quot;},{&quot;companyNum&quot;:150,&quot;tradeAmt&quot;:16627134,&quot;code&quot;:&quot;new_hghy&quot;,&quot;avgPrice&quot;:16.724,&quot;name&quot;:&quot;化工行业&quot;,&quot;curDate&quot;:&quot;20211221&quot;,&quot;tradeVol&quot;:230917787.000,&quot;updownRate&quot;:&quot;-0.012&quot;}]}" />
+          <option name="url" value="/api/quot/search/all" />
+        </ResponseHistory>
+        <ResponseHistory>
+          <option name="className" value="com.shf.stock.controller.StockController" />
+          <option name="code" value="200" />
+          <option name="enableEnv" value="port" />
+          <option name="enableProject" value="local" />
+          <option name="method" value="sectorAll" />
+          <option name="methodType" value="GET" />
+          <option name="name" value="沪深两市板块分时行情数据查询，以交易时间和交易总金额降序查询，取前10条数据" />
+          <option name="paramGroup">
+            <ParamGroupCollection>
+              <option name="className" value="com.shf.stock.controller.StockController" />
+              <option name="method" value="sectorAll" />
+              <option name="methodDescription" value="沪深两市板块分时行情数据查询，以交易时间和交易总金额降序查询，取前10条数据" />
+              <option name="multipartKeyValueListJson" value="[]" />
+              <option name="originUrl" value="/api/quot/search/all" />
+              <option name="pathParamsKeyValueListJson" value="[]" />
+              <option name="returnDocument" value="{&#10;&#9;&quot;code&quot;:&quot;No comment,Type =Number&quot;,&#10;&#9;&quot;msg&quot;:&quot;No comment,Type =String&quot;,&#10;&#9;&quot;data&quot;:{}&#10;}" />
+              <option name="url" value="/api/quot/search/all" />
+              <option name="urlEncodedKeyValueListJson" value="[]" />
+              <option name="urlParamsKeyValueListJson" value="[]" />
+            </ParamGroupCollection>
+          </option>
+          <option name="requestInfo" value="Request Url: http://127.0.0.1:8081/api/quot/search/all&#13;&#10;Request Headers: &#13;&#10;    Accept: application/json,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8&#13;&#10;    User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.142 Safari/537.36 Hutool&#13;&#10;    Accept-Encoding: gzip, deflate&#13;&#10;    Accept-Language: zh-CN,zh;q=0.8&#13;&#10;Request Body: &#13;&#10;    null&#13;&#10;" />
+          <option name="response" value="{&quot;code&quot;:0}" />
+          <option name="url" value="/api/quot/search/all" />
+        </ResponseHistory>
+        <ResponseHistory>
+          <option name="className" value="com.shf.stock.controller.StockController" />
+          <option name="code" value="200" />
+          <option name="enableEnv" value="port" />
+          <option name="enableProject" value="local" />
+          <option name="method" value="sectorAll" />
+          <option name="methodType" value="GET" />
+          <option name="name" value="沪深两市板块分时行情数据查询，以交易时间和交易总金额降序查询，取前10条数据" />
+          <option name="paramGroup">
+            <ParamGroupCollection>
+              <option name="className" value="com.shf.stock.controller.StockController" />
+              <option name="method" value="sectorAll" />
+              <option name="methodDescription" value="沪深两市板块分时行情数据查询，以交易时间和交易总金额降序查询，取前10条数据" />
+              <option name="multipartKeyValueListJson" value="[]" />
+              <option name="originUrl" value="/api/quot/search/all" />
+              <option name="pathParamsKeyValueListJson" value="[]" />
+              <option name="returnDocument" value="{&#10;&#9;&quot;code&quot;:&quot;No comment,Type =Number&quot;,&#10;&#9;&quot;msg&quot;:&quot;No comment,Type =String&quot;,&#10;&#9;&quot;data&quot;:{}&#10;}" />
+              <option name="url" value="/api/quot/search/all" />
+              <option name="urlEncodedKeyValueListJson" value="[]" />
+              <option name="urlParamsKeyValueListJson" value="[]" />
+            </ParamGroupCollection>
+          </option>
+          <option name="requestInfo" value="Request Url: http://127.0.0.1:8081/api/quot/search/all&#13;&#10;Request Headers: &#13;&#10;    Accept: application/json,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8&#13;&#10;    User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.142 Safari/537.36 Hutool&#13;&#10;    Accept-Encoding: gzip, deflate&#13;&#10;    Accept-Language: zh-CN,zh;q=0.8&#13;&#10;Request Body: &#13;&#10;    null&#13;&#10;" />
+          <option name="response" value="{&quot;code&quot;:0}" />
+          <option name="url" value="/api/quot/search/all" />
+        </ResponseHistory>
+        <ResponseHistory>
+          <option name="className" value="com.shf.stock.controller.StockController" />
+          <option name="code" value="200" />
+          <option name="enableEnv" value="port" />
+          <option name="enableProject" value="local" />
+          <option name="method" value="sectorAll" />
+          <option name="methodType" value="GET" />
+          <option name="name" value="沪深两市板块分时行情数据查询，以交易时间和交易总金额降序查询，取前10条数据" />
+          <option name="paramGroup">
+            <ParamGroupCollection>
+              <option name="className" value="com.shf.stock.controller.StockController" />
+              <option name="method" value="sectorAll" />
+              <option name="methodDescription" value="沪深两市板块分时行情数据查询，以交易时间和交易总金额降序查询，取前10条数据" />
+              <option name="multipartKeyValueListJson" value="[]" />
+              <option name="originUrl" value="/api/quot/search/all" />
+              <option name="pathParamsKeyValueListJson" value="[]" />
+              <option name="returnDocument" value="{&#10;&#9;&quot;code&quot;:&quot;No comment,Type =Number&quot;,&#10;&#9;&quot;msg&quot;:&quot;No comment,Type =String&quot;,&#10;&#9;&quot;data&quot;:{}&#10;}" />
+              <option name="url" value="/api/quot/search/all" />
+              <option name="urlEncodedKeyValueListJson" value="[]" />
+              <option name="urlParamsKeyValueListJson" value="[]" />
+            </ParamGroupCollection>
+          </option>
+          <option name="requestInfo" value="Request Url: http://127.0.0.1:8081/api/quot/search/all&#13;&#10;Request Headers: &#13;&#10;    Accept: application/json,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8&#13;&#10;    User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.142 Safari/537.36 Hutool&#13;&#10;    Accept-Encoding: gzip, deflate&#13;&#10;    Accept-Language: zh-CN,zh;q=0.8&#13;&#10;Request Body: &#13;&#10;    null&#13;&#10;" />
+          <option name="response" value="{&quot;code&quot;:0}" />
+          <option name="url" value="/api/quot/search/all" />
+        </ResponseHistory>
+        <ResponseHistory>
+          <option name="className" value="com.shf.stock.controller.StockController" />
+          <option name="code" value="200" />
+          <option name="enableEnv" value="port" />
+          <option name="enableProject" value="local" />
+          <option name="method" value="sectorAll" />
+          <option name="methodType" value="GET" />
+          <option name="name" value="沪深两市板块分时行情数据查询，以交易时间和交易总金额降序查询，取前10条数据" />
+          <option name="paramGroup">
+            <ParamGroupCollection>
+              <option name="className" value="com.shf.stock.controller.StockController" />
+              <option name="method" value="sectorAll" />
+              <option name="methodDescription" value="沪深两市板块分时行情数据查询，以交易时间和交易总金额降序查询，取前10条数据" />
+              <option name="multipartKeyValueListJson" value="[]" />
+              <option name="originUrl" value="/api/quot/search/all" />
+              <option name="pathParamsKeyValueListJson" value="[]" />
+              <option name="returnDocument" value="{&#10;&#9;&quot;code&quot;:&quot;No comment,Type =Number&quot;,&#10;&#9;&quot;msg&quot;:&quot;No comment,Type =String&quot;,&#10;&#9;&quot;data&quot;:{}&#10;}" />
+              <option name="url" value="/api/quot/search/all" />
+              <option name="urlEncodedKeyValueListJson" value="[]" />
+              <option name="urlParamsKeyValueListJson" value="[]" />
+            </ParamGroupCollection>
+          </option>
+          <option name="requestInfo" value="Request Url: http://127.0.0.1:8081/api/quot/search/all&#13;&#10;Request Headers: &#13;&#10;    Accept: application/json,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8&#13;&#10;    User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.142 Safari/537.36 Hutool&#13;&#10;    Accept-Encoding: gzip, deflate&#13;&#10;    Accept-Language: zh-CN,zh;q=0.8&#13;&#10;Request Body: &#13;&#10;    null&#13;&#10;" />
+          <option name="response" value="{&quot;code&quot;:0}" />
+          <option name="url" value="/api/quot/search/all" />
+        </ResponseHistory>
+        <ResponseHistory>
+          <option name="className" value="com.shf.stock.controller.StockController" />
+          <option name="code" value="200" />
+          <option name="enableEnv" value="port" />
+          <option name="enableProject" value="local" />
+          <option name="method" value="sectorAll" />
+          <option name="methodType" value="GET" />
+          <option name="name" value="沪深两市板块分时行情数据查询，以交易时间和交易总金额降序查询，取前10条数据" />
+          <option name="paramGroup">
+            <ParamGroupCollection>
+              <option name="className" value="com.shf.stock.controller.StockController" />
+              <option name="method" value="sectorAll" />
+              <option name="methodDescription" value="沪深两市板块分时行情数据查询，以交易时间和交易总金额降序查询，取前10条数据" />
+              <option name="multipartKeyValueListJson" value="[]" />
+              <option name="originUrl" value="/api/quot/search/all" />
+              <option name="pathParamsKeyValueListJson" value="[]" />
+              <option name="returnDocument" value="{&#10;&#9;&quot;code&quot;:&quot;No comment,Type =Number&quot;,&#10;&#9;&quot;msg&quot;:&quot;No comment,Type =String&quot;,&#10;&#9;&quot;data&quot;:{}&#10;}" />
+              <option name="url" value="/api/quot/search/all" />
+              <option name="urlEncodedKeyValueListJson" value="[]" />
+              <option name="urlParamsKeyValueListJson" value="[]" />
+            </ParamGroupCollection>
+          </option>
+          <option name="requestInfo" value="Request Url: http://127.0.0.1:8081/api/quot/search/all&#13;&#10;Request Headers: &#13;&#10;    Accept: application/json,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8&#13;&#10;    User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.142 Safari/537.36 Hutool&#13;&#10;    Accept-Encoding: gzip, deflate&#13;&#10;    Accept-Language: zh-CN,zh;q=0.8&#13;&#10;Request Body: &#13;&#10;    null&#13;&#10;" />
+          <option name="response" value="{&quot;code&quot;:0}" />
+          <option name="url" value="/api/quot/search/all" />
+        </ResponseHistory>
+        <ResponseHistory>
+          <option name="className" value="com.shf.stock.controller.StockController" />
+          <option name="code" value="200" />
+          <option name="enableEnv" value="port" />
+          <option name="enableProject" value="local" />
+          <option name="method" value="sectorAll" />
+          <option name="methodType" value="GET" />
+          <option name="name" value="沪深两市板块分时行情数据查询，以交易时间和交易总金额降序查询，取前10条数据" />
+          <option name="paramGroup">
+            <ParamGroupCollection>
+              <option name="className" value="com.shf.stock.controller.StockController" />
+              <option name="method" value="sectorAll" />
+              <option name="methodDescription" value="沪深两市板块分时行情数据查询，以交易时间和交易总金额降序查询，取前10条数据" />
+              <option name="multipartKeyValueListJson" value="[]" />
+              <option name="originUrl" value="/api/quot/search/all" />
+              <option name="pathParamsKeyValueListJson" value="[]" />
+              <option name="returnDocument" value="{&#10;&#9;&quot;code&quot;:&quot;No comment,Type =Number&quot;,&#10;&#9;&quot;msg&quot;:&quot;No comment,Type =String&quot;,&#10;&#9;&quot;data&quot;:{}&#10;}" />
+              <option name="url" value="/api/quot/search/all" />
+              <option name="urlEncodedKeyValueListJson" value="[]" />
+              <option name="urlParamsKeyValueListJson" value="[]" />
+            </ParamGroupCollection>
+          </option>
+          <option name="requestInfo" value="Request Url: http://127.0.0.1:8081/api/quot/search/all&#13;&#10;Request Headers: &#13;&#10;    Accept: application/json,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8&#13;&#10;    User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.142 Safari/537.36 Hutool&#13;&#10;    Accept-Encoding: gzip, deflate&#13;&#10;    Accept-Language: zh-CN,zh;q=0.8&#13;&#10;Request Body: &#13;&#10;    null&#13;&#10;" />
+          <option name="response" value="{&quot;code&quot;:0}" />
+          <option name="url" value="/api/quot/search/all" />
+        </ResponseHistory>
+        <ResponseHistory>
+          <option name="className" value="com.shf.stock.controller.StockController" />
+          <option name="code" value="200" />
+          <option name="enableEnv" value="port" />
+          <option name="enableProject" value="local" />
+          <option name="method" value="sectorAll" />
+          <option name="methodType" value="GET" />
+          <option name="name" value="沪深两市板块分时行情数据查询，以交易时间和交易总金额降序查询，取前10条数据" />
+          <option name="paramGroup">
+            <ParamGroupCollection>
+              <option name="className" value="com.shf.stock.controller.StockController" />
+              <option name="method" value="sectorAll" />
+              <option name="methodDescription" value="沪深两市板块分时行情数据查询，以交易时间和交易总金额降序查询，取前10条数据" />
+              <option name="multipartKeyValueListJson" value="[]" />
+              <option name="originUrl" value="/api/quot/search/all" />
+              <option name="pathParamsKeyValueListJson" value="[]" />
+              <option name="returnDocument" value="{&#10;&#9;&quot;code&quot;:&quot;No comment,Type =Number&quot;,&#10;&#9;&quot;msg&quot;:&quot;No comment,Type =String&quot;,&#10;&#9;&quot;data&quot;:{}&#10;}" />
+              <option name="url" value="/api/quot/search/all" />
+              <option name="urlEncodedKeyValueListJson" value="[]" />
+              <option name="urlParamsKeyValueListJson" value="[]" />
+            </ParamGroupCollection>
+          </option>
+          <option name="requestInfo" value="Request Url: http://127.0.0.1:8081/api/quot/search/all&#13;&#10;Request Headers: &#13;&#10;    Accept: application/json,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8&#13;&#10;    User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.142 Safari/537.36 Hutool&#13;&#10;    Accept-Encoding: gzip, deflate&#13;&#10;    Accept-Language: zh-CN,zh;q=0.8&#13;&#10;Request Body: &#13;&#10;    null&#13;&#10;" />
+          <option name="response" value="{&quot;code&quot;:0}" />
+          <option name="url" value="/api/quot/search/all" />
+        </ResponseHistory>
+        <ResponseHistory>
+          <option name="className" value="com.shf.stock.controller.StockController" />
+          <option name="code" value="200" />
+          <option name="enableEnv" value="port" />
+          <option name="enableProject" value="local" />
+          <option name="method" value="sectorAll" />
+          <option name="methodType" value="GET" />
+          <option name="name" value="沪深两市板块分时行情数据查询，以交易时间和交易总金额降序查询，取前10条数据" />
+          <option name="paramGroup">
+            <ParamGroupCollection>
+              <option name="className" value="com.shf.stock.controller.StockController" />
+              <option name="method" value="sectorAll" />
+              <option name="methodDescription" value="沪深两市板块分时行情数据查询，以交易时间和交易总金额降序查询，取前10条数据" />
+              <option name="multipartKeyValueListJson" value="[]" />
+              <option name="originUrl" value="/api/quot/search/all" />
+              <option name="pathParamsKeyValueListJson" value="[]" />
+              <option name="returnDocument" value="{&#10;&#9;&quot;code&quot;:&quot;No comment,Type =Number&quot;,&#10;&#9;&quot;msg&quot;:&quot;No comment,Type =String&quot;,&#10;&#9;&quot;data&quot;:{}&#10;}" />
+              <option name="url" value="/api/quot/search/all" />
+              <option name="urlEncodedKeyValueListJson" value="[]" />
+              <option name="urlParamsKeyValueListJson" value="[]" />
+            </ParamGroupCollection>
+          </option>
+          <option name="requestInfo" value="Request Url: http://127.0.0.1:8081/api/quot/search/all&#13;&#10;Request Headers: &#13;&#10;    Accept: application/json,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8&#13;&#10;    User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.142 Safari/537.36 Hutool&#13;&#10;    Accept-Encoding: gzip, deflate&#13;&#10;    Accept-Language: zh-CN,zh;q=0.8&#13;&#10;Request Body: &#13;&#10;    null&#13;&#10;" />
+          <option name="response" value="{&quot;code&quot;:0}" />
+          <option name="url" value="/api/quot/search/all" />
+        </ResponseHistory>
+        <ResponseHistory>
+          <option name="className" value="com.shf.stock.controller.StockController" />
+          <option name="code" value="200" />
+          <option name="enableEnv" value="port" />
+          <option name="enableProject" value="local" />
+          <option name="method" value="sectorAll" />
+          <option name="methodType" value="GET" />
+          <option name="name" value="沪深两市板块分时行情数据查询，以交易时间和交易总金额降序查询，取前10条数据" />
+          <option name="paramGroup">
+            <ParamGroupCollection>
+              <option name="className" value="com.shf.stock.controller.StockController" />
+              <option name="method" value="sectorAll" />
+              <option name="methodDescription" value="沪深两市板块分时行情数据查询，以交易时间和交易总金额降序查询，取前10条数据" />
+              <option name="multipartKeyValueListJson" value="[]" />
+              <option name="originUrl" value="/api/quot/search/all" />
+              <option name="pathParamsKeyValueListJson" value="[]" />
+              <option name="returnDocument" value="{&#10;&#9;&quot;code&quot;:&quot;No comment,Type =Number&quot;,&#10;&#9;&quot;msg&quot;:&quot;No comment,Type =String&quot;,&#10;&#9;&quot;data&quot;:{}&#10;}" />
+              <option name="url" value="/api/quot/search/all" />
+              <option name="urlEncodedKeyValueListJson" value="[]" />
+              <option name="urlParamsKeyValueListJson" value="[]" />
+            </ParamGroupCollection>
+          </option>
+          <option name="requestInfo" value="Request Url: http://127.0.0.1:8081/api/quot/search/all&#13;&#10;Request Headers: &#13;&#10;    Accept: application/json,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8&#13;&#10;    User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.142 Safari/537.36 Hutool&#13;&#10;    Accept-Encoding: gzip, deflate&#13;&#10;    Accept-Language: zh-CN,zh;q=0.8&#13;&#10;Request Body: &#13;&#10;    null&#13;&#10;" />
+          <option name="response" value="{&quot;code&quot;:0}" />
+          <option name="url" value="/api/quot/search/all" />
+        </ResponseHistory>
+        <ResponseHistory>
+          <option name="className" value="com.shf.stock.controller.StockController" />
+          <option name="code" value="200" />
+          <option name="enableEnv" value="port" />
+          <option name="enableProject" value="local" />
+          <option name="method" value="sectorAll" />
+          <option name="methodType" value="GET" />
+          <option name="name" value="沪深两市板块分时行情数据查询，以交易时间和交易总金额降序查询，取前10条数据" />
+          <option name="paramGroup">
+            <ParamGroupCollection>
+              <option name="className" value="com.shf.stock.controller.StockController" />
+              <option name="method" value="sectorAll" />
+              <option name="methodDescription" value="沪深两市板块分时行情数据查询，以交易时间和交易总金额降序查询，取前10条数据" />
+              <option name="multipartKeyValueListJson" value="[]" />
+              <option name="originUrl" value="/api/quot/search/all" />
+              <option name="pathParamsKeyValueListJson" value="[]" />
+              <option name="returnDocument" value="{&#10;&#9;&quot;code&quot;:&quot;No comment,Type =Number&quot;,&#10;&#9;&quot;msg&quot;:&quot;No comment,Type =String&quot;,&#10;&#9;&quot;data&quot;:{}&#10;}" />
+              <option name="url" value="/api/quot/search/all" />
+              <option name="urlEncodedKeyValueListJson" value="[]" />
+              <option name="urlParamsKeyValueListJson" value="[]" />
+            </ParamGroupCollection>
+          </option>
+          <option name="requestInfo" value="Request Url: http://127.0.0.1:8081/api/quot/search/all&#13;&#10;Request Headers: &#13;&#10;    Accept: application/json,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8&#13;&#10;    User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.142 Safari/537.36 Hutool&#13;&#10;    Accept-Encoding: gzip, deflate&#13;&#10;    Accept-Language: zh-CN,zh;q=0.8&#13;&#10;Request Body: &#13;&#10;    null&#13;&#10;" />
+          <option name="response" value="{&quot;code&quot;:0}" />
+          <option name="url" value="/api/quot/search/all" />
+        </ResponseHistory>
+        <ResponseHistory>
+          <option name="className" value="com.shf.stock.controller.StockController" />
+          <option name="code" value="200" />
+          <option name="enableEnv" value="port" />
+          <option name="enableProject" value="local" />
+          <option name="method" value="sectorAll" />
+          <option name="methodType" value="GET" />
+          <option name="name" value="沪深两市板块分时行情数据查询，以交易时间和交易总金额降序查询，取前10条数据" />
+          <option name="paramGroup">
+            <ParamGroupCollection>
+              <option name="className" value="com.shf.stock.controller.StockController" />
+              <option name="method" value="sectorAll" />
+              <option name="methodDescription" value="沪深两市板块分时行情数据查询，以交易时间和交易总金额降序查询，取前10条数据" />
+              <option name="multipartKeyValueListJson" value="[]" />
+              <option name="originUrl" value="/api/quot/search/all" />
+              <option name="pathParamsKeyValueListJson" value="[]" />
+              <option name="returnDocument" value="{&#10;&#9;&quot;code&quot;:&quot;No comment,Type =Number&quot;,&#10;&#9;&quot;msg&quot;:&quot;No comment,Type =String&quot;,&#10;&#9;&quot;data&quot;:{}&#10;}" />
+              <option name="url" value="/api/quot/search/all" />
+              <option name="urlEncodedKeyValueListJson" value="[]" />
+              <option name="urlParamsKeyValueListJson" value="[]" />
+            </ParamGroupCollection>
+          </option>
+          <option name="requestInfo" value="Request Url: http://127.0.0.1:8081/api/quot/search/all&#13;&#10;Request Headers: &#13;&#10;    Accept: application/json,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8&#13;&#10;    User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.142 Safari/537.36 Hutool&#13;&#10;    Accept-Encoding: gzip, deflate&#13;&#10;    Accept-Language: zh-CN,zh;q=0.8&#13;&#10;Request Body: &#13;&#10;    null&#13;&#10;" />
+          <option name="response" value="{&quot;code&quot;:0}" />
+          <option name="url" value="/api/quot/search/all" />
+        </ResponseHistory>
+        <ResponseHistory>
+          <option name="className" value="com.shf.stock.controller.StockController" />
+          <option name="code" value="200" />
+          <option name="enableEnv" value="port" />
+          <option name="enableProject" value="local" />
+          <option name="method" value="sectorAll" />
+          <option name="methodType" value="GET" />
+          <option name="name" value="沪深两市板块分时行情数据查询，以交易时间和交易总金额降序查询，取前10条数据" />
+          <option name="paramGroup">
+            <ParamGroupCollection>
+              <option name="className" value="com.shf.stock.controller.StockController" />
+              <option name="method" value="sectorAll" />
+              <option name="methodDescription" value="沪深两市板块分时行情数据查询，以交易时间和交易总金额降序查询，取前10条数据" />
+              <option name="multipartKeyValueListJson" value="[]" />
+              <option name="originUrl" value="/api/quot/search/all" />
+              <option name="pathParamsKeyValueListJson" value="[]" />
+              <option name="returnDocument" value="{&#10;&#9;&quot;code&quot;:&quot;No comment,Type =Number&quot;,&#10;&#9;&quot;msg&quot;:&quot;No comment,Type =String&quot;,&#10;&#9;&quot;data&quot;:{}&#10;}" />
+              <option name="url" value="/api/quot/search/all" />
+              <option name="urlEncodedKeyValueListJson" value="[]" />
+              <option name="urlParamsKeyValueListJson" value="[]" />
+            </ParamGroupCollection>
+          </option>
+          <option name="requestInfo" value="Request Url: http://127.0.0.1:8081/api/quot/search/all&#13;&#10;Request Headers: &#13;&#10;    Accept: application/json,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8&#13;&#10;    User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.142 Safari/537.36 Hutool&#13;&#10;    Accept-Encoding: gzip, deflate&#13;&#10;    Accept-Language: zh-CN,zh;q=0.8&#13;&#10;Request Body: &#13;&#10;    null&#13;&#10;" />
+          <option name="response" value="{&quot;code&quot;:0}" />
+          <option name="url" value="/api/quot/search/all" />
+        </ResponseHistory>
+        <ResponseHistory>
+          <option name="className" value="com.shf.stock.controller.StockController" />
+          <option name="code" value="200" />
+          <option name="enableEnv" value="port" />
+          <option name="enableProject" value="local" />
+          <option name="method" value="sectorAll" />
+          <option name="methodType" value="GET" />
+          <option name="name" value="沪深两市板块分时行情数据查询，以交易时间和交易总金额降序查询，取前10条数据" />
+          <option name="paramGroup">
+            <ParamGroupCollection>
+              <option name="className" value="com.shf.stock.controller.StockController" />
+              <option name="method" value="sectorAll" />
+              <option name="methodDescription" value="沪深两市板块分时行情数据查询，以交易时间和交易总金额降序查询，取前10条数据" />
+              <option name="multipartKeyValueListJson" value="[]" />
+              <option name="originUrl" value="/api/quot/search/all" />
+              <option name="pathParamsKeyValueListJson" value="[]" />
+              <option name="returnDocument" value="{&#10;&#9;&quot;code&quot;:&quot;No comment,Type =Number&quot;,&#10;&#9;&quot;msg&quot;:&quot;No comment,Type =String&quot;,&#10;&#9;&quot;data&quot;:{}&#10;}" />
+              <option name="url" value="/api/quot/search/all" />
+              <option name="urlEncodedKeyValueListJson" value="[]" />
+              <option name="urlParamsKeyValueListJson" value="[]" />
+            </ParamGroupCollection>
+          </option>
+          <option name="requestInfo" value="Request Url: http://127.0.0.1:8081/api/quot/search/all&#13;&#10;Request Headers: &#13;&#10;    Accept: application/json,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8&#13;&#10;    User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.142 Safari/537.36 Hutool&#13;&#10;    Accept-Encoding: gzip, deflate&#13;&#10;    Accept-Language: zh-CN,zh;q=0.8&#13;&#10;Request Body: &#13;&#10;    null&#13;&#10;" />
+          <option name="response" value="{&quot;code&quot;:0}" />
+          <option name="url" value="/api/quot/search/all" />
+        </ResponseHistory>
+        <ResponseHistory>
+          <option name="className" value="com.shf.stock.controller.StockController" />
+          <option name="code" value="200" />
+          <option name="enableEnv" value="port" />
+          <option name="enableProject" value="local" />
+          <option name="method" value="sectorAll" />
+          <option name="methodType" value="GET" />
+          <option name="name" value="沪深两市板块分时行情数据查询，以交易时间和交易总金额降序查询，取前10条数据" />
+          <option name="paramGroup">
+            <ParamGroupCollection>
+              <option name="className" value="com.shf.stock.controller.StockController" />
+              <option name="method" value="sectorAll" />
+              <option name="methodDescription" value="沪深两市板块分时行情数据查询，以交易时间和交易总金额降序查询，取前10条数据" />
+              <option name="multipartKeyValueListJson" value="[]" />
+              <option name="originUrl" value="/api/quot/search/all" />
+              <option name="pathParamsKeyValueListJson" value="[]" />
+              <option name="returnDocument" value="{&#10;&#9;&quot;code&quot;:&quot;No comment,Type =Number&quot;,&#10;&#9;&quot;msg&quot;:&quot;No comment,Type =String&quot;,&#10;&#9;&quot;data&quot;:{}&#10;}" />
+              <option name="url" value="/api/quot/search/all" />
+              <option name="urlEncodedKeyValueListJson" value="[]" />
+              <option name="urlParamsKeyValueListJson" value="[]" />
+            </ParamGroupCollection>
+          </option>
+          <option name="requestInfo" value="Request Url: http://127.0.0.1:8081/api/quot/search/all&#13;&#10;Request Headers: &#13;&#10;    Accept: application/json,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8&#13;&#10;    User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.142 Safari/537.36 Hutool&#13;&#10;    Accept-Encoding: gzip, deflate&#13;&#10;    Accept-Language: zh-CN,zh;q=0.8&#13;&#10;Request Body: &#13;&#10;    null&#13;&#10;" />
+          <option name="response" value="{&quot;code&quot;:0}" />
+          <option name="url" value="/api/quot/search/all" />
+        </ResponseHistory>
+        <ResponseHistory>
+          <option name="className" value="com.shf.stock.controller.StockController" />
+          <option name="code" value="200" />
+          <option name="enableEnv" value="port" />
+          <option name="enableProject" value="local" />
+          <option name="method" value="sectorAll" />
+          <option name="methodType" value="GET" />
+          <option name="name" value="沪深两市板块分时行情数据查询，以交易时间和交易总金额降序查询，取前10条数据" />
+          <option name="paramGroup">
+            <ParamGroupCollection>
+              <option name="className" value="com.shf.stock.controller.StockController" />
+              <option name="method" value="sectorAll" />
+              <option name="methodDescription" value="沪深两市板块分时行情数据查询，以交易时间和交易总金额降序查询，取前10条数据" />
+              <option name="multipartKeyValueListJson" value="[]" />
+              <option name="originUrl" value="/api/quot/search/all" />
+              <option name="pathParamsKeyValueListJson" value="[]" />
+              <option name="returnDocument" value="{&#10;&#9;&quot;code&quot;:&quot;No comment,Type =Number&quot;,&#10;&#9;&quot;msg&quot;:&quot;No comment,Type =String&quot;,&#10;&#9;&quot;data&quot;:{}&#10;}" />
+              <option name="url" value="/api/quot/search/all" />
+              <option name="urlEncodedKeyValueListJson" value="[]" />
+              <option name="urlParamsKeyValueListJson" value="[]" />
+            </ParamGroupCollection>
+          </option>
+          <option name="requestInfo" value="Request Url: http://127.0.0.1:8081/api/quot/search/all&#13;&#10;Request Headers: &#13;&#10;    Accept: application/json,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8&#13;&#10;    User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.142 Safari/537.36 Hutool&#13;&#10;    Accept-Encoding: gzip, deflate&#13;&#10;    Accept-Language: zh-CN,zh;q=0.8&#13;&#10;Request Body: &#13;&#10;    null&#13;&#10;" />
+          <option name="response" value="{&quot;code&quot;:0}" />
+          <option name="url" value="/api/quot/search/all" />
+        </ResponseHistory>
+        <ResponseHistory>
+          <option name="className" value="com.shf.stock.controller.StockController" />
+          <option name="code" value="200" />
+          <option name="enableEnv" value="port" />
+          <option name="enableProject" value="local" />
+          <option name="method" value="sectorAll" />
+          <option name="methodType" value="GET" />
+          <option name="name" value="沪深两市板块分时行情数据查询，以交易时间和交易总金额降序查询，取前10条数据" />
+          <option name="paramGroup">
+            <ParamGroupCollection>
+              <option name="className" value="com.shf.stock.controller.StockController" />
+              <option name="method" value="sectorAll" />
+              <option name="methodDescription" value="沪深两市板块分时行情数据查询，以交易时间和交易总金额降序查询，取前10条数据" />
+              <option name="multipartKeyValueListJson" value="[]" />
+              <option name="originUrl" value="/api/quot/search/all" />
+              <option name="pathParamsKeyValueListJson" value="[]" />
+              <option name="returnDocument" value="{&#10;&#9;&quot;code&quot;:&quot;No comment,Type =Number&quot;,&#10;&#9;&quot;msg&quot;:&quot;No comment,Type =String&quot;,&#10;&#9;&quot;data&quot;:{}&#10;}" />
+              <option name="url" value="/api/quot/search/all" />
+              <option name="urlEncodedKeyValueListJson" value="[]" />
+              <option name="urlParamsKeyValueListJson" value="[]" />
+            </ParamGroupCollection>
+          </option>
+          <option name="requestInfo" value="Request Url: http://127.0.0.1:8081/api/quot/search/all&#13;&#10;Request Headers: &#13;&#10;    Accept: application/json,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8&#13;&#10;    User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.142 Safari/537.36 Hutool&#13;&#10;    Accept-Encoding: gzip, deflate&#13;&#10;    Accept-Language: zh-CN,zh;q=0.8&#13;&#10;Request Body: &#13;&#10;    null&#13;&#10;" />
+          <option name="response" value="{&quot;code&quot;:0}" />
+          <option name="url" value="/api/quot/search/all" />
+        </ResponseHistory>
+        <ResponseHistory>
+          <option name="className" value="com.shf.stock.controller.StockController" />
+          <option name="code" value="200" />
+          <option name="enableEnv" value="port" />
+          <option name="enableProject" value="local" />
+          <option name="method" value="sectorAll" />
+          <option name="methodType" value="GET" />
+          <option name="name" value="沪深两市板块分时行情数据查询，以交易时间和交易总金额降序查询，取前10条数据" />
+          <option name="paramGroup">
+            <ParamGroupCollection>
+              <option name="className" value="com.shf.stock.controller.StockController" />
+              <option name="method" value="sectorAll" />
+              <option name="methodDescription" value="沪深两市板块分时行情数据查询，以交易时间和交易总金额降序查询，取前10条数据" />
+              <option name="multipartKeyValueListJson" value="[]" />
+              <option name="originUrl" value="/api/quot/search/all" />
+              <option name="pathParamsKeyValueListJson" value="[]" />
+              <option name="returnDocument" value="{&#10;&#9;&quot;code&quot;:&quot;No comment,Type =Number&quot;,&#10;&#9;&quot;msg&quot;:&quot;No comment,Type =String&quot;,&#10;&#9;&quot;data&quot;:{}&#10;}" />
+              <option name="url" value="/api/quot/search/all" />
+              <option name="urlEncodedKeyValueListJson" value="[]" />
+              <option name="urlParamsKeyValueListJson" value="[]" />
+            </ParamGroupCollection>
+          </option>
+          <option name="requestInfo" value="Request Url: http://127.0.0.1:8081/api/quot/search/all&#13;&#10;Request Headers: &#13;&#10;    Accept: application/json,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8&#13;&#10;    User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.142 Safari/537.36 Hutool&#13;&#10;    Accept-Encoding: gzip, deflate&#13;&#10;    Accept-Language: zh-CN,zh;q=0.8&#13;&#10;Request Body: &#13;&#10;    null&#13;&#10;" />
+          <option name="response" value="{&quot;code&quot;:0}" />
+          <option name="url" value="/api/quot/search/all" />
+        </ResponseHistory>
+        <ResponseHistory>
+          <option name="className" value="com.shf.stock.controller.StockController" />
+          <option name="code" value="200" />
+          <option name="enableEnv" value="port" />
+          <option name="enableProject" value="local" />
+          <option name="method" value="sectorAll" />
+          <option name="methodType" value="GET" />
+          <option name="name" value="沪深两市板块分时行情数据查询，以交易时间和交易总金额降序查询，取前10条数据" />
+          <option name="paramGroup">
+            <ParamGroupCollection>
+              <option name="className" value="com.shf.stock.controller.StockController" />
+              <option name="method" value="sectorAll" />
+              <option name="methodDescription" value="沪深两市板块分时行情数据查询，以交易时间和交易总金额降序查询，取前10条数据" />
+              <option name="multipartKeyValueListJson" value="[]" />
+              <option name="originUrl" value="/api/quot/search/all" />
+              <option name="pathParamsKeyValueListJson" value="[]" />
+              <option name="returnDocument" value="{&#10;&#9;&quot;code&quot;:&quot;No comment,Type =Number&quot;,&#10;&#9;&quot;msg&quot;:&quot;No comment,Type =String&quot;,&#10;&#9;&quot;data&quot;:{}&#10;}" />
+              <option name="url" value="/api/quot/search/all" />
+              <option name="urlEncodedKeyValueListJson" value="[]" />
+              <option name="urlParamsKeyValueListJson" value="[]" />
+            </ParamGroupCollection>
+          </option>
+          <option name="requestInfo" value="Request Url: http://127.0.0.1:8081/api/quot/search/all&#13;&#10;Request Headers: &#13;&#10;    Accept: application/json,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8&#13;&#10;    User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.142 Safari/537.36 Hutool&#13;&#10;    Accept-Encoding: gzip, deflate&#13;&#10;    Accept-Language: zh-CN,zh;q=0.8&#13;&#10;Request Body: &#13;&#10;    null&#13;&#10;" />
+          <option name="response" value="{&quot;code&quot;:0}" />
+          <option name="url" value="/api/quot/search/all" />
+        </ResponseHistory>
+        <ResponseHistory>
+          <option name="className" value="com.shf.stock.controller.StockController" />
+          <option name="code" value="200" />
+          <option name="enableEnv" value="port" />
+          <option name="enableProject" value="local" />
+          <option name="method" value="sectorAll" />
+          <option name="methodType" value="GET" />
+          <option name="name" value="沪深两市板块分时行情数据查询，以交易时间和交易总金额降序查询，取前10条数据" />
+          <option name="paramGroup">
+            <ParamGroupCollection>
+              <option name="className" value="com.shf.stock.controller.StockController" />
+              <option name="method" value="sectorAll" />
+              <option name="methodDescription" value="沪深两市板块分时行情数据查询，以交易时间和交易总金额降序查询，取前10条数据" />
+              <option name="multipartKeyValueListJson" value="[]" />
+              <option name="originUrl" value="/api/quot/search/all" />
+              <option name="pathParamsKeyValueListJson" value="[]" />
+              <option name="returnDocument" value="{&#10;&#9;&quot;code&quot;:&quot;No comment,Type =Number&quot;,&#10;&#9;&quot;msg&quot;:&quot;No comment,Type =String&quot;,&#10;&#9;&quot;data&quot;:{}&#10;}" />
+              <option name="url" value="/api/quot/search/all" />
+              <option name="urlEncodedKeyValueListJson" value="[]" />
+              <option name="urlParamsKeyValueListJson" value="[]" />
+            </ParamGroupCollection>
+          </option>
+          <option name="requestInfo" value="Request Url: http://127.0.0.1:8081/api/quot/search/all&#13;&#10;Request Headers: &#13;&#10;    Accept: application/json,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8&#13;&#10;    User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.142 Safari/537.36 Hutool&#13;&#10;    Accept-Encoding: gzip, deflate&#13;&#10;    Accept-Language: zh-CN,zh;q=0.8&#13;&#10;Request Body: &#13;&#10;    null&#13;&#10;" />
+          <option name="response" value="{&quot;code&quot;:0}" />
+          <option name="url" value="/api/quot/search/all" />
         </ResponseHistory>
       </list>
     </option>

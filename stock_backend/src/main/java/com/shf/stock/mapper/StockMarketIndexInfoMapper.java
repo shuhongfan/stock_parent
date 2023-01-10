@@ -1,6 +1,12 @@
 package com.shf.stock.mapper;
 
+import com.shf.stock.common.domain.InnerMarketDomain;
 import com.shf.stock.pojo.StockMarketIndexInfo;
+import org.apache.ibatis.annotations.Mapper;
+import org.apache.ibatis.annotations.Param;
+
+import java.util.Date;
+import java.util.List;
 
 /**
 * @author shuho
@@ -8,6 +14,7 @@ import com.shf.stock.pojo.StockMarketIndexInfo;
 * @createDate 2023-01-08 19:06:44
 * @Entity com.shf.stock.pojo.StockMarketIndexInfo
 */
+@Mapper
 public interface StockMarketIndexInfoMapper {
 
     int deleteByPrimaryKey(Long id);
@@ -22,4 +29,11 @@ public interface StockMarketIndexInfoMapper {
 
     int updateByPrimaryKey(StockMarketIndexInfo record);
 
+    /**
+     * 根据大盘的id和时间查询大盘信息
+     * @param marketIds  大盘id集合
+     * @param timePoint 当前时间点（默认精确到分钟）
+     * @return
+     */
+    List<InnerMarketDomain> getMarketInfo(@Param("marketIds") List<String> marketIds, @Param("timePoint") Date timePoint);
 }

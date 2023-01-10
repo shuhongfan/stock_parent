@@ -2,10 +2,11 @@
 <project version="4">
   <component name="fastRequestCurrentParamGroup">
     <option name="className" value="com.shf.stock.controller.StockController" />
-    <option name="method" value="getAllBusiness" />
+    <option name="method" value="sectorAll" />
+    <option name="methodDescription" value="沪深两市板块分时行情数据查询，以交易时间和交易总金额降序查询，取前10条数据" />
     <option name="module" value="stock_backend" />
-    <option name="originUrl" value="/api/quot/stock/business/all" />
-    <option name="returnDocument" value="[&#10;&#9;{&#10;&#9;&#9;&quot;secCode&quot;:&quot;股票编码&quot;,&#10;&#9;&#9;&quot;secName&quot;:&quot;股票名称&quot;,&#10;&#9;&#9;&quot;sectorCode&quot;:&quot;行业板块代码&quot;,&#10;&#9;&#9;&quot;sectorName&quot;:&quot;行业板块名称&quot;,&#10;&#9;&#9;&quot;business&quot;:&quot;主营业务&quot;,&#10;&#9;&#9;&quot;updateTime&quot;:&quot;更新时间&quot;&#10;&#9;}&#10;]" />
-    <option name="url" value="/api/quot/stock/business/all" />
+    <option name="originUrl" value="/api/quot/search/all" />
+    <option name="returnDocument" value="{&#10;&#9;&quot;code&quot;:&quot;No comment,Type =Number&quot;,&#10;&#9;&quot;msg&quot;:&quot;No comment,Type =String&quot;,&#10;&#9;&quot;data&quot;:{}&#10;}" />
+    <option name="url" value="/api/quot/search/all" />
   </component>
 </project>

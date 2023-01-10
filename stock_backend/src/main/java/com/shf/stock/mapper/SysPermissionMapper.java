@@ -1,6 +1,7 @@
 package com.shf.stock.mapper;
 
 import com.shf.stock.pojo.SysPermission;
+import org.apache.ibatis.annotations.Mapper;
 
 /**
 * @author shuho
@@ -8,6 +9,7 @@ import com.shf.stock.pojo.SysPermission;
 * @createDate 2023-01-08 19:06:44
 * @Entity com.shf.stock.pojo.SysPermission
 */
+@Mapper
 public interface SysPermissionMapper {
 
     int deleteByPrimaryKey(Long id);

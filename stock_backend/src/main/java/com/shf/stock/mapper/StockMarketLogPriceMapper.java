@@ -1,6 +1,7 @@
 package com.shf.stock.mapper;
 
 import com.shf.stock.pojo.StockMarketLogPrice;
+import org.apache.ibatis.annotations.Mapper;
 
 /**
 * @author shuho
@@ -8,6 +9,7 @@ import com.shf.stock.pojo.StockMarketLogPrice;
 * @createDate 2023-01-08 19:06:44
 * @Entity com.shf.stock.pojo.StockMarketLogPrice
 */
+@Mapper
 public interface StockMarketLogPriceMapper {
 
     int deleteByPrimaryKey(Long id);

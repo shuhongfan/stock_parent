@@ -29,10 +29,36 @@
         where  id = #{id,jdbcType=VARCHAR} 
     </select>
 
+
+    <select id="getMarketInfo" resultType="com.shf.stock.common.domain.InnerMarketDomain">
+        SELECT
+            tmp.mark_Id AS code,
+            tmp.mark_name AS name,
+            sml.pre_close_price AS preClosePrice,
+            sml.open_price AS openPrice,
+            tmp.current_price AS tradePrice,
+            tmp.updown_rate AS upDown,
+            tmp.trade_account AS tradeAmt,
+            tmp.trade_volume AS tradeVol,
+            DATE_FORMAT( tmp.cur_time, '%Y%m%d') AS curDate
+        FROM
+        (
+            SELECT * FROM stock_market_index_info AS smi
+            WHERE smi.cur_time =#{timePoint}
+            AND smi.mark_Id IN
+            <foreach collection="marketIds" item="marketId" open="(" close=")" separator=",">
+                #{marketId}
+            </foreach>
+        ) AS tmp
+        LEFT JOIN stock_market_log_price AS sml ON tmp.mark_Id=sml.market_code
+        AND DATE_FORMAT( sml.cur_date, '%Y%m%d' )= DATE_FORMAT(#{timePoint},'%Y%m%d' )
+    </select>
+
     <delete id="deleteByPrimaryKey" parameterType="java.lang.Long">
         delete from stock_market_index_info
         where  id = #{id,jdbcType=VARCHAR} 
     </delete>
+
     <insert id="insert" keyColumn="id" keyProperty="id" parameterType="com.shf.stock.pojo.StockMarketIndexInfo" useGeneratedKeys="true">
         insert into stock_market_index_info
         ( id,mark_Id,cur_time
