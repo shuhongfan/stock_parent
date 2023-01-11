@@ -32,6 +32,61 @@
         where  id = #{id,jdbcType=VARCHAR} 
     </select>
 
+    <select id="getStockRtInfoLimit" resultType="com.shf.stock.common.domain.StockUpdownDomain">
+        select
+            sri.trade_amount as tradeAmt,
+            sri.pre_close_price as preClosePrice,
+            (sri.max_price-sri.min_price)/sri.pre_close_price as amplitude,
+            sri.stock_code as code,
+            sri.stock_name as name,
+            date_format(sri.cur_time,'%Y%m%d') as curDate,
+            sri.trade_volume as tradeVol,
+            (sri.cur_price-sri.pre_close_price) as increase,
+            (sri.cur_price-sri.pre_close_price)/sri.pre_close_price as upDown,
+            sri.cur_price as tradePrice
+        from stock_rt_info as sri
+        where sri.cur_time=#{timePoint}
+        order by upDown desc
+            limit 10;
+    </select>
+    <select id="getStockInfoAll" resultType="com.shf.stock.common.domain.StockUpdownDomain">
+        select
+            sri.trade_amount as tradeAmt,
+            sri.pre_close_price as preClosePrice,
+            (sri.max_price-sri.min_price)/sri.pre_close_price as amplitude,
+            sri.stock_code as code,
+            sri.stock_name as name,
+            date_format(sri.cur_time,'%Y%m%d') as curDate,
+            sri.trade_volume as tradeVol,
+            sri.cur_price-sri.pre_close_price as increase,
+            (sri.cur_price-sri.pre_close_price)/sri.pre_close_price as upDown,
+            sri.cur_price as tradePrice
+        from stock_rt_info as sri
+        order by sri.cur_time desc,upDown desc
+    </select>
+    <select id="getStockUpDownCount" resultType="java.util.Map">
+        select
+            date_format(tmp.cur_time,'%Y%m%d%H%i') as time,
+            count(*) as count
+            from
+                (
+                select
+                sri.cur_time,
+                (sri.cur_price-sri.pre_close_price)/sri.pre_close_price as increase
+                from stock_rt_info sri
+                where sri.cur_time between #{startTime} and #{endTime}
+                    <if test="flag==1">
+                        having increase>=0.1
+                    </if>
+                    <if test="flag==0">
+                        having increase &lt;=-0.1
+                    </if>
+                ) as tmp
+            group by tmp.cur_time
+            order by tmp.cur_time asc;
+
+    </select>
+
     <delete id="deleteByPrimaryKey" parameterType="java.lang.Long">
         delete from stock_rt_info
         where  id = #{id,jdbcType=VARCHAR} 

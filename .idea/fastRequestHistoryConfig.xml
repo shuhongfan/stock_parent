@@ -8,6 +8,243 @@
           <option name="code" value="200" />
           <option name="enableEnv" value="port" />
           <option name="enableProject" value="local" />
+          <option name="method" value="upDownCount" />
+          <option name="methodType" value="GET" />
+          <option name="name" value="功能描述：沪深两市涨跌停分时行情数据查询，查询T日每分钟的涨跌停数据（T：当前股票交易日） &#9;&#9;查询每分钟的涨停和跌停的数据的同级； &#9;&#9;如果不在股票的交易日内，那么就统计最近的股票交易下的数据 &#9; map: &#9;    upList:涨停数据统计 &#9;    downList:跌停数据统计" />
+          <option name="paramGroup">
+            <ParamGroupCollection>
+              <option name="className" value="com.shf.stock.controller.StockController" />
+              <option name="method" value="upDownCount" />
+              <option name="methodDescription" value="功能描述：沪深两市涨跌停分时行情数据查询，查询T日每分钟的涨跌停数据（T：当前股票交易日） &#9;&#9;查询每分钟的涨停和跌停的数据的同级； &#9;&#9;如果不在股票的交易日内，那么就统计最近的股票交易下的数据 &#9; map: &#9;    upList:涨停数据统计 &#9;    downList:跌停数据统计" />
+              <option name="multipartKeyValueListJson" value="[]" />
+              <option name="originUrl" value="/api/quot/stock/updown/count" />
+              <option name="pathParamsKeyValueListJson" value="[]" />
+              <option name="returnDocument" value="{&#10;&#9;&quot;code&quot;:&quot;No comment,Type =Number&quot;,&#10;&#9;&quot;msg&quot;:&quot;No comment,Type =String&quot;,&#10;&#9;&quot;data&quot;:{}&#10;}" />
+              <option name="url" value="/api/quot/stock/updown/count" />
+              <option name="urlEncodedKeyValueListJson" value="[]" />
+              <option name="urlParamsKeyValueListJson" value="[]" />
+            </ParamGroupCollection>
+          </option>
+          <option name="requestInfo" value="Request Url: http://127.0.0.1:8081/api/quot/stock/updown/count&#13;&#10;Request Headers: &#13;&#10;    Accept: application/json,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8&#13;&#10;    User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.142 Safari/537.36 Hutool&#13;&#10;    Accept-Encoding: gzip, deflate&#13;&#10;    Accept-Language: zh-CN,zh;q=0.8&#13;&#10;Request Body: &#13;&#10;    null&#13;&#10;" />
+          <option name="response" value="{&quot;code&quot;:1,&quot;data&quot;:{&quot;upList&quot;:[{&quot;count&quot;:1,&quot;time&quot;:&quot;202112190956&quot;},{&quot;count&quot;:1,&quot;time&quot;:&quot;202112191338&quot;},{&quot;count&quot;:1,&quot;time&quot;:&quot;202112191339&quot;},{&quot;count&quot;:1,&quot;time&quot;:&quot;202112191340&quot;},{&quot;count&quot;:1,&quot;time&quot;:&quot;202112191341&quot;},{&quot;count&quot;:1,&quot;time&quot;:&quot;202112191342&quot;},{&quot;count&quot;:1,&quot;time&quot;:&quot;202112191343&quot;},{&quot;count&quot;:1,&quot;time&quot;:&quot;202112191344&quot;},{&quot;count&quot;:1,&quot;time&quot;:&quot;202112191345&quot;},{&quot;count&quot;:1,&quot;time&quot;:&quot;202112191346&quot;},{&quot;count&quot;:1,&quot;time&quot;:&quot;202112191347&quot;},{&quot;count&quot;:1,&quot;time&quot;:&quot;202112191348&quot;},{&quot;count&quot;:1,&quot;time&quot;:&quot;202112191349&quot;},{&quot;count&quot;:1,&quot;time&quot;:&quot;202112191350&quot;},{&quot;count&quot;:1,&quot;time&quot;:&quot;202112191351&quot;},{&quot;count&quot;:1,&quot;time&quot;:&quot;202112191352&quot;},{&quot;count&quot;:1,&quot;time&quot;:&quot;202112191353&quot;},{&quot;count&quot;:1,&quot;time&quot;:&quot;202112191354&quot;},{&quot;count&quot;:1,&quot;time&quot;:&quot;202112191355&quot;},{&quot;count&quot;:1,&quot;time&quot;:&quot;202112191356&quot;},{&quot;count&quot;:1,&quot;time&quot;:&quot;202112191357&quot;},{&quot;count&quot;:1,&quot;time&quot;:&quot;202112191358&quot;},{&quot;count&quot;:1,&quot;time&quot;:&quot;202112191359&quot;},{&quot;count&quot;:1,&quot;time&quot;:&quot;202112191400&quot;},{&quot;count&quot;:1,&quot;time&quot;:&quot;202112191401&quot;},{&quot;count&quot;:1,&quot;time&quot;:&quot;202112191402&quot;},{&quot;count&quot;:1,&quot;time&quot;:&quot;202112191403&quot;},{&quot;count&quot;:1,&quot;time&quot;:&quot;202112191404&quot;},{&quot;count&quot;:1,&quot;time&quot;:&quot;202112191405&quot;},{&quot;count&quot;:1,&quot;time&quot;:&quot;202112191406&quot;},{&quot;count&quot;:1,&quot;time&quot;:&quot;202112191407&quot;},{&quot;count&quot;:1,&quot;time&quot;:&quot;202112191408&quot;},{&quot;count&quot;:1,&quot;time&quot;:&quot;202112191409&quot;},{&quot;count&quot;:1,&quot;time&quot;:&quot;202112191410&quot;},{&quot;count&quot;:1,&quot;time&quot;:&quot;202112191411&quot;},{&quot;count&quot;:1,&quot;time&quot;:&quot;202112191412&quot;},{&quot;count&quot;:1,&quot;time&quot;:&quot;202112191413&quot;},{&quot;count&quot;:1,&quot;time&quot;:&quot;202112191414&quot;},{&quot;count&quot;:1,&quot;time&quot;:&quot;202112191415&quot;},{&quot;count&quot;:1,&quot;time&quot;:&quot;202112191416&quot;},{&quot;count&quot;:1,&quot;time&quot;:&quot;202112191417&quot;},{&quot;count&quot;:1,&quot;time&quot;:&quot;202112191418&quot;},{&quot;count&quot;:1,&quot;time&quot;:&quot;202112191419&quot;},{&quot;count&quot;:1,&quot;time&quot;:&quot;202112191420&quot;},{&quot;count&quot;:1,&quot;time&quot;:&quot;202112191421&quot;},{&quot;count&quot;:1,&quot;time&quot;:&quot;202112191422&quot;},{&quot;count&quot;:1,&quot;time&quot;:&quot;202112191423&quot;},{&quot;count&quot;:1,&quot;time&quot;:&quot;202112191424&quot;},{&quot;count&quot;:1,&quot;time&quot;:&quot;202112191425&quot;},{&quot;count&quot;:1,&quot;time&quot;:&quot;202112191426&quot;},{&quot;count&quot;:1,&quot;time&quot;:&quot;202112191427&quot;},{&quot;count&quot;:1,&quot;time&quot;:&quot;202112191428&quot;},{&quot;count&quot;:1,&quot;time&quot;:&quot;202112191429&quot;},{&quot;count&quot;:1,&quot;time&quot;:&quot;202112191430&quot;},{&quot;count&quot;:1,&quot;time&quot;:&quot;202112191431&quot;},{&quot;count&quot;:1,&quot;time&quot;:&quot;202112191432&quot;},{&quot;count&quot;:1,&quot;time&quot;:&quot;202112191433&quot;},{&quot;count&quot;:1,&quot;time&quot;:&quot;202112191434&quot;},{&quot;count&quot;:1,&quot;time&quot;:&quot;202112191435&quot;},{&quot;count&quot;:1,&quot;time&quot;:&quot;202112191436&quot;},{&quot;count&quot;:1,&quot;time&quot;:&quot;202112191437&quot;},{&quot;count&quot;:1,&quot;time&quot;:&quot;202112191438&quot;},{&quot;count&quot;:1,&quot;time&quot;:&quot;202112191439&quot;},{&quot;count&quot;:1,&quot;time&quot;:&quot;202112191440&quot;},{&quot;count&quot;:1,&quot;time&quot;:&quot;202112191441&quot;},{&quot;count&quot;:1,&quot;time&quot;:&quot;202112191442&quot;},{&quot;count&quot;:1,&quot;time&quot;:&quot;202112191443&quot;},{&quot;count&quot;:1,&quot;time&quot;:&quot;202112191444&quot;},{&quot;count&quot;:1,&quot;time&quot;:&quot;202112191445&quot;},{&quot;count&quot;:1,&quot;time&quot;:&quot;202112191446&quot;},{&quot;count&quot;:1,&quot;time&quot;:&quot;202112191447&quot;},{&quot;count&quot;:1,&quot;time&quot;:&quot;202112191448&quot;},{&quot;count&quot;:1,&quot;time&quot;:&quot;202112191449&quot;},{&quot;count&quot;:1,&quot;time&quot;:&quot;202112191450&quot;},{&quot;count&quot;:1,&quot;time&quot;:&quot;202112191451&quot;},{&quot;count&quot;:1,&quot;time&quot;:&quot;202112191452&quot;},{&quot;count&quot;:1,&quot;time&quot;:&quot;202112191453&quot;},{&quot;count&quot;:1,&quot;time&quot;:&quot;202112191454&quot;},{&quot;count&quot;:2,&quot;time&quot;:&quot;202112191455&quot;},{&quot;count&quot;:2,&quot;time&quot;:&quot;202112191456&quot;},{&quot;count&quot;:2,&quot;time&quot;:&quot;202112191457&quot;},{&quot;count&quot;:2,&quot;time&quot;:&quot;202112191458&quot;}],&quot;downList&quot;:[{&quot;count&quot;:1,&quot;time&quot;:&quot;202112191002&quot;},{&quot;count&quot;:1,&quot;time&quot;:&quot;202112191003&quot;},{&quot;count&quot;:1,&quot;time&quot;:&quot;202112191004&quot;},{&quot;count&quot;:1,&quot;time&quot;:&quot;202112191005&quot;}]}}" />
+          <option name="url" value="/api/quot/stock/updown/count" />
+        </ResponseHistory>
+        <ResponseHistory>
+          <option name="className" value="com.shf.stock.controller.StockController" />
+          <option name="code" value="500" />
+          <option name="enableEnv" value="port" />
+          <option name="enableProject" value="local" />
+          <option name="method" value="upDownCount" />
+          <option name="methodType" value="GET" />
+          <option name="name" value="功能描述：沪深两市涨跌停分时行情数据查询，查询T日每分钟的涨跌停数据（T：当前股票交易日） &#9;&#9;查询每分钟的涨停和跌停的数据的同级； &#9;&#9;如果不在股票的交易日内，那么就统计最近的股票交易下的数据 &#9; map: &#9;    upList:涨停数据统计 &#9;    downList:跌停数据统计" />
+          <option name="paramGroup">
+            <ParamGroupCollection>
+              <option name="className" value="com.shf.stock.controller.StockController" />
+              <option name="method" value="upDownCount" />
+              <option name="methodDescription" value="功能描述：沪深两市涨跌停分时行情数据查询，查询T日每分钟的涨跌停数据（T：当前股票交易日） &#9;&#9;查询每分钟的涨停和跌停的数据的同级； &#9;&#9;如果不在股票的交易日内，那么就统计最近的股票交易下的数据 &#9; map: &#9;    upList:涨停数据统计 &#9;    downList:跌停数据统计" />
+              <option name="multipartKeyValueListJson" value="[]" />
+              <option name="originUrl" value="/api/quot/stock/updown/count" />
+              <option name="pathParamsKeyValueListJson" value="[]" />
+              <option name="returnDocument" value="{&#10;&#9;&quot;code&quot;:&quot;No comment,Type =Number&quot;,&#10;&#9;&quot;msg&quot;:&quot;No comment,Type =String&quot;,&#10;&#9;&quot;data&quot;:{}&#10;}" />
+              <option name="url" value="/api/quot/stock/updown/count" />
+              <option name="urlEncodedKeyValueListJson" value="[]" />
+              <option name="urlParamsKeyValueListJson" value="[]" />
+            </ParamGroupCollection>
+          </option>
+          <option name="requestInfo" value="Request Url: http://127.0.0.1:8081/api/quot/stock/updown/count&#13;&#10;Request Headers: &#13;&#10;    Accept: application/json,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8&#13;&#10;    User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.142 Safari/537.36 Hutool&#13;&#10;    Accept-Encoding: gzip, deflate&#13;&#10;    Accept-Language: zh-CN,zh;q=0.8&#13;&#10;Request Body: &#13;&#10;    null&#13;&#10;" />
+          <option name="response" value="{&quot;timestamp&quot;:&quot;2023-01-11T09:30:20.803+00:00&quot;,&quot;status&quot;:500,&quot;error&quot;:&quot;Internal Server Error&quot;,&quot;path&quot;:&quot;/api/quot/stock/updown/count&quot;}" />
+          <option name="url" value="/api/quot/stock/updown/count" />
+        </ResponseHistory>
+        <ResponseHistory>
+          <option name="className" value="com.shf.stock.controller.StockController" />
+          <option name="code" value="500" />
+          <option name="enableEnv" value="port" />
+          <option name="enableProject" value="local" />
+          <option name="method" value="upDownCount" />
+          <option name="methodType" value="GET" />
+          <option name="name" value="功能描述：沪深两市涨跌停分时行情数据查询，查询T日每分钟的涨跌停数据（T：当前股票交易日） &#9;&#9;查询每分钟的涨停和跌停的数据的同级； &#9;&#9;如果不在股票的交易日内，那么就统计最近的股票交易下的数据 &#9; map: &#9;    upList:涨停数据统计 &#9;    downList:跌停数据统计" />
+          <option name="paramGroup">
+            <ParamGroupCollection>
+              <option name="className" value="com.shf.stock.controller.StockController" />
+              <option name="method" value="upDownCount" />
+              <option name="methodDescription" value="功能描述：沪深两市涨跌停分时行情数据查询，查询T日每分钟的涨跌停数据（T：当前股票交易日） &#9;&#9;查询每分钟的涨停和跌停的数据的同级； &#9;&#9;如果不在股票的交易日内，那么就统计最近的股票交易下的数据 &#9; map: &#9;    upList:涨停数据统计 &#9;    downList:跌停数据统计" />
+              <option name="multipartKeyValueListJson" value="[]" />
+              <option name="originUrl" value="/api/quot/stock/updown/count" />
+              <option name="pathParamsKeyValueListJson" value="[]" />
+              <option name="returnDocument" value="{&#10;&#9;&quot;code&quot;:&quot;No comment,Type =Number&quot;,&#10;&#9;&quot;msg&quot;:&quot;No comment,Type =String&quot;,&#10;&#9;&quot;data&quot;:{}&#10;}" />
+              <option name="url" value="/api/quot/stock/updown/count" />
+              <option name="urlEncodedKeyValueListJson" value="[]" />
+              <option name="urlParamsKeyValueListJson" value="[]" />
+            </ParamGroupCollection>
+          </option>
+          <option name="requestInfo" value="Request Url: http://127.0.0.1:8081/api/quot/stock/updown/count&#13;&#10;Request Headers: &#13;&#10;    Accept: application/json,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8&#13;&#10;    User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.142 Safari/537.36 Hutool&#13;&#10;    Accept-Encoding: gzip, deflate&#13;&#10;    Accept-Language: zh-CN,zh;q=0.8&#13;&#10;Request Body: &#13;&#10;    null&#13;&#10;" />
+          <option name="response" value="{&quot;timestamp&quot;:&quot;2023-01-11T09:29:37.008+00:00&quot;,&quot;status&quot;:500,&quot;error&quot;:&quot;Internal Server Error&quot;,&quot;path&quot;:&quot;/api/quot/stock/updown/count&quot;}" />
+          <option name="url" value="/api/quot/stock/updown/count" />
+        </ResponseHistory>
+        <ResponseHistory>
+          <option name="className" value="com.shf.stock.controller.StockController" />
+          <option name="code" value="500" />
+          <option name="enableEnv" value="port" />
+          <option name="enableProject" value="local" />
+          <option name="method" value="upDownCount" />
+          <option name="methodType" value="GET" />
+          <option name="name" value="功能描述：沪深两市涨跌停分时行情数据查询，查询T日每分钟的涨跌停数据（T：当前股票交易日） &#9;&#9;查询每分钟的涨停和跌停的数据的同级； &#9;&#9;如果不在股票的交易日内，那么就统计最近的股票交易下的数据 &#9; map: &#9;    upList:涨停数据统计 &#9;    downList:跌停数据统计" />
+          <option name="paramGroup">
+            <ParamGroupCollection>
+              <option name="className" value="com.shf.stock.controller.StockController" />
+              <option name="method" value="upDownCount" />
+              <option name="methodDescription" value="功能描述：沪深两市涨跌停分时行情数据查询，查询T日每分钟的涨跌停数据（T：当前股票交易日） &#9;&#9;查询每分钟的涨停和跌停的数据的同级； &#9;&#9;如果不在股票的交易日内，那么就统计最近的股票交易下的数据 &#9; map: &#9;    upList:涨停数据统计 &#9;    downList:跌停数据统计" />
+              <option name="multipartKeyValueListJson" value="[]" />
+              <option name="originUrl" value="/api/quot/stock/updown/count" />
+              <option name="pathParamsKeyValueListJson" value="[]" />
+              <option name="returnDocument" value="{&#10;&#9;&quot;code&quot;:&quot;No comment,Type =Number&quot;,&#10;&#9;&quot;msg&quot;:&quot;No comment,Type =String&quot;,&#10;&#9;&quot;data&quot;:{}&#10;}" />
+              <option name="url" value="/api/quot/stock/updown/count" />
+              <option name="urlEncodedKeyValueListJson" value="[]" />
+              <option name="urlParamsKeyValueListJson" value="[]" />
+            </ParamGroupCollection>
+          </option>
+          <option name="requestInfo" value="Request Url: http://127.0.0.1:8081/api/quot/stock/updown/count&#13;&#10;Request Headers: &#13;&#10;    Accept: application/json,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8&#13;&#10;    User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.142 Safari/537.36 Hutool&#13;&#10;    Accept-Encoding: gzip, deflate&#13;&#10;    Accept-Language: zh-CN,zh;q=0.8&#13;&#10;Request Body: &#13;&#10;    null&#13;&#10;" />
+          <option name="response" value="{&quot;timestamp&quot;:&quot;2023-01-11T09:28:24.340+00:00&quot;,&quot;status&quot;:500,&quot;error&quot;:&quot;Internal Server Error&quot;,&quot;path&quot;:&quot;/api/quot/stock/updown/count&quot;}" />
+          <option name="url" value="/api/quot/stock/updown/count" />
+        </ResponseHistory>
+        <ResponseHistory>
+          <option name="className" value="com.shf.stock.controller.StockController" />
+          <option name="code" value="200" />
+          <option name="enableEnv" value="port" />
+          <option name="enableProject" value="local" />
+          <option name="method" value="upDownCount" />
+          <option name="methodType" value="GET" />
+          <option name="name" value="功能描述：沪深两市涨跌停分时行情数据查询，查询T日每分钟的涨跌停数据（T：当前股票交易日） &#9;&#9;查询每分钟的涨停和跌停的数据的同级； &#9;&#9;如果不在股票的交易日内，那么就统计最近的股票交易下的数据 &#9; map: &#9;    upList:涨停数据统计 &#9;    downList:跌停数据统计" />
+          <option name="paramGroup">
+            <ParamGroupCollection>
+              <option name="className" value="com.shf.stock.controller.StockController" />
+              <option name="method" value="upDownCount" />
+              <option name="methodDescription" value="功能描述：沪深两市涨跌停分时行情数据查询，查询T日每分钟的涨跌停数据（T：当前股票交易日） &#9;&#9;查询每分钟的涨停和跌停的数据的同级； &#9;&#9;如果不在股票的交易日内，那么就统计最近的股票交易下的数据 &#9; map: &#9;    upList:涨停数据统计 &#9;    downList:跌停数据统计" />
+              <option name="multipartKeyValueListJson" value="[]" />
+              <option name="originUrl" value="/api/quot/stock/updown/count" />
+              <option name="pathParamsKeyValueListJson" value="[]" />
+              <option name="returnDocument" value="{&#10;&#9;&quot;code&quot;:&quot;No comment,Type =Number&quot;,&#10;&#9;&quot;msg&quot;:&quot;No comment,Type =String&quot;,&#10;&#9;&quot;data&quot;:{}&#10;}" />
+              <option name="url" value="/api/quot/stock/updown/count" />
+              <option name="urlEncodedKeyValueListJson" value="[]" />
+              <option name="urlParamsKeyValueListJson" value="[]" />
+            </ParamGroupCollection>
+          </option>
+          <option name="requestInfo" value="Request Url: http://127.0.0.1:8081/api/quot/stock/updown/count&#13;&#10;Request Headers: &#13;&#10;    Accept: application/json,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8&#13;&#10;    User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.142 Safari/537.36 Hutool&#13;&#10;    Accept-Encoding: gzip, deflate&#13;&#10;    Accept-Language: zh-CN,zh;q=0.8&#13;&#10;Request Body: &#13;&#10;    null&#13;&#10;" />
+          <option name="response" value="{&quot;code&quot;:1,&quot;data&quot;:{&quot;upList&quot;:[{&quot;count&quot;:1,&quot;time&quot;:&quot;2021-12-19T01:56:00.000+00:00&quot;},{&quot;count&quot;:1,&quot;time&quot;:&quot;2021-12-19T05:38:00.000+00:00&quot;},{&quot;count&quot;:1,&quot;time&quot;:&quot;2021-12-19T05:39:00.000+00:00&quot;},{&quot;count&quot;:1,&quot;time&quot;:&quot;2021-12-19T05:40:00.000+00:00&quot;},{&quot;count&quot;:1,&quot;time&quot;:&quot;2021-12-19T05:41:00.000+00:00&quot;},{&quot;count&quot;:1,&quot;time&quot;:&quot;2021-12-19T05:42:00.000+00:00&quot;},{&quot;count&quot;:1,&quot;time&quot;:&quot;2021-12-19T05:43:00.000+00:00&quot;},{&quot;count&quot;:1,&quot;time&quot;:&quot;2021-12-19T05:44:00.000+00:00&quot;},{&quot;count&quot;:1,&quot;time&quot;:&quot;2021-12-19T05:45:00.000+00:00&quot;},{&quot;count&quot;:1,&quot;time&quot;:&quot;2021-12-19T05:46:00.000+00:00&quot;},{&quot;count&quot;:1,&quot;time&quot;:&quot;2021-12-19T05:47:00.000+00:00&quot;},{&quot;count&quot;:1,&quot;time&quot;:&quot;2021-12-19T05:48:00.000+00:00&quot;},{&quot;count&quot;:1,&quot;time&quot;:&quot;2021-12-19T05:49:00.000+00:00&quot;},{&quot;count&quot;:1,&quot;time&quot;:&quot;2021-12-19T05:50:00.000+00:00&quot;},{&quot;count&quot;:1,&quot;time&quot;:&quot;2021-12-19T05:51:00.000+00:00&quot;},{&quot;count&quot;:1,&quot;time&quot;:&quot;2021-12-19T05:52:00.000+00:00&quot;},{&quot;count&quot;:1,&quot;time&quot;:&quot;2021-12-19T05:53:00.000+00:00&quot;},{&quot;count&quot;:1,&quot;time&quot;:&quot;2021-12-19T05:54:00.000+00:00&quot;},{&quot;count&quot;:1,&quot;time&quot;:&quot;2021-12-19T05:55:00.000+00:00&quot;},{&quot;count&quot;:1,&quot;time&quot;:&quot;2021-12-19T05:56:00.000+00:00&quot;},{&quot;count&quot;:1,&quot;time&quot;:&quot;2021-12-19T05:57:00.000+00:00&quot;},{&quot;count&quot;:1,&quot;time&quot;:&quot;2021-12-19T05:58:00.000+00:00&quot;},{&quot;count&quot;:1,&quot;time&quot;:&quot;2021-12-19T05:59:00.000+00:00&quot;},{&quot;count&quot;:1,&quot;time&quot;:&quot;2021-12-19T06:00:00.000+00:00&quot;},{&quot;count&quot;:1,&quot;time&quot;:&quot;2021-12-19T06:01:00.000+00:00&quot;},{&quot;count&quot;:1,&quot;time&quot;:&quot;2021-12-19T06:02:00.000+00:00&quot;},{&quot;count&quot;:1,&quot;time&quot;:&quot;2021-12-19T06:03:00.000+00:00&quot;},{&quot;count&quot;:1,&quot;time&quot;:&quot;2021-12-19T06:04:00.000+00:00&quot;},{&quot;count&quot;:1,&quot;time&quot;:&quot;2021-12-19T06:05:00.000+00:00&quot;},{&quot;count&quot;:1,&quot;time&quot;:&quot;2021-12-19T06:06:00.000+00:00&quot;},{&quot;count&quot;:1,&quot;time&quot;:&quot;2021-12-19T06:07:00.000+00:00&quot;},{&quot;count&quot;:1,&quot;time&quot;:&quot;2021-12-19T06:08:00.000+00:00&quot;},{&quot;count&quot;:1,&quot;time&quot;:&quot;2021-12-19T06:09:00.000+00:00&quot;},{&quot;count&quot;:1,&quot;time&quot;:&quot;2021-12-19T06:10:00.000+00:00&quot;},{&quot;count&quot;:1,&quot;time&quot;:&quot;2021-12-19T06:11:00.000+00:00&quot;},{&quot;count&quot;:1,&quot;time&quot;:&quot;2021-12-19T06:12:00.000+00:00&quot;},{&quot;count&quot;:1,&quot;time&quot;:&quot;2021-12-19T06:13:00.000+00:00&quot;},{&quot;count&quot;:1,&quot;time&quot;:&quot;2021-12-19T06:14:00.000+00:00&quot;},{&quot;count&quot;:1,&quot;time&quot;:&quot;2021-12-19T06:15:00.000+00:00&quot;},{&quot;count&quot;:1,&quot;time&quot;:&quot;2021-12-19T06:16:00.000+00:00&quot;},{&quot;count&quot;:1,&quot;time&quot;:&quot;2021-12-19T06:17:00.000+00:00&quot;},{&quot;count&quot;:1,&quot;time&quot;:&quot;2021-12-19T06:18:00.000+00:00&quot;},{&quot;count&quot;:1,&quot;time&quot;:&quot;2021-12-19T06:19:00.000+00:00&quot;},{&quot;count&quot;:1,&quot;time&quot;:&quot;2021-12-19T06:20:00.000+00:00&quot;},{&quot;count&quot;:1,&quot;time&quot;:&quot;2021-12-19T06:21:00.000+00:00&quot;},{&quot;count&quot;:1,&quot;time&quot;:&quot;2021-12-19T06:22:00.000+00:00&quot;},{&quot;count&quot;:1,&quot;time&quot;:&quot;2021-12-19T06:23:00.000+00:00&quot;},{&quot;count&quot;:1,&quot;time&quot;:&quot;2021-12-19T06:24:00.000+00:00&quot;},{&quot;count&quot;:1,&quot;time&quot;:&quot;2021-12-19T06:25:00.000+00:00&quot;},{&quot;count&quot;:1,&quot;time&quot;:&quot;2021-12-19T06:26:00.000+00:00&quot;},{&quot;count&quot;:1,&quot;time&quot;:&quot;2021-12-19T06:27:00.000+00:00&quot;},{&quot;count&quot;:1,&quot;time&quot;:&quot;2021-12-19T06:28:00.000+00:00&quot;},{&quot;count&quot;:1,&quot;time&quot;:&quot;2021-12-19T06:29:00.000+00:00&quot;},{&quot;count&quot;:1,&quot;time&quot;:&quot;2021-12-19T06:30:00.000+00:00&quot;},{&quot;count&quot;:1,&quot;time&quot;:&quot;2021-12-19T06:31:00.000+00:00&quot;},{&quot;count&quot;:1,&quot;time&quot;:&quot;2021-12-19T06:32:00.000+00:00&quot;},{&quot;count&quot;:1,&quot;time&quot;:&quot;2021-12-19T06:33:00.000+00:00&quot;},{&quot;count&quot;:1,&quot;time&quot;:&quot;2021-12-19T06:34:00.000+00:00&quot;},{&quot;count&quot;:1,&quot;time&quot;:&quot;2021-12-19T06:35:00.000+00:00&quot;},{&quot;count&quot;:1,&quot;time&quot;:&quot;2021-12-19T06:36:00.000+00:00&quot;},{&quot;count&quot;:1,&quot;time&quot;:&quot;2021-12-19T06:37:00.000+00:00&quot;},{&quot;count&quot;:1,&quot;time&quot;:&quot;2021-12-19T06:38:00.000+00:00&quot;},{&quot;count&quot;:1,&quot;time&quot;:&quot;2021-12-19T06:39:00.000+00:00&quot;},{&quot;count&quot;:1,&quot;time&quot;:&quot;2021-12-19T06:40:00.000+00:00&quot;},{&quot;count&quot;:1,&quot;time&quot;:&quot;2021-12-19T06:41:00.000+00:00&quot;},{&quot;count&quot;:1,&quot;time&quot;:&quot;2021-12-19T06:42:00.000+00:00&quot;},{&quot;count&quot;:1,&quot;time&quot;:&quot;2021-12-19T06:43:00.000+00:00&quot;},{&quot;count&quot;:1,&quot;time&quot;:&quot;2021-12-19T06:44:00.000+00:00&quot;},{&quot;count&quot;:1,&quot;time&quot;:&quot;2021-12-19T06:45:00.000+00:00&quot;},{&quot;count&quot;:1,&quot;time&quot;:&quot;2021-12-19T06:46:00.000+00:00&quot;},{&quot;count&quot;:1,&quot;time&quot;:&quot;2021-12-19T06:47:00.000+00:00&quot;},{&quot;count&quot;:1,&quot;time&quot;:&quot;2021-12-19T06:48:00.000+00:00&quot;},{&quot;count&quot;:1,&quot;time&quot;:&quot;2021-12-19T06:49:00.000+00:00&quot;},{&quot;count&quot;:1,&quot;time&quot;:&quot;2021-12-19T06:50:00.000+00:00&quot;},{&quot;count&quot;:1,&quot;time&quot;:&quot;2021-12-19T06:51:00.000+00:00&quot;},{&quot;count&quot;:1,&quot;time&quot;:&quot;2021-12-19T06:52:00.000+00:00&quot;},{&quot;count&quot;:1,&quot;time&quot;:&quot;2021-12-19T06:53:00.000+00:00&quot;},{&quot;count&quot;:1,&quot;time&quot;:&quot;2021-12-19T06:54:00.000+00:00&quot;},{&quot;count&quot;:2,&quot;time&quot;:&quot;2021-12-19T06:55:00.000+00:00&quot;},{&quot;count&quot;:2,&quot;time&quot;:&quot;2021-12-19T06:56:00.000+00:00&quot;},{&quot;count&quot;:2,&quot;time&quot;:&quot;2021-12-19T06:57:00.000+00:00&quot;},{&quot;count&quot;:2,&quot;time&quot;:&quot;2021-12-19T06:58:00.000+00:00&quot;}],&quot;downList&quot;:[{&quot;count&quot;:1,&quot;time&quot;:&quot;2021-12-19T01:56:00.000+00:00&quot;},{&quot;count&quot;:1,&quot;time&quot;:&quot;2021-12-19T05:38:00.000+00:00&quot;},{&quot;count&quot;:1,&quot;time&quot;:&quot;2021-12-19T05:39:00.000+00:00&quot;},{&quot;count&quot;:1,&quot;time&quot;:&quot;2021-12-19T05:40:00.000+00:00&quot;},{&quot;count&quot;:1,&quot;time&quot;:&quot;2021-12-19T05:41:00.000+00:00&quot;},{&quot;count&quot;:1,&quot;time&quot;:&quot;2021-12-19T05:42:00.000+00:00&quot;},{&quot;count&quot;:1,&quot;time&quot;:&quot;2021-12-19T05:43:00.000+00:00&quot;},{&quot;count&quot;:1,&quot;time&quot;:&quot;2021-12-19T05:44:00.000+00:00&quot;},{&quot;count&quot;:1,&quot;time&quot;:&quot;2021-12-19T05:45:00.000+00:00&quot;},{&quot;count&quot;:1,&quot;time&quot;:&quot;2021-12-19T05:46:00.000+00:00&quot;},{&quot;count&quot;:1,&quot;time&quot;:&quot;2021-12-19T05:47:00.000+00:00&quot;},{&quot;count&quot;:1,&quot;time&quot;:&quot;2021-12-19T05:48:00.000+00:00&quot;},{&quot;count&quot;:1,&quot;time&quot;:&quot;2021-12-19T05:49:00.000+00:00&quot;},{&quot;count&quot;:1,&quot;time&quot;:&quot;2021-12-19T05:50:00.000+00:00&quot;},{&quot;count&quot;:1,&quot;time&quot;:&quot;2021-12-19T05:51:00.000+00:00&quot;},{&quot;count&quot;:1,&quot;time&quot;:&quot;2021-12-19T05:52:00.000+00:00&quot;},{&quot;count&quot;:1,&quot;time&quot;:&quot;2021-12-19T05:53:00.000+00:00&quot;},{&quot;count&quot;:1,&quot;time&quot;:&quot;2021-12-19T05:54:00.000+00:00&quot;},{&quot;count&quot;:1,&quot;time&quot;:&quot;2021-12-19T05:55:00.000+00:00&quot;},{&quot;count&quot;:1,&quot;time&quot;:&quot;2021-12-19T05:56:00.000+00:00&quot;},{&quot;count&quot;:1,&quot;time&quot;:&quot;2021-12-19T05:57:00.000+00:00&quot;},{&quot;count&quot;:1,&quot;time&quot;:&quot;2021-12-19T05:58:00.000+00:00&quot;},{&quot;count&quot;:1,&quot;time&quot;:&quot;2021-12-19T05:59:00.000+00:00&quot;},{&quot;count&quot;:1,&quot;time&quot;:&quot;2021-12-19T06:00:00.000+00:00&quot;},{&quot;count&quot;:1,&quot;time&quot;:&quot;2021-12-19T06:01:00.000+00:00&quot;},{&quot;count&quot;:1,&quot;time&quot;:&quot;2021-12-19T06:02:00.000+00:00&quot;},{&quot;count&quot;:1,&quot;time&quot;:&quot;2021-12-19T06:03:00.000+00:00&quot;},{&quot;count&quot;:1,&quot;time&quot;:&quot;2021-12-19T06:04:00.000+00:00&quot;},{&quot;count&quot;:1,&quot;time&quot;:&quot;2021-12-19T06:05:00.000+00:00&quot;},{&quot;count&quot;:1,&quot;time&quot;:&quot;2021-12-19T06:06:00.000+00:00&quot;},{&quot;count&quot;:1,&quot;time&quot;:&quot;2021-12-19T06:07:00.000+00:00&quot;},{&quot;count&quot;:1,&quot;time&quot;:&quot;2021-12-19T06:08:00.000+00:00&quot;},{&quot;count&quot;:1,&quot;time&quot;:&quot;2021-12-19T06:09:00.000+00:00&quot;},{&quot;count&quot;:1,&quot;time&quot;:&quot;2021-12-19T06:10:00.000+00:00&quot;},{&quot;count&quot;:1,&quot;time&quot;:&quot;2021-12-19T06:11:00.000+00:00&quot;},{&quot;count&quot;:1,&quot;time&quot;:&quot;2021-12-19T06:12:00.000+00:00&quot;},{&quot;count&quot;:1,&quot;time&quot;:&quot;2021-12-19T06:13:00.000+00:00&quot;},{&quot;count&quot;:1,&quot;time&quot;:&quot;2021-12-19T06:14:00.000+00:00&quot;},{&quot;count&quot;:1,&quot;time&quot;:&quot;2021-12-19T06:15:00.000+00:00&quot;},{&quot;count&quot;:1,&quot;time&quot;:&quot;2021-12-19T06:16:00.000+00:00&quot;},{&quot;count&quot;:1,&quot;time&quot;:&quot;2021-12-19T06:17:00.000+00:00&quot;},{&quot;count&quot;:1,&quot;time&quot;:&quot;2021-12-19T06:18:00.000+00:00&quot;},{&quot;count&quot;:1,&quot;time&quot;:&quot;2021-12-19T06:19:00.000+00:00&quot;},{&quot;count&quot;:1,&quot;time&quot;:&quot;2021-12-19T06:20:00.000+00:00&quot;},{&quot;count&quot;:1,&quot;time&quot;:&quot;2021-12-19T06:21:00.000+00:00&quot;},{&quot;count&quot;:1,&quot;time&quot;:&quot;2021-12-19T06:22:00.000+00:00&quot;},{&quot;count&quot;:1,&quot;time&quot;:&quot;2021-12-19T06:23:00.000+00:00&quot;},{&quot;count&quot;:1,&quot;time&quot;:&quot;2021-12-19T06:24:00.000+00:00&quot;},{&quot;count&quot;:1,&quot;time&quot;:&quot;2021-12-19T06:25:00.000+00:00&quot;},{&quot;count&quot;:1,&quot;time&quot;:&quot;2021-12-19T06:26:00.000+00:00&quot;},{&quot;count&quot;:1,&quot;time&quot;:&quot;2021-12-19T06:27:00.000+00:00&quot;},{&quot;count&quot;:1,&quot;time&quot;:&quot;2021-12-19T06:28:00.000+00:00&quot;},{&quot;count&quot;:1,&quot;time&quot;:&quot;2021-12-19T06:29:00.000+00:00&quot;},{&quot;count&quot;:1,&quot;time&quot;:&quot;2021-12-19T06:30:00.000+00:00&quot;},{&quot;count&quot;:1,&quot;time&quot;:&quot;2021-12-19T06:31:00.000+00:00&quot;},{&quot;count&quot;:1,&quot;time&quot;:&quot;2021-12-19T06:32:00.000+00:00&quot;},{&quot;count&quot;:1,&quot;time&quot;:&quot;2021-12-19T06:33:00.000+00:00&quot;},{&quot;count&quot;:1,&quot;time&quot;:&quot;2021-12-19T06:34:00.000+00:00&quot;},{&quot;count&quot;:1,&quot;time&quot;:&quot;2021-12-19T06:35:00.000+00:00&quot;},{&quot;count&quot;:1,&quot;time&quot;:&quot;2021-12-19T06:36:00.000+00:00&quot;},{&quot;count&quot;:1,&quot;time&quot;:&quot;2021-12-19T06:37:00.000+00:00&quot;},{&quot;count&quot;:1,&quot;time&quot;:&quot;2021-12-19T06:38:00.000+00:00&quot;},{&quot;count&quot;:1,&quot;time&quot;:&quot;2021-12-19T06:39:00.000+00:00&quot;},{&quot;count&quot;:1,&quot;time&quot;:&quot;2021-12-19T06:40:00.000+00:00&quot;},{&quot;count&quot;:1,&quot;time&quot;:&quot;2021-12-19T06:41:00.000+00:00&quot;},{&quot;count&quot;:1,&quot;time&quot;:&quot;2021-12-19T06:42:00.000+00:00&quot;},{&quot;count&quot;:1,&quot;time&quot;:&quot;2021-12-19T06:43:00.000+00:00&quot;},{&quot;count&quot;:1,&quot;time&quot;:&quot;2021-12-19T06:44:00.000+00:00&quot;},{&quot;count&quot;:1,&quot;time&quot;:&quot;2021-12-19T06:45:00.000+00:00&quot;},{&quot;count&quot;:1,&quot;time&quot;:&quot;2021-12-19T06:46:00.000+00:00&quot;},{&quot;count&quot;:1,&quot;time&quot;:&quot;2021-12-19T06:47:00.000+00:00&quot;},{&quot;count&quot;:1,&quot;time&quot;:&quot;2021-12-19T06:48:00.000+00:00&quot;},{&quot;count&quot;:1,&quot;time&quot;:&quot;2021-12-19T06:49:00.000+00:00&quot;},{&quot;count&quot;:1,&quot;time&quot;:&quot;2021-12-19T06:50:00.000+00:00&quot;},{&quot;count&quot;:1,&quot;time&quot;:&quot;2021-12-19T06:51:00.000+00:00&quot;},{&quot;count&quot;:1,&quot;time&quot;:&quot;2021-12-19T06:52:00.000+00:00&quot;},{&quot;count&quot;:1,&quot;time&quot;:&quot;2021-12-19T06:53:00.000+00:00&quot;},{&quot;count&quot;:1,&quot;time&quot;:&quot;2021-12-19T06:54:00.000+00:00&quot;},{&quot;count&quot;:2,&quot;time&quot;:&quot;2021-12-19T06:55:00.000+00:00&quot;},{&quot;count&quot;:2,&quot;time&quot;:&quot;2021-12-19T06:56:00.000+00:00&quot;},{&quot;count&quot;:2,&quot;time&quot;:&quot;2021-12-19T06:57:00.000+00:00&quot;},{&quot;count&quot;:2,&quot;time&quot;:&quot;2021-12-19T06:58:00.000+00:00&quot;}]}}" />
+          <option name="url" value="/api/quot/stock/updown/count" />
+        </ResponseHistory>
+        <ResponseHistory>
+          <option name="className" value="com.shf.stock.controller.StockController" />
+          <option name="code" value="200" />
+          <option name="enableEnv" value="port" />
+          <option name="enableProject" value="local" />
+          <option name="method" value="getStockInfo4Page" />
+          <option name="methodType" value="GET" />
+          <option name="name" value="分页查询股票交易数据，按照日期和涨幅降序排序" />
+          <option name="paramGroup">
+            <ParamGroupCollection>
+              <option name="className" value="com.shf.stock.controller.StockController" />
+              <option name="method" value="getStockInfo4Page" />
+              <option name="methodDescription" value="分页查询股票交易数据，按照日期和涨幅降序排序" />
+              <option name="multipartKeyValueListJson" value="[]" />
+              <option name="originUrl" value="/api/quot/stock/all" />
+              <option name="pathParamsKeyValueListJson" value="[]" />
+              <option name="returnDocument" value="{&#10;&#9;&quot;code&quot;:&quot;No comment,Type =Number&quot;,&#10;&#9;&quot;msg&quot;:&quot;No comment,Type =String&quot;,&#10;&#9;&quot;data&quot;:{&#10;&#9;&#9;&quot;totalRows&quot;:&quot;总记录数&quot;,&#10;&#9;&#9;&quot;totalPages&quot;:&quot;总页数&quot;,&#10;&#9;&#9;&quot;pageNum&quot;:&quot;当前第几页&quot;,&#10;&#9;&#9;&quot;pageSize&quot;:&quot;每页记录数&quot;,&#10;&#9;&#9;&quot;size&quot;:&quot;当前页记录数&quot;,&#10;&#9;&#9;&quot;rows&quot;:[&#10;&#9;&#9;&#9;{&#10;&#9;&#9;&#9;&#9;&quot;tradeAmt&quot;:&quot;交易量&quot;,&#10;&#9;&#9;&#9;&#9;&quot;preClosePrice&quot;:&quot;前收盘价&quot;,&#10;&#9;&#9;&#9;&#9;&quot;amplitude&quot;:&quot;振幅&quot;,&#10;&#9;&#9;&#9;&#9;&quot;code&quot;:&quot;股票编码&quot;,&#10;&#9;&#9;&#9;&#9;&quot;name&quot;:&quot;名称&quot;,&#10;&#9;&#9;&#9;&#9;&quot;curDate&quot;:&quot;日期&quot;,&#10;&#9;&#9;&#9;&#9;&quot;tradeVol&quot;:&quot;交易金额&quot;,&#10;&#9;&#9;&#9;&#9;&quot;increase&quot;:&quot;张涨跌&quot;,&#10;&#9;&#9;&#9;&#9;&quot;upDown&quot;:&quot;涨幅&quot;,&#10;&#9;&#9;&#9;&#9;&quot;tradePrice&quot;:&quot;当前价格&quot;&#10;&#9;&#9;&#9;}&#10;&#9;&#9;]&#10;&#9;}&#10;}" />
+              <option name="url" value="/api/quot/stock/all" />
+              <option name="urlEncodedKeyValueListJson" value="[]" />
+              <option name="urlParamsKeyValueListJson" value="[{&quot;comment&quot;:&quot; &quot;,&quot;customFlag&quot;:2,&quot;enabled&quot;:true,&quot;key&quot;:&quot;page&quot;,&quot;type&quot;:&quot;Number&quot;,&quot;value&quot;:&quot;1&quot;},{&quot;comment&quot;:&quot; &quot;,&quot;customFlag&quot;:2,&quot;enabled&quot;:true,&quot;key&quot;:&quot;pageSize&quot;,&quot;type&quot;:&quot;Number&quot;,&quot;value&quot;:&quot;10&quot;}]" />
+              <option name="urlParamsKeyValueListText" value="page=1&#10;&amp;pageSize=10" />
+            </ParamGroupCollection>
+          </option>
+          <option name="requestInfo" value="Request Url: http://127.0.0.1:8081/api/quot/stock/all?pageSize=10&amp;page=1&#13;&#10;Request Headers: &#13;&#10;    Accept: application/json,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8&#13;&#10;    User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.142 Safari/537.36 Hutool&#13;&#10;    Accept-Encoding: gzip, deflate&#13;&#10;    Accept-Language: zh-CN,zh;q=0.8&#13;&#10;Request Body: &#13;&#10;    null&#13;&#10;" />
+          <option name="response" value="{&quot;code&quot;:1,&quot;data&quot;:{&quot;totalRows&quot;:148635,&quot;totalPages&quot;:14864,&quot;pageNum&quot;:1,&quot;pageSize&quot;:10,&quot;size&quot;:10,&quot;rows&quot;:[{&quot;tradeAmt&quot;:138000708,&quot;preClosePrice&quot;:13.93,&quot;amplitude&quot;:0.091170,&quot;code&quot;:&quot;000009&quot;,&quot;name&quot;:&quot;\&quot;中国宝安&quot;,&quot;curDate&quot;:&quot;20220114&quot;,&quot;tradeVol&quot;:2000152571.690,&quot;increase&quot;:0.50,&quot;upDown&quot;:0.035894,&quot;tradePrice&quot;:14.43},{&quot;tradeAmt&quot;:82754589,&quot;preClosePrice&quot;:12.52,&quot;amplitude&quot;:0.079073,&quot;code&quot;:&quot;600021&quot;,&quot;name&quot;:&quot;\&quot;上海电力&quot;,&quot;curDate&quot;:&quot;20220114&quot;,&quot;tradeVol&quot;:1059466418.000,&quot;increase&quot;:0.31,&quot;upDown&quot;:0.024760,&quot;tradePrice&quot;:12.83},{&quot;tradeAmt&quot;:28784179,&quot;preClosePrice&quot;:6.15,&quot;amplitude&quot;:0.034146,&quot;code&quot;:&quot;600025&quot;,&quot;name&quot;:&quot;\&quot;华能水电&quot;,&quot;curDate&quot;:&quot;20220114&quot;,&quot;tradeVol&quot;:177472342.000,&quot;increase&quot;:0.15,&quot;upDown&quot;:0.024390,&quot;tradePrice&quot;:6.30},{&quot;tradeAmt&quot;:56634567,&quot;preClosePrice&quot;:7.46,&quot;amplitude&quot;:0.087131,&quot;code&quot;:&quot;000019&quot;,&quot;name&quot;:&quot;\&quot;深粮控股&quot;,&quot;curDate&quot;:&quot;20220114&quot;,&quot;tradeVol&quot;:450177573.600,&quot;increase&quot;:0.15,&quot;upDown&quot;:0.020107,&quot;tradePrice&quot;:7.61},{&quot;tradeAmt&quot;:63627447,&quot;preClosePrice&quot;:2.71,&quot;amplitude&quot;:0.040590,&quot;code&quot;:&quot;000008&quot;,&quot;name&quot;:&quot;\&quot;神州高铁&quot;,&quot;curDate&quot;:&quot;20220114&quot;,&quot;tradeVol&quot;:174876568.770,&quot;increase&quot;:0.05,&quot;upDown&quot;:0.018450,&quot;tradePrice&quot;:2.76},{&quot;tradeAmt&quot;:8219011,&quot;preClosePrice&quot;:21.59,&quot;amplitude&quot;:0.053729,&quot;code&quot;:&quot;000004&quot;,&quot;name&quot;:&quot;\&quot;国华网安&quot;,&quot;curDate&quot;:&quot;20220114&quot;,&quot;tradeVol&quot;:180911147.060,&quot;increase&quot;:0.12,&quot;upDown&quot;:0.005558,&quot;tradePrice&quot;:21.71},{&quot;tradeAmt&quot;:5364277,&quot;preClosePrice&quot;:6.56,&quot;amplitude&quot;:0.036585,&quot;code&quot;:&quot;000007&quot;,&quot;name&quot;:&quot;\&quot;*ST全新&quot;,&quot;curDate&quot;:&quot;20220114&quot;,&quot;tradeVol&quot;:35147066.000,&quot;increase&quot;:-0.02,&quot;upDown&quot;:-0.003049,&quot;tradePrice&quot;:6.54},{&quot;tradeAmt&quot;:7546209,&quot;preClosePrice&quot;:8.80,&quot;amplitude&quot;:0.045455,&quot;code&quot;:&quot;000014&quot;,&quot;name&quot;:&quot;\&quot;沙河股份&quot;,&quot;curDate&quot;:&quot;20220114&quot;,&quot;tradeVol&quot;:65971430.470,&quot;increase&quot;:-0.07,&quot;upDown&quot;:-0.007955,&quot;tradePrice&quot;:8.73},{&quot;tradeAmt&quot;:7512703,&quot;preClosePrice&quot;:15.02,&quot;amplitude&quot;:0.016644,&quot;code&quot;:&quot;000021&quot;,&quot;name&quot;:&quot;\&quot;深科技&quot;,&quot;curDate&quot;:&quot;20220114&quot;,&quot;tradeVol&quot;:112622348.610,&quot;increase&quot;:-0.12,&quot;upDown&quot;:-0.007989,&quot;tradePrice&quot;:14.90},{&quot;tradeAmt&quot;:1372659,&quot;preClosePrice&quot;:9.60,&quot;amplitude&quot;:0.021875,&quot;code&quot;:&quot;000020&quot;,&quot;name&quot;:&quot;\&quot;深华发Ａ&quot;,&quot;curDate&quot;:&quot;20220114&quot;,&quot;tradeVol&quot;:13174591.270,&quot;increase&quot;:-0.08,&quot;upDown&quot;:-0.008333,&quot;tradePrice&quot;:9.52}]}}" />
+          <option name="url" value="/api/quot/stock/all" />
+        </ResponseHistory>
+        <ResponseHistory>
+          <option name="className" value="com.shf.stock.controller.StockController" />
+          <option name="code" value="200" />
+          <option name="enableEnv" value="port" />
+          <option name="enableProject" value="local" />
+          <option name="method" value="getStockInfo4Page" />
+          <option name="methodType" value="GET" />
+          <option name="name" value="分页查询股票交易数据，按照日期和涨幅降序排序" />
+          <option name="paramGroup">
+            <ParamGroupCollection>
+              <option name="className" value="com.shf.stock.controller.StockController" />
+              <option name="method" value="getStockInfo4Page" />
+              <option name="methodDescription" value="分页查询股票交易数据，按照日期和涨幅降序排序" />
+              <option name="multipartKeyValueListJson" value="[]" />
+              <option name="originUrl" value="/api/quot/stock/all" />
+              <option name="pathParamsKeyValueListJson" value="[]" />
+              <option name="returnDocument" value="{&#10;&#9;&quot;code&quot;:&quot;No comment,Type =Number&quot;,&#10;&#9;&quot;msg&quot;:&quot;No comment,Type =String&quot;,&#10;&#9;&quot;data&quot;:{&#10;&#9;&#9;&quot;totalRows&quot;:&quot;总记录数&quot;,&#10;&#9;&#9;&quot;totalPages&quot;:&quot;总页数&quot;,&#10;&#9;&#9;&quot;pageNum&quot;:&quot;当前第几页&quot;,&#10;&#9;&#9;&quot;pageSize&quot;:&quot;每页记录数&quot;,&#10;&#9;&#9;&quot;size&quot;:&quot;当前页记录数&quot;,&#10;&#9;&#9;&quot;rows&quot;:[&#10;&#9;&#9;&#9;{&#10;&#9;&#9;&#9;&#9;&quot;tradeAmt&quot;:&quot;交易量&quot;,&#10;&#9;&#9;&#9;&#9;&quot;preClosePrice&quot;:&quot;前收盘价&quot;,&#10;&#9;&#9;&#9;&#9;&quot;amplitude&quot;:&quot;振幅&quot;,&#10;&#9;&#9;&#9;&#9;&quot;code&quot;:&quot;股票编码&quot;,&#10;&#9;&#9;&#9;&#9;&quot;name&quot;:&quot;名称&quot;,&#10;&#9;&#9;&#9;&#9;&quot;curDate&quot;:&quot;日期&quot;,&#10;&#9;&#9;&#9;&#9;&quot;tradeVol&quot;:&quot;交易金额&quot;,&#10;&#9;&#9;&#9;&#9;&quot;increase&quot;:&quot;张涨跌&quot;,&#10;&#9;&#9;&#9;&#9;&quot;upDown&quot;:&quot;涨幅&quot;,&#10;&#9;&#9;&#9;&#9;&quot;tradePrice&quot;:&quot;当前价格&quot;&#10;&#9;&#9;&#9;}&#10;&#9;&#9;]&#10;&#9;}&#10;}" />
+              <option name="url" value="/api/quot/stock/all" />
+              <option name="urlEncodedKeyValueListJson" value="[]" />
+              <option name="urlParamsKeyValueListJson" value="[{&quot;comment&quot;:&quot; &quot;,&quot;customFlag&quot;:2,&quot;enabled&quot;:true,&quot;key&quot;:&quot;page&quot;,&quot;type&quot;:&quot;Number&quot;,&quot;value&quot;:&quot;1&quot;},{&quot;comment&quot;:&quot; &quot;,&quot;customFlag&quot;:2,&quot;enabled&quot;:true,&quot;key&quot;:&quot;pageSize&quot;,&quot;type&quot;:&quot;Number&quot;,&quot;value&quot;:&quot;1&quot;}]" />
+              <option name="urlParamsKeyValueListText" value="page=1&#10;&amp;pageSize=1" />
+            </ParamGroupCollection>
+          </option>
+          <option name="requestInfo" value="Request Url: http://127.0.0.1:8081/api/quot/stock/all?pageSize=1&amp;page=1&#13;&#10;Request Headers: &#13;&#10;    Accept: application/json,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8&#13;&#10;    User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.142 Safari/537.36 Hutool&#13;&#10;    Accept-Encoding: gzip, deflate&#13;&#10;    Accept-Language: zh-CN,zh;q=0.8&#13;&#10;Request Body: &#13;&#10;    null&#13;&#10;" />
+          <option name="response" value="{&quot;code&quot;:1,&quot;data&quot;:{&quot;totalRows&quot;:148635,&quot;totalPages&quot;:148635,&quot;pageNum&quot;:1,&quot;pageSize&quot;:1,&quot;size&quot;:1,&quot;rows&quot;:[{&quot;tradeAmt&quot;:138000708,&quot;preClosePrice&quot;:13.93,&quot;amplitude&quot;:0.091170,&quot;code&quot;:&quot;000009&quot;,&quot;name&quot;:&quot;\&quot;中国宝安&quot;,&quot;curDate&quot;:&quot;20220114&quot;,&quot;tradeVol&quot;:2000152571.690,&quot;increase&quot;:0.50,&quot;upDown&quot;:0.035894,&quot;tradePrice&quot;:14.43}]}}" />
+          <option name="url" value="/api/quot/stock/all" />
+        </ResponseHistory>
+        <ResponseHistory>
+          <option name="className" value="com.shf.stock.controller.StockController" />
+          <option name="code" value="200" />
+          <option name="enableEnv" value="port" />
+          <option name="enableProject" value="local" />
+          <option name="method" value="getStockInfo4Page" />
+          <option name="methodType" value="GET" />
+          <option name="name" value="分页查询股票交易数据，按照日期和涨幅降序排序" />
+          <option name="paramGroup">
+            <ParamGroupCollection>
+              <option name="className" value="com.shf.stock.controller.StockController" />
+              <option name="method" value="getStockInfo4Page" />
+              <option name="methodDescription" value="分页查询股票交易数据，按照日期和涨幅降序排序" />
+              <option name="multipartKeyValueListJson" value="[]" />
+              <option name="originUrl" value="/api/quot/stock/all" />
+              <option name="pathParamsKeyValueListJson" value="[]" />
+              <option name="returnDocument" value="{&#10;&#9;&quot;code&quot;:&quot;No comment,Type =Number&quot;,&#10;&#9;&quot;msg&quot;:&quot;No comment,Type =String&quot;,&#10;&#9;&quot;data&quot;:{&#10;&#9;&#9;&quot;totalRows&quot;:&quot;总记录数&quot;,&#10;&#9;&#9;&quot;totalPages&quot;:&quot;总页数&quot;,&#10;&#9;&#9;&quot;pageNum&quot;:&quot;当前第几页&quot;,&#10;&#9;&#9;&quot;pageSize&quot;:&quot;每页记录数&quot;,&#10;&#9;&#9;&quot;size&quot;:&quot;当前页记录数&quot;,&#10;&#9;&#9;&quot;rows&quot;:[&#10;&#9;&#9;&#9;{&#10;&#9;&#9;&#9;&#9;&quot;tradeAmt&quot;:&quot;交易量&quot;,&#10;&#9;&#9;&#9;&#9;&quot;preClosePrice&quot;:&quot;前收盘价&quot;,&#10;&#9;&#9;&#9;&#9;&quot;amplitude&quot;:&quot;振幅&quot;,&#10;&#9;&#9;&#9;&#9;&quot;code&quot;:&quot;股票编码&quot;,&#10;&#9;&#9;&#9;&#9;&quot;name&quot;:&quot;名称&quot;,&#10;&#9;&#9;&#9;&#9;&quot;curDate&quot;:&quot;日期&quot;,&#10;&#9;&#9;&#9;&#9;&quot;tradeVol&quot;:&quot;交易金额&quot;,&#10;&#9;&#9;&#9;&#9;&quot;increase&quot;:&quot;张涨跌&quot;,&#10;&#9;&#9;&#9;&#9;&quot;upDown&quot;:&quot;涨幅&quot;,&#10;&#9;&#9;&#9;&#9;&quot;tradePrice&quot;:&quot;当前价格&quot;&#10;&#9;&#9;&#9;}&#10;&#9;&#9;]&#10;&#9;}&#10;}" />
+              <option name="url" value="/api/quot/stock/all" />
+              <option name="urlEncodedKeyValueListJson" value="[]" />
+              <option name="urlParamsKeyValueListJson" value="[{&quot;comment&quot;:&quot; &quot;,&quot;customFlag&quot;:2,&quot;enabled&quot;:true,&quot;key&quot;:&quot;page&quot;,&quot;type&quot;:&quot;Number&quot;,&quot;value&quot;:&quot;1&quot;},{&quot;comment&quot;:&quot; &quot;,&quot;customFlag&quot;:2,&quot;enabled&quot;:true,&quot;key&quot;:&quot;pageSize&quot;,&quot;type&quot;:&quot;Number&quot;,&quot;value&quot;:&quot;1&quot;}]" />
+              <option name="urlParamsKeyValueListText" value="page=1&#10;&amp;pageSize=1" />
+            </ParamGroupCollection>
+          </option>
+          <option name="requestInfo" value="Request Url: http://127.0.0.1:8081/api/quot/stock/all?pageSize=1&amp;page=1&#13;&#10;Request Headers: &#13;&#10;    Accept: application/json,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8&#13;&#10;    User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.142 Safari/537.36 Hutool&#13;&#10;    Accept-Encoding: gzip, deflate&#13;&#10;    Accept-Language: zh-CN,zh;q=0.8&#13;&#10;Request Body: &#13;&#10;    null&#13;&#10;" />
+          <option name="response" value="{&quot;code&quot;:1,&quot;data&quot;:{&quot;totalRows&quot;:148635,&quot;totalPages&quot;:148635,&quot;pageNum&quot;:1,&quot;pageSize&quot;:1,&quot;size&quot;:1,&quot;rows&quot;:[{&quot;tradeAmt&quot;:138000708,&quot;preClosePrice&quot;:13.93,&quot;amplitude&quot;:0.091170,&quot;code&quot;:&quot;000009&quot;,&quot;name&quot;:&quot;\&quot;中国宝安&quot;,&quot;curDate&quot;:&quot;20220114&quot;,&quot;tradeVol&quot;:2000152571.690,&quot;increase&quot;:0.50,&quot;upDown&quot;:0.035894,&quot;tradePrice&quot;:14.43}]}}" />
+          <option name="url" value="/api/quot/stock/all" />
+        </ResponseHistory>
+        <ResponseHistory>
+          <option name="className" value="com.shf.stock.controller.StockController" />
+          <option name="code" value="200" />
+          <option name="enableEnv" value="port" />
+          <option name="enableProject" value="local" />
+          <option name="method" value="getStockRtInfoLimit" />
+          <option name="methodType" value="GET" />
+          <option name="name" value="沪深两市个股涨幅分时行情数据查询，以时间顺序和涨幅查询前10条数据" />
+          <option name="paramGroup">
+            <ParamGroupCollection>
+              <option name="className" value="com.shf.stock.controller.StockController" />
+              <option name="method" value="getStockRtInfoLimit" />
+              <option name="methodDescription" value="沪深两市个股涨幅分时行情数据查询，以时间顺序和涨幅查询前10条数据" />
+              <option name="multipartKeyValueListJson" value="[]" />
+              <option name="originUrl" value="/api/quot/stock/increace" />
+              <option name="pathParamsKeyValueListJson" value="[]" />
+              <option name="returnDocument" value="{&#10;&#9;&quot;code&quot;:&quot;No comment,Type =Number&quot;,&#10;&#9;&quot;msg&quot;:&quot;No comment,Type =String&quot;,&#10;&#9;&quot;data&quot;:{}&#10;}" />
+              <option name="url" value="/api/quot/stock/increace" />
+              <option name="urlEncodedKeyValueListJson" value="[]" />
+              <option name="urlParamsKeyValueListJson" value="[]" />
+            </ParamGroupCollection>
+          </option>
+          <option name="requestInfo" value="Request Url: http://127.0.0.1:8081/api/quot/stock/increace&#13;&#10;Request Headers: &#13;&#10;    Accept: application/json,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8&#13;&#10;    User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.142 Safari/537.36 Hutool&#13;&#10;    Accept-Encoding: gzip, deflate&#13;&#10;    Accept-Language: zh-CN,zh;q=0.8&#13;&#10;Request Body: &#13;&#10;    null&#13;&#10;" />
+          <option name="response" value="{&quot;code&quot;:1,&quot;data&quot;:[{&quot;tradeAmt&quot;:17031550,&quot;preClosePrice&quot;:6.84,&quot;amplitude&quot;:0.062865,&quot;code&quot;:&quot;000019&quot;,&quot;name&quot;:&quot;深粮控股&quot;,&quot;curDate&quot;:&quot;20211226&quot;,&quot;tradeVol&quot;:124728281.510,&quot;increase&quot;:0.28,&quot;upDown&quot;:0.040936,&quot;tradePrice&quot;:7.12},{&quot;tradeAmt&quot;:35075078,&quot;preClosePrice&quot;:8.21,&quot;amplitude&quot;:0.045067,&quot;code&quot;:&quot;000027&quot;,&quot;name&quot;:&quot;深圳能源&quot;,&quot;curDate&quot;:&quot;20211226&quot;,&quot;tradeVol&quot;:296386732.570,&quot;increase&quot;:0.30,&quot;upDown&quot;:0.036541,&quot;tradePrice&quot;:8.51},{&quot;tradeAmt&quot;:8833989,&quot;preClosePrice&quot;:11.10,&quot;amplitude&quot;:0.039640,&quot;code&quot;:&quot;600004&quot;,&quot;name&quot;:&quot;白云机场&quot;,&quot;curDate&quot;:&quot;20211226&quot;,&quot;tradeVol&quot;:100448594.000,&quot;increase&quot;:0.38,&quot;upDown&quot;:0.034234,&quot;tradePrice&quot;:11.48},{&quot;tradeAmt&quot;:483100,&quot;preClosePrice&quot;:13.05,&quot;amplitude&quot;:0.033716,&quot;code&quot;:&quot;000023&quot;,&quot;name&quot;:&quot;深天地Ａ&quot;,&quot;curDate&quot;:&quot;20211226&quot;,&quot;tradeVol&quot;:6429400.000,&quot;increase&quot;:0.36,&quot;upDown&quot;:0.027586,&quot;tradePrice&quot;:13.41},{&quot;tradeAmt&quot;:9273159,&quot;preClosePrice&quot;:44.57,&quot;amplitude&quot;:0.025129,&quot;code&quot;:&quot;600009&quot;,&quot;name&quot;:&quot;上海机场&quot;,&quot;curDate&quot;:&quot;20211226&quot;,&quot;tradeVol&quot;:420742374.000,&quot;increase&quot;:1.10,&quot;upDown&quot;:0.024680,&quot;tradePrice&quot;:45.67},{&quot;tradeAmt&quot;:40111024,&quot;preClosePrice&quot;:4.08,&quot;amplitude&quot;:0.034314,&quot;code&quot;:&quot;600023&quot;,&quot;name&quot;:&quot;浙能电力&quot;,&quot;curDate&quot;:&quot;20211226&quot;,&quot;tradeVol&quot;:166868548.000,&quot;increase&quot;:0.09,&quot;upDown&quot;:0.022059,&quot;tradePrice&quot;:4.17},{&quot;tradeAmt&quot;:2299500,&quot;preClosePrice&quot;:13.86,&quot;amplitude&quot;:0.027417,&quot;code&quot;:&quot;600007&quot;,&quot;name&quot;:&quot;中国国贸&quot;,&quot;curDate&quot;:&quot;20211226&quot;,&quot;tradeVol&quot;:32431039.000,&quot;increase&quot;:0.26,&quot;upDown&quot;:0.018759,&quot;tradePrice&quot;:14.12},{&quot;tradeAmt&quot;:7231966,&quot;preClosePrice&quot;:9.45,&quot;amplitude&quot;:0.017989,&quot;code&quot;:&quot;000012&quot;,&quot;name&quot;:&quot;南 玻Ａ&quot;,&quot;curDate&quot;:&quot;20211226&quot;,&quot;tradeVol&quot;:68622208.000,&quot;increase&quot;:0.11,&quot;upDown&quot;:0.011640,&quot;tradePrice&quot;:9.56},{&quot;tradeAmt&quot;:5093759,&quot;preClosePrice&quot;:4.38,&quot;amplitude&quot;:0.018265,&quot;code&quot;:&quot;000006&quot;,&quot;name&quot;:&quot;深振业Ａ&quot;,&quot;curDate&quot;:&quot;20211226&quot;,&quot;tradeVol&quot;:22489261.910,&quot;increase&quot;:0.05,&quot;upDown&quot;:0.011416,&quot;tradePrice&quot;:4.43},{&quot;tradeAmt&quot;:43564495,&quot;preClosePrice&quot;:19.64,&quot;amplitude&quot;:0.018839,&quot;code&quot;:&quot;000002&quot;,&quot;name&quot;:&quot;万 科Ａ&quot;,&quot;curDate&quot;:&quot;20211226&quot;,&quot;tradeVol&quot;:869257008.760,&quot;increase&quot;:0.22,&quot;upDown&quot;:0.011202,&quot;tradePrice&quot;:19.86}]}" />
+          <option name="url" value="/api/quot/stock/increace" />
+        </ResponseHistory>
+        <ResponseHistory>
+          <option name="className" value="com.shf.stock.controller.StockController" />
+          <option name="code" value="200" />
+          <option name="enableEnv" value="port" />
+          <option name="enableProject" value="local" />
           <option name="method" value="sectorAll" />
           <option name="methodType" value="GET" />
           <option name="name" value="沪深两市板块分时行情数据查询，以交易时间和交易总金额降序查询，取前10条数据" />
@@ -27,240 +264,6 @@
           </option>
           <option name="requestInfo" value="Request Url: http://127.0.0.1:8081/api/quot/search/all&#13;&#10;Request Headers: &#13;&#10;    Accept: application/json,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8&#13;&#10;    User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.142 Safari/537.36 Hutool&#13;&#10;    Accept-Encoding: gzip, deflate&#13;&#10;    Accept-Language: zh-CN,zh;q=0.8&#13;&#10;Request Body: &#13;&#10;    null&#13;&#10;" />
           <option name="response" value="{&quot;code&quot;:1,&quot;data&quot;:[{&quot;companyNum&quot;:247,&quot;tradeAmt&quot;:49729784,&quot;code&quot;:&quot;new_dzxx&quot;,&quot;avgPrice&quot;:14.463,&quot;name&quot;:&quot;电子信息&quot;,&quot;curDate&quot;:&quot;20211221&quot;,&quot;tradeVol&quot;:538547506.000,&quot;updownRate&quot;:&quot;0.007&quot;},{&quot;companyNum&quot;:65,&quot;tradeAmt&quot;:38786837,&quot;code&quot;:&quot;new_fdsb&quot;,&quot;avgPrice&quot;:12.655,&quot;name&quot;:&quot;发电设备&quot;,&quot;curDate&quot;:&quot;20211221&quot;,&quot;tradeVol&quot;:330659267.000,&quot;updownRate&quot;:&quot;0.001&quot;},{&quot;companyNum&quot;:155,&quot;tradeAmt&quot;:36225708,&quot;code&quot;:&quot;new_swzz&quot;,&quot;avgPrice&quot;:21.451,&quot;name&quot;:&quot;生物制药&quot;,&quot;curDate&quot;:&quot;20211221&quot;,&quot;tradeVol&quot;:308152783.000,&quot;updownRate&quot;:&quot;-0.028&quot;},{&quot;companyNum&quot;:103,&quot;tradeAmt&quot;:42455982,&quot;code&quot;:&quot;new_qczz&quot;,&quot;avgPrice&quot;:17.293,&quot;name&quot;:&quot;汽车制造&quot;,&quot;curDate&quot;:&quot;20211221&quot;,&quot;tradeVol&quot;:306231113.000,&quot;updownRate&quot;:&quot;0.016&quot;},{&quot;companyNum&quot;:76,&quot;tradeAmt&quot;:9932401,&quot;code&quot;:&quot;new_stock&quot;,&quot;avgPrice&quot;:51.031,&quot;name&quot;:&quot;次新股&quot;,&quot;curDate&quot;:&quot;20211221&quot;,&quot;tradeVol&quot;:288729792.000,&quot;updownRate&quot;:&quot;-0.608&quot;},{&quot;companyNum&quot;:211,&quot;tradeAmt&quot;:31886994,&quot;code&quot;:&quot;new_jxhy&quot;,&quot;avgPrice&quot;:13.350,&quot;name&quot;:&quot;机械行业&quot;,&quot;curDate&quot;:&quot;20211221&quot;,&quot;tradeVol&quot;:287993013.000,&quot;updownRate&quot;:&quot;-0.019&quot;},{&quot;companyNum&quot;:152,&quot;tradeAmt&quot;:21166627,&quot;code&quot;:&quot;new_dzqj&quot;,&quot;avgPrice&quot;:23.818,&quot;name&quot;:&quot;电子器件&quot;,&quot;curDate&quot;:&quot;20211221&quot;,&quot;tradeVol&quot;:279570855.000,&quot;updownRate&quot;:&quot;-0.017&quot;},{&quot;companyNum&quot;:58,&quot;tradeAmt&quot;:23202627,&quot;code&quot;:&quot;new_dqhy&quot;,&quot;avgPrice&quot;:16.824,&quot;name&quot;:&quot;电器行业&quot;,&quot;curDate&quot;:&quot;20211221&quot;,&quot;tradeVol&quot;:255162351.000,&quot;updownRate&quot;:&quot;0.045&quot;},{&quot;companyNum&quot;:123,&quot;tradeAmt&quot;:55633374,&quot;code&quot;:&quot;new_fdc&quot;,&quot;avgPrice&quot;:8.118,&quot;name&quot;:&quot;房地产&quot;,&quot;curDate&quot;:&quot;20211221&quot;,&quot;tradeVol&quot;:243390676.000,&quot;updownRate&quot;:&quot;0.038&quot;},{&quot;companyNum&quot;:150,&quot;tradeAmt&quot;:16627134,&quot;code&quot;:&quot;new_hghy&quot;,&quot;avgPrice&quot;:16.724,&quot;name&quot;:&quot;化工行业&quot;,&quot;curDate&quot;:&quot;20211221&quot;,&quot;tradeVol&quot;:230917787.000,&quot;updownRate&quot;:&quot;-0.012&quot;}]}" />
-          <option name="url" value="/api/quot/search/all" />
-        </ResponseHistory>
-        <ResponseHistory>
-          <option name="className" value="com.shf.stock.controller.StockController" />
-          <option name="code" value="200" />
-          <option name="enableEnv" value="port" />
-          <option name="enableProject" value="local" />
-          <option name="method" value="sectorAll" />
-          <option name="methodType" value="GET" />
-          <option name="name" value="沪深两市板块分时行情数据查询，以交易时间和交易总金额降序查询，取前10条数据" />
-          <option name="paramGroup">
-            <ParamGroupCollection>
-              <option name="className" value="com.shf.stock.controller.StockController" />
-              <option name="method" value="sectorAll" />
-              <option name="methodDescription" value="沪深两市板块分时行情数据查询，以交易时间和交易总金额降序查询，取前10条数据" />
-              <option name="multipartKeyValueListJson" value="[]" />
-              <option name="originUrl" value="/api/quot/search/all" />
-              <option name="pathParamsKeyValueListJson" value="[]" />
-              <option name="returnDocument" value="{&#10;&#9;&quot;code&quot;:&quot;No comment,Type =Number&quot;,&#10;&#9;&quot;msg&quot;:&quot;No comment,Type =String&quot;,&#10;&#9;&quot;data&quot;:{}&#10;}" />
-              <option name="url" value="/api/quot/search/all" />
-              <option name="urlEncodedKeyValueListJson" value="[]" />
-              <option name="urlParamsKeyValueListJson" value="[]" />
-            </ParamGroupCollection>
-          </option>
-          <option name="requestInfo" value="Request Url: http://127.0.0.1:8081/api/quot/search/all&#13;&#10;Request Headers: &#13;&#10;    Accept: application/json,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8&#13;&#10;    User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.142 Safari/537.36 Hutool&#13;&#10;    Accept-Encoding: gzip, deflate&#13;&#10;    Accept-Language: zh-CN,zh;q=0.8&#13;&#10;Request Body: &#13;&#10;    null&#13;&#10;" />
-          <option name="response" value="{&quot;code&quot;:0}" />
-          <option name="url" value="/api/quot/search/all" />
-        </ResponseHistory>
-        <ResponseHistory>
-          <option name="className" value="com.shf.stock.controller.StockController" />
-          <option name="code" value="200" />
-          <option name="enableEnv" value="port" />
-          <option name="enableProject" value="local" />
-          <option name="method" value="sectorAll" />
-          <option name="methodType" value="GET" />
-          <option name="name" value="沪深两市板块分时行情数据查询，以交易时间和交易总金额降序查询，取前10条数据" />
-          <option name="paramGroup">
-            <ParamGroupCollection>
-              <option name="className" value="com.shf.stock.controller.StockController" />
-              <option name="method" value="sectorAll" />
-              <option name="methodDescription" value="沪深两市板块分时行情数据查询，以交易时间和交易总金额降序查询，取前10条数据" />
-              <option name="multipartKeyValueListJson" value="[]" />
-              <option name="originUrl" value="/api/quot/search/all" />
-              <option name="pathParamsKeyValueListJson" value="[]" />
-              <option name="returnDocument" value="{&#10;&#9;&quot;code&quot;:&quot;No comment,Type =Number&quot;,&#10;&#9;&quot;msg&quot;:&quot;No comment,Type =String&quot;,&#10;&#9;&quot;data&quot;:{}&#10;}" />
-              <option name="url" value="/api/quot/search/all" />
-              <option name="urlEncodedKeyValueListJson" value="[]" />
-              <option name="urlParamsKeyValueListJson" value="[]" />
-            </ParamGroupCollection>
-          </option>
-          <option name="requestInfo" value="Request Url: http://127.0.0.1:8081/api/quot/search/all&#13;&#10;Request Headers: &#13;&#10;    Accept: application/json,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8&#13;&#10;    User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.142 Safari/537.36 Hutool&#13;&#10;    Accept-Encoding: gzip, deflate&#13;&#10;    Accept-Language: zh-CN,zh;q=0.8&#13;&#10;Request Body: &#13;&#10;    null&#13;&#10;" />
-          <option name="response" value="{&quot;code&quot;:0}" />
-          <option name="url" value="/api/quot/search/all" />
-        </ResponseHistory>
-        <ResponseHistory>
-          <option name="className" value="com.shf.stock.controller.StockController" />
-          <option name="code" value="200" />
-          <option name="enableEnv" value="port" />
-          <option name="enableProject" value="local" />
-          <option name="method" value="sectorAll" />
-          <option name="methodType" value="GET" />
-          <option name="name" value="沪深两市板块分时行情数据查询，以交易时间和交易总金额降序查询，取前10条数据" />
-          <option name="paramGroup">
-            <ParamGroupCollection>
-              <option name="className" value="com.shf.stock.controller.StockController" />
-              <option name="method" value="sectorAll" />
-              <option name="methodDescription" value="沪深两市板块分时行情数据查询，以交易时间和交易总金额降序查询，取前10条数据" />
-              <option name="multipartKeyValueListJson" value="[]" />
-              <option name="originUrl" value="/api/quot/search/all" />
-              <option name="pathParamsKeyValueListJson" value="[]" />
-              <option name="returnDocument" value="{&#10;&#9;&quot;code&quot;:&quot;No comment,Type =Number&quot;,&#10;&#9;&quot;msg&quot;:&quot;No comment,Type =String&quot;,&#10;&#9;&quot;data&quot;:{}&#10;}" />
-              <option name="url" value="/api/quot/search/all" />
-              <option name="urlEncodedKeyValueListJson" value="[]" />
-              <option name="urlParamsKeyValueListJson" value="[]" />
-            </ParamGroupCollection>
-          </option>
-          <option name="requestInfo" value="Request Url: http://127.0.0.1:8081/api/quot/search/all&#13;&#10;Request Headers: &#13;&#10;    Accept: application/json,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8&#13;&#10;    User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.142 Safari/537.36 Hutool&#13;&#10;    Accept-Encoding: gzip, deflate&#13;&#10;    Accept-Language: zh-CN,zh;q=0.8&#13;&#10;Request Body: &#13;&#10;    null&#13;&#10;" />
-          <option name="response" value="{&quot;code&quot;:0}" />
-          <option name="url" value="/api/quot/search/all" />
-        </ResponseHistory>
-        <ResponseHistory>
-          <option name="className" value="com.shf.stock.controller.StockController" />
-          <option name="code" value="200" />
-          <option name="enableEnv" value="port" />
-          <option name="enableProject" value="local" />
-          <option name="method" value="sectorAll" />
-          <option name="methodType" value="GET" />
-          <option name="name" value="沪深两市板块分时行情数据查询，以交易时间和交易总金额降序查询，取前10条数据" />
-          <option name="paramGroup">
-            <ParamGroupCollection>
-              <option name="className" value="com.shf.stock.controller.StockController" />
-              <option name="method" value="sectorAll" />
-              <option name="methodDescription" value="沪深两市板块分时行情数据查询，以交易时间和交易总金额降序查询，取前10条数据" />
-              <option name="multipartKeyValueListJson" value="[]" />
-              <option name="originUrl" value="/api/quot/search/all" />
-              <option name="pathParamsKeyValueListJson" value="[]" />
-              <option name="returnDocument" value="{&#10;&#9;&quot;code&quot;:&quot;No comment,Type =Number&quot;,&#10;&#9;&quot;msg&quot;:&quot;No comment,Type =String&quot;,&#10;&#9;&quot;data&quot;:{}&#10;}" />
-              <option name="url" value="/api/quot/search/all" />
-              <option name="urlEncodedKeyValueListJson" value="[]" />
-              <option name="urlParamsKeyValueListJson" value="[]" />
-            </ParamGroupCollection>
-          </option>
-          <option name="requestInfo" value="Request Url: http://127.0.0.1:8081/api/quot/search/all&#13;&#10;Request Headers: &#13;&#10;    Accept: application/json,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8&#13;&#10;    User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.142 Safari/537.36 Hutool&#13;&#10;    Accept-Encoding: gzip, deflate&#13;&#10;    Accept-Language: zh-CN,zh;q=0.8&#13;&#10;Request Body: &#13;&#10;    null&#13;&#10;" />
-          <option name="response" value="{&quot;code&quot;:0}" />
-          <option name="url" value="/api/quot/search/all" />
-        </ResponseHistory>
-        <ResponseHistory>
-          <option name="className" value="com.shf.stock.controller.StockController" />
-          <option name="code" value="200" />
-          <option name="enableEnv" value="port" />
-          <option name="enableProject" value="local" />
-          <option name="method" value="sectorAll" />
-          <option name="methodType" value="GET" />
-          <option name="name" value="沪深两市板块分时行情数据查询，以交易时间和交易总金额降序查询，取前10条数据" />
-          <option name="paramGroup">
-            <ParamGroupCollection>
-              <option name="className" value="com.shf.stock.controller.StockController" />
-              <option name="method" value="sectorAll" />
-              <option name="methodDescription" value="沪深两市板块分时行情数据查询，以交易时间和交易总金额降序查询，取前10条数据" />
-              <option name="multipartKeyValueListJson" value="[]" />
-              <option name="originUrl" value="/api/quot/search/all" />
-              <option name="pathParamsKeyValueListJson" value="[]" />
-              <option name="returnDocument" value="{&#10;&#9;&quot;code&quot;:&quot;No comment,Type =Number&quot;,&#10;&#9;&quot;msg&quot;:&quot;No comment,Type =String&quot;,&#10;&#9;&quot;data&quot;:{}&#10;}" />
-              <option name="url" value="/api/quot/search/all" />
-              <option name="urlEncodedKeyValueListJson" value="[]" />
-              <option name="urlParamsKeyValueListJson" value="[]" />
-            </ParamGroupCollection>
-          </option>
-          <option name="requestInfo" value="Request Url: http://127.0.0.1:8081/api/quot/search/all&#13;&#10;Request Headers: &#13;&#10;    Accept: application/json,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8&#13;&#10;    User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.142 Safari/537.36 Hutool&#13;&#10;    Accept-Encoding: gzip, deflate&#13;&#10;    Accept-Language: zh-CN,zh;q=0.8&#13;&#10;Request Body: &#13;&#10;    null&#13;&#10;" />
-          <option name="response" value="{&quot;code&quot;:0}" />
-          <option name="url" value="/api/quot/search/all" />
-        </ResponseHistory>
-        <ResponseHistory>
-          <option name="className" value="com.shf.stock.controller.StockController" />
-          <option name="code" value="200" />
-          <option name="enableEnv" value="port" />
-          <option name="enableProject" value="local" />
-          <option name="method" value="sectorAll" />
-          <option name="methodType" value="GET" />
-          <option name="name" value="沪深两市板块分时行情数据查询，以交易时间和交易总金额降序查询，取前10条数据" />
-          <option name="paramGroup">
-            <ParamGroupCollection>
-              <option name="className" value="com.shf.stock.controller.StockController" />
-              <option name="method" value="sectorAll" />
-              <option name="methodDescription" value="沪深两市板块分时行情数据查询，以交易时间和交易总金额降序查询，取前10条数据" />
-              <option name="multipartKeyValueListJson" value="[]" />
-              <option name="originUrl" value="/api/quot/search/all" />
-              <option name="pathParamsKeyValueListJson" value="[]" />
-              <option name="returnDocument" value="{&#10;&#9;&quot;code&quot;:&quot;No comment,Type =Number&quot;,&#10;&#9;&quot;msg&quot;:&quot;No comment,Type =String&quot;,&#10;&#9;&quot;data&quot;:{}&#10;}" />
-              <option name="url" value="/api/quot/search/all" />
-              <option name="urlEncodedKeyValueListJson" value="[]" />
-              <option name="urlParamsKeyValueListJson" value="[]" />
-            </ParamGroupCollection>
-          </option>
-          <option name="requestInfo" value="Request Url: http://127.0.0.1:8081/api/quot/search/all&#13;&#10;Request Headers: &#13;&#10;    Accept: application/json,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8&#13;&#10;    User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.142 Safari/537.36 Hutool&#13;&#10;    Accept-Encoding: gzip, deflate&#13;&#10;    Accept-Language: zh-CN,zh;q=0.8&#13;&#10;Request Body: &#13;&#10;    null&#13;&#10;" />
-          <option name="response" value="{&quot;code&quot;:0}" />
-          <option name="url" value="/api/quot/search/all" />
-        </ResponseHistory>
-        <ResponseHistory>
-          <option name="className" value="com.shf.stock.controller.StockController" />
-          <option name="code" value="200" />
-          <option name="enableEnv" value="port" />
-          <option name="enableProject" value="local" />
-          <option name="method" value="sectorAll" />
-          <option name="methodType" value="GET" />
-          <option name="name" value="沪深两市板块分时行情数据查询，以交易时间和交易总金额降序查询，取前10条数据" />
-          <option name="paramGroup">
-            <ParamGroupCollection>
-              <option name="className" value="com.shf.stock.controller.StockController" />
-              <option name="method" value="sectorAll" />
-              <option name="methodDescription" value="沪深两市板块分时行情数据查询，以交易时间和交易总金额降序查询，取前10条数据" />
-              <option name="multipartKeyValueListJson" value="[]" />
-              <option name="originUrl" value="/api/quot/search/all" />
-              <option name="pathParamsKeyValueListJson" value="[]" />
-              <option name="returnDocument" value="{&#10;&#9;&quot;code&quot;:&quot;No comment,Type =Number&quot;,&#10;&#9;&quot;msg&quot;:&quot;No comment,Type =String&quot;,&#10;&#9;&quot;data&quot;:{}&#10;}" />
-              <option name="url" value="/api/quot/search/all" />
-              <option name="urlEncodedKeyValueListJson" value="[]" />
-              <option name="urlParamsKeyValueListJson" value="[]" />
-            </ParamGroupCollection>
-          </option>
-          <option name="requestInfo" value="Request Url: http://127.0.0.1:8081/api/quot/search/all&#13;&#10;Request Headers: &#13;&#10;    Accept: application/json,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8&#13;&#10;    User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.142 Safari/537.36 Hutool&#13;&#10;    Accept-Encoding: gzip, deflate&#13;&#10;    Accept-Language: zh-CN,zh;q=0.8&#13;&#10;Request Body: &#13;&#10;    null&#13;&#10;" />
-          <option name="response" value="{&quot;code&quot;:0}" />
-          <option name="url" value="/api/quot/search/all" />
-        </ResponseHistory>
-        <ResponseHistory>
-          <option name="className" value="com.shf.stock.controller.StockController" />
-          <option name="code" value="200" />
-          <option name="enableEnv" value="port" />
-          <option name="enableProject" value="local" />
-          <option name="method" value="sectorAll" />
-          <option name="methodType" value="GET" />
-          <option name="name" value="沪深两市板块分时行情数据查询，以交易时间和交易总金额降序查询，取前10条数据" />
-          <option name="paramGroup">
-            <ParamGroupCollection>
-              <option name="className" value="com.shf.stock.controller.StockController" />
-              <option name="method" value="sectorAll" />
-              <option name="methodDescription" value="沪深两市板块分时行情数据查询，以交易时间和交易总金额降序查询，取前10条数据" />
-              <option name="multipartKeyValueListJson" value="[]" />
-              <option name="originUrl" value="/api/quot/search/all" />
-              <option name="pathParamsKeyValueListJson" value="[]" />
-              <option name="returnDocument" value="{&#10;&#9;&quot;code&quot;:&quot;No comment,Type =Number&quot;,&#10;&#9;&quot;msg&quot;:&quot;No comment,Type =String&quot;,&#10;&#9;&quot;data&quot;:{}&#10;}" />
-              <option name="url" value="/api/quot/search/all" />
-              <option name="urlEncodedKeyValueListJson" value="[]" />
-              <option name="urlParamsKeyValueListJson" value="[]" />
-            </ParamGroupCollection>
-          </option>
-          <option name="requestInfo" value="Request Url: http://127.0.0.1:8081/api/quot/search/all&#13;&#10;Request Headers: &#13;&#10;    Accept: application/json,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8&#13;&#10;    User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.142 Safari/537.36 Hutool&#13;&#10;    Accept-Encoding: gzip, deflate&#13;&#10;    Accept-Language: zh-CN,zh;q=0.8&#13;&#10;Request Body: &#13;&#10;    null&#13;&#10;" />
-          <option name="response" value="{&quot;code&quot;:0}" />
-          <option name="url" value="/api/quot/search/all" />
-        </ResponseHistory>
-        <ResponseHistory>
-          <option name="className" value="com.shf.stock.controller.StockController" />
-          <option name="code" value="200" />
-          <option name="enableEnv" value="port" />
-          <option name="enableProject" value="local" />
-          <option name="method" value="sectorAll" />
-          <option name="methodType" value="GET" />
-          <option name="name" value="沪深两市板块分时行情数据查询，以交易时间和交易总金额降序查询，取前10条数据" />
-          <option name="paramGroup">
-            <ParamGroupCollection>
-              <option name="className" value="com.shf.stock.controller.StockController" />
-              <option name="method" value="sectorAll" />
-              <option name="methodDescription" value="沪深两市板块分时行情数据查询，以交易时间和交易总金额降序查询，取前10条数据" />
-              <option name="multipartKeyValueListJson" value="[]" />
-              <option name="originUrl" value="/api/quot/search/all" />
-              <option name="pathParamsKeyValueListJson" value="[]" />
-              <option name="returnDocument" value="{&#10;&#9;&quot;code&quot;:&quot;No comment,Type =Number&quot;,&#10;&#9;&quot;msg&quot;:&quot;No comment,Type =String&quot;,&#10;&#9;&quot;data&quot;:{}&#10;}" />
-              <option name="url" value="/api/quot/search/all" />
-              <option name="urlEncodedKeyValueListJson" value="[]" />
-              <option name="urlParamsKeyValueListJson" value="[]" />
-            </ParamGroupCollection>
-          </option>
-          <option name="requestInfo" value="Request Url: http://127.0.0.1:8081/api/quot/search/all&#13;&#10;Request Headers: &#13;&#10;    Accept: application/json,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8&#13;&#10;    User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.142 Safari/537.36 Hutool&#13;&#10;    Accept-Encoding: gzip, deflate&#13;&#10;    Accept-Language: zh-CN,zh;q=0.8&#13;&#10;Request Body: &#13;&#10;    null&#13;&#10;" />
-          <option name="response" value="{&quot;code&quot;:0}" />
           <option name="url" value="/api/quot/search/all" />
         </ResponseHistory>
         <ResponseHistory>

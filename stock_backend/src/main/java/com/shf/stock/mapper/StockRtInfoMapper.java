@@ -1,7 +1,13 @@
 package com.shf.stock.mapper;
 
+import com.shf.stock.common.domain.StockUpdownDomain;
 import com.shf.stock.pojo.StockRtInfo;
 import org.apache.ibatis.annotations.Mapper;
+import org.apache.ibatis.annotations.Param;
+
+import java.util.Date;
+import java.util.List;
+import java.util.Map;
 
 /**
 * @author shuho
@@ -24,4 +30,25 @@ public interface StockRtInfoMapper {
 
     int updateByPrimaryKey(StockRtInfo record);
 
+    /**
+     * 沪深两市个股涨幅分时行情数据查询，以时间顺序和涨幅查询前10条数据
+     * @param timePoint 时间点，精确到分钟
+     * @return
+     */
+    List<StockUpdownDomain> getStockRtInfoLimit(@Param("timePoint") Date timePoint);
+
+    /**
+     * 根据日期和涨幅降序排序查询股票信息
+     * @return
+     */
+    List<StockUpdownDomain> getStockInfoAll();
+
+    /**
+     * 根据制定日期范围统计对应范围内每分钟的涨停或者跌停的数据
+     * @param startTime 开始时间
+     * @param endTime  结束时间
+     * @param flag  标识 1代表涨停 0代表跌停
+     * @return
+     */
+    List<Map> getStockUpDownCount(@Param("startTime") Date startTime, @Param("endTime") Date endTime, @Param("flag") int flag);
 }
