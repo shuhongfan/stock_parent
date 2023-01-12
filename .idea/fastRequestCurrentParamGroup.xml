@@ -2,11 +2,20 @@
 <project version="4">
   <component name="fastRequestCurrentParamGroup">
     <option name="className" value="com.shf.stock.controller.StockController" />
-    <option name="method" value="upDownCount" />
-    <option name="methodDescription" value="功能描述：沪深两市涨跌停分时行情数据查询，查询T日每分钟的涨跌停数据（T：当前股票交易日） &#9;&#9;查询每分钟的涨停和跌停的数据的同级； &#9;&#9;如果不在股票的交易日内，那么就统计最近的股票交易下的数据 &#9; map: &#9;    upList:涨停数据统计 &#9;    downList:跌停数据统计" />
+    <option name="method" value="stockScreenTimeSharing" />
+    <option name="methodDescription" value="功能描述：查询单个个股的分时行情数据，也就是统计指定股票T日每分钟的交易数据；         如果当前日期不在有效时间内，则以最近的一个股票交易时间作为查询时间点" />
     <option name="module" value="stock_backend" />
-    <option name="originUrl" value="/api/quot/stock/updown/count" />
+    <option name="originUrl" value="/api/quot/stock/screen/time-sharing" />
+    <option name="requestParamMap">
+      <map>
+        <entry key="code">
+          <value>
+            <Object />
+          </value>
+        </entry>
+      </map>
+    </option>
     <option name="returnDocument" value="{&#10;&#9;&quot;code&quot;:&quot;No comment,Type =Number&quot;,&#10;&#9;&quot;msg&quot;:&quot;No comment,Type =String&quot;,&#10;&#9;&quot;data&quot;:{}&#10;}" />
-    <option name="url" value="/api/quot/stock/updown/count" />
+    <option name="url" value="/api/quot/stock/screen/time-sharing" />
   </component>
 </project>

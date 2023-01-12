@@ -1,5 +1,7 @@
 package com.shf.stock.mapper;
 
+import com.shf.stock.common.domain.Stock4EvrDayDomain;
+import com.shf.stock.common.domain.Stock4MinuteDomain;
 import com.shf.stock.common.domain.StockUpdownDomain;
 import com.shf.stock.pojo.StockRtInfo;
 import org.apache.ibatis.annotations.Mapper;
@@ -51,4 +53,30 @@ public interface StockRtInfoMapper {
      * @return
      */
     List<Map> getStockUpDownCount(@Param("startTime") Date startTime, @Param("endTime") Date endTime, @Param("flag") int flag);
+
+    /**
+     * 查询指定时间点下股票在各个涨幅区间的数量
+     * @param timePoint
+     * @return
+     */
+    List<Map> getStockUpDownRegin(@Param("timePoint") Date timePoint);
+
+
+    /**
+     * 根据时间范围查询指定股票的交易流水
+     * @param code
+     * @param startTime
+     * @param endTime
+     * @return
+     */
+    List<Stock4MinuteDomain> getStockInfoByCodeAndDate(@Param("code") String code, @Param("startTime") Date startTime, @Param("endTime") Date endTime);
+
+    /**
+     * 查询指定日期范围内指定股票每天的交易数据
+     * @param stockCode
+     * @param startTime
+     * @param endTime
+     * @return
+     */
+    List<Stock4EvrDayDomain> getStockInfo4EvrDay(@Param("stockCode") String stockCode, @Param("startTime") Date startTime, @Param("endTime") Date endTime);
 }

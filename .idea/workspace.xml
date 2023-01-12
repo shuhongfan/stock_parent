@@ -4,21 +4,20 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d12776b0-676e-4f33-b403-07f5601aa687" name="变更" comment="day02&#10;1. 完善基于前后端分用户验证码登录功能;&#10;2. 理解验证码生成流程,并使用postman测试;&#10;3. 理解并实现国内大盘数据展示功能;&#10;4. 理解并实现国内板块数据展示功能;&#10;5. 理解后端接口调试和前后端联调的概念;">
-      <change afterPath="$PROJECT_DIR$/stock_backend/src/main/java/com/shf/stock/common/domain/StockExcelDomain.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/stock_backend/src/main/java/com/shf/stock/common/domain/StockUpdownDomain.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/stock_backend/src/main/java/com/shf/stock/pojo/User.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/stock_backend/src/main/java/com/shf/stock/vo/resp/PageResult.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/stock_backend/src/test/java/com/shf/stock/TestEasyExcel.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/stock_backend/用户.xls" afterDir="false" />
+    <list default="true" id="d12776b0-676e-4f33-b403-07f5601aa687" name="变更" comment="day03&#10;1. 理解涨幅榜业务需求;&#10;2. 理解涨停跌停概念，并涨停跌停基本实现;&#10;3. 理解涨停跌停SQL分析流程，并根据接口文档自定义实现;&#10;4. 理解echarts基本使用;&#10;5. 掌握easyExcel基本使用,并实现涨幅榜数据导出功能;">
+      <change afterPath="$PROJECT_DIR$/stock_backend/src/main/java/com/shf/stock/common/domain/Stock4EvrDayDomain.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/stock_backend/src/main/java/com/shf/stock/common/domain/Stock4MinuteDomain.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/fastRequestCurrentParamGroup.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/fastRequestCurrentParamGroup.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/fastRequestHistoryConfig.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/fastRequestHistoryConfig.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/stock_backend/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/stock_backend/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/stock_backend/src/main/java/com/shf/stock/common/domain/StockInfoConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/stock_backend/src/main/java/com/shf/stock/config/vo/StockInfoConfig.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/stock_backend/src/main/java/com/shf/stock/controller/StockController.java" beforeDir="false" afterPath="$PROJECT_DIR$/stock_backend/src/main/java/com/shf/stock/controller/StockController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/stock_backend/src/main/java/com/shf/stock/mapper/StockMarketIndexInfoMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/stock_backend/src/main/java/com/shf/stock/mapper/StockMarketIndexInfoMapper.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/stock_backend/src/main/java/com/shf/stock/mapper/StockRtInfoMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/stock_backend/src/main/java/com/shf/stock/mapper/StockRtInfoMapper.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/stock_backend/src/main/java/com/shf/stock/service/StockService.java" beforeDir="false" afterPath="$PROJECT_DIR$/stock_backend/src/main/java/com/shf/stock/service/StockService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/stock_backend/src/main/java/com/shf/stock/service/impl/StockServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/stock_backend/src/main/java/com/shf/stock/service/impl/StockServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/stock_backend/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/stock_backend/src/main/resources/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/stock_backend/src/main/resources/mapper/StockMarketIndexInfoMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/stock_backend/src/main/resources/mapper/StockMarketIndexInfoMapper.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/stock_backend/src/main/resources/mapper/StockRtInfoMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/stock_backend/src/main/resources/mapper/StockRtInfoMapper.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -190,7 +189,6 @@
       </method>
     </configuration>
     <configuration name="StockAPP" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
-      <option name="FRAME_DEACTIVATION_UPDATE_POLICY" value="UpdateClassesAndResources" />
       <module name="stock_backend" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="com.shf.stock.StockAPP" />
       <method v="2">
@@ -232,7 +230,7 @@
       <workItem from="1673339148439" duration="12010000" />
       <workItem from="1673415154215" duration="9610000" />
       <workItem from="1673429583848" duration="50000" />
-      <workItem from="1673429644691" duration="3095000" />
+      <workItem from="1673429644691" duration="17369000" />
     </task>
     <task id="LOCAL-00001" summary="init">
       <created>1673176360652</created>
@@ -255,7 +253,14 @@
       <option name="project" value="LOCAL" />
       <updated>1673364296668</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="day03&#10;1. 理解涨幅榜业务需求;&#10;2. 理解涨停跌停概念，并涨停跌停基本实现;&#10;3. 理解涨停跌停SQL分析流程，并根据接口文档自定义实现;&#10;4. 理解echarts基本使用;&#10;5. 掌握easyExcel基本使用,并实现涨幅榜数据导出功能;">
+      <created>1673432808464</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1673432808464</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -277,7 +282,8 @@
     <MESSAGE value="init" />
     <MESSAGE value="day01&#10;1. 能说出项目的基本概述;&#10;2. 能说出股票相关的核心概念;&#10;   2.1 股票、板块、大盘的概念;&#10;   2.2 股票涨幅、涨跌、振幅、开盘、收盘、涨停|跌停概念;&#10;3. 能说出项目的技术架构;&#10;4. 能说出项目开发的基本流程;&#10;5. 能够动手搭建开发环境;&#10;   5.1 搭建后端开发环境;&#10;   5.2 搭建前端环境;&#10;6. 能够完成用户登录功能;" />
     <MESSAGE value="day02&#10;1. 完善基于前后端分用户验证码登录功能;&#10;2. 理解验证码生成流程,并使用postman测试;&#10;3. 理解并实现国内大盘数据展示功能;&#10;4. 理解并实现国内板块数据展示功能;&#10;5. 理解后端接口调试和前后端联调的概念;" />
-    <option name="LAST_COMMIT_MESSAGE" value="day02&#10;1. 完善基于前后端分用户验证码登录功能;&#10;2. 理解验证码生成流程,并使用postman测试;&#10;3. 理解并实现国内大盘数据展示功能;&#10;4. 理解并实现国内板块数据展示功能;&#10;5. 理解后端接口调试和前后端联调的概念;" />
+    <MESSAGE value="day03&#10;1. 理解涨幅榜业务需求;&#10;2. 理解涨停跌停概念，并涨停跌停基本实现;&#10;3. 理解涨停跌停SQL分析流程，并根据接口文档自定义实现;&#10;4. 理解echarts基本使用;&#10;5. 掌握easyExcel基本使用,并实现涨幅榜数据导出功能;" />
+    <option name="LAST_COMMIT_MESSAGE" value="day03&#10;1. 理解涨幅榜业务需求;&#10;2. 理解涨停跌停概念，并涨停跌停基本实现;&#10;3. 理解涨停跌停SQL分析流程，并根据接口文档自定义实现;&#10;4. 理解echarts基本使用;&#10;5. 掌握easyExcel基本使用,并实现涨幅榜数据导出功能;" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

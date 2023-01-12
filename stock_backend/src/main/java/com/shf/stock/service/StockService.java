@@ -1,6 +1,8 @@
 package com.shf.stock.service;
 
 import com.shf.stock.common.domain.InnerMarketDomain;
+import com.shf.stock.common.domain.Stock4EvrDayDomain;
+import com.shf.stock.common.domain.Stock4MinuteDomain;
 import com.shf.stock.common.domain.StockUpdownDomain;
 import com.shf.stock.pojo.StockBlockRtInfo;
 import com.shf.stock.pojo.StockBusiness;
@@ -63,4 +65,30 @@ public interface StockService {
      * @param pageSize
      */
     void stockExport(HttpServletResponse response, Integer page, Integer pageSize) throws IOException;
+
+    /**
+     * 统计国内A股大盘T日和T-1日成交量对比功能（成交量为沪市和深市成交量之和）
+     * @return
+     */
+    R<Map> stockTradeVol4InnerMarket();
+
+    /**
+     * 查询当前时间下股票的涨跌幅度区间统计功能
+     * @return
+     */
+    R<Map> stockUpDownScopeCount();
+
+    /**
+     * 询单个个股的分时行情数据，也就是统计指定股票T日每分钟的交易数据
+     * @param code
+     * @return
+     */
+    R<List<Stock4MinuteDomain>> stockScreenTimeSharing(String code);
+
+    /**
+     * 个股日K线
+     * @param stockCode
+     * @return
+     */
+    R<List<Stock4EvrDayDomain>> stockCreenDkLine(String stockCode);
 }

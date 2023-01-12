@@ -1,6 +1,8 @@
 package com.shf.stock.controller;
 
 import com.shf.stock.common.domain.InnerMarketDomain;
+import com.shf.stock.common.domain.Stock4EvrDayDomain;
+import com.shf.stock.common.domain.Stock4MinuteDomain;
 import com.shf.stock.common.domain.StockUpdownDomain;
 import com.shf.stock.pojo.StockBlockRtInfo;
 import com.shf.stock.pojo.StockBusiness;
@@ -8,10 +10,7 @@ import com.shf.stock.service.StockService;
 import com.shf.stock.vo.resp.PageResult;
 import com.shf.stock.vo.resp.R;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.CrossOrigin;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
@@ -91,6 +90,7 @@ public class StockController {
 
     /**
      * 将指定页面的股票导出到excel表下
+     *
      * @param response
      * @param page
      * @param pageSize
@@ -98,5 +98,50 @@ public class StockController {
     @GetMapping("/stock/export")
     public void stockExport(HttpServletResponse response, Integer page, Integer pageSize) throws IOException {
         stockService.stockExport(response, page, pageSize);
+    }
+
+    /**
+     * 功能描述：统计国内A股大盘T日和T-1日成交量对比功能（成交量为沪市和深市成交量之和）
+     *   map结构示例：
+     *      {
+     *         "volList": [{"count": 3926392,"time": "202112310930"},......],
+     *       "yesVolList":[{"count": 3926392,"time": "202112310930"},......]
+     *      }
+     * @return
+     */
+    @GetMapping("/stock/tradevol")
+    public R<Map> stockTradeVol4InnerMarket() {
+        return stockService.stockTradeVol4InnerMarket();
+    }
+
+    /**
+     * 查询当前时间下股票的涨跌幅度区间统计功能
+     * 如果当前日期不在有效时间内，则以最近的一个股票交易时间作为查询点
+     * @return
+     */
+    @GetMapping("/stock/updown")
+    public R<Map> getStockUpDown(){
+        return stockService.stockUpDownScopeCount();
+    }
+
+    /**
+     * 功能描述：查询单个个股的分时行情数据，也就是统计指定股票T日每分钟的交易数据；
+     *         如果当前日期不在有效时间内，则以最近的一个股票交易时间作为查询时间点
+     * @param code 股票编码
+     * @return
+     */
+    @GetMapping("/stock/screen/time-sharing")
+    public R<List<Stock4MinuteDomain>> stockScreenTimeSharing(@RequestParam("code") String code){
+        return stockService.stockScreenTimeSharing(code);
+    }
+
+
+    /**
+     * 单个个股日K 数据查询 ，可以根据时间区间查询数日的K线数据
+     * @param stockCode 股票编码
+     */
+    @RequestMapping("/stock/screen/dkline")
+    public R<List<Stock4EvrDayDomain>> getDayKLinData(@RequestParam("code") String stockCode){
+        return stockService.stockCreenDkLine(stockCode);
     }
 }

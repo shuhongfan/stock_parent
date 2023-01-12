@@ -86,6 +86,98 @@
             order by tmp.cur_time asc;
 
     </select>
+<!--    <select id="getStockUpDownRegin" resultType="java.util.Map">-->
+<!--        select-->
+<!--            tmp2.title,-->
+<!--            count(*) as count-->
+<!--        from (-->
+<!--            select-->
+<!--                case-->
+<!--                    WHEN tmp.rate > 0.07 THEN  '>7%'-->
+<!--                    WHEN tmp.rate > 0.05 AND tmp.rate &lt;= 0.07 THEN '5~7%'-->
+<!--                    WHEN tmp.rate > 0.03 AND tmp.rate &lt;= 0.05 THEN '3~5%'-->
+<!--                    WHEN tmp.rate > 0 AND tmp.rate &lt;= 0.03 THEN '0~3%'-->
+<!--                    WHEN tmp.rate > -0.03 AND tmp.rate &lt;= 0 THEN '-3~0%'-->
+<!--                    WHEN tmp.rate > -0.05 AND tmp.rate &lt;= -0.03 THEN '-5~-3%'-->
+<!--                    WHEN tmp.rate > -0.07 AND tmp.rate &lt;= -0.05 THEN '-7~-5%'-->
+<!--                    ELSE '&lt;-7%'-->
+<!--                END 'title'-->
+<!--            from (-->
+<!--                select-->
+<!--                    (sri.cur_price-sri.pre_close_price)/sri.pre_close_price as rate-->
+<!--                from stock_rt_info as sri-->
+<!--                where sri.cur_time=#{timePoint}-->
+<!--                ) as tmp-->
+<!--            ) as tmp2-->
+<!--            group by tmp2.title;-->
+<!--    </select>-->
+    <select id="getStockUpDownRegin" resultType="java.util.Map">
+        <![CDATA[
+            select
+                tmp2.title,
+                count(*) as count
+            from (
+                select
+                    case
+                        WHEN tmp.rate > 0.07 THEN  '>7%'
+                        WHEN tmp.rate > 0.05 AND tmp.rate <= 0.07 THEN '5~7%'
+                        WHEN tmp.rate > 0.03 AND tmp.rate <= 0.05 THEN '3~5%'
+                        WHEN tmp.rate > 0 AND tmp.rate <= 0.03 THEN '0~3%'
+                        WHEN tmp.rate > -0.03 AND tmp.rate <= 0 THEN '-3~0%'
+                        WHEN tmp.rate > -0.05 AND tmp.rate <= -0.03 THEN '-5~-3%'
+                        WHEN tmp.rate > -0.07 AND tmp.rate <= -0.05 THEN '-7~-5%'
+                        ELSE '<-7%'
+                    END 'title'
+                from (
+                    select
+                        (sri.cur_price-sri.pre_close_price)/sri.pre_close_price as rate
+                    from stock_rt_info as sri
+                    where sri.cur_time=#{timePoint}
+                    ) as tmp
+                ) as tmp2
+                group by tmp2.title;
+        ]]>
+    </select>
+    <select id="getStockInfoByCodeAndDate" resultType="com.shf.stock.common.domain.Stock4MinuteDomain">
+        select
+            date_format(sri.cur_time,'%Y%m%d%H%i') as date,
+            sri.trade_amount as tradeAmt,
+            sri.stock_code as code,
+            sri.min_price lowPrice,
+            sri.pre_close_price as preClosePrice,
+            sri.stock_name as name,
+            sri.max_price as highPrice,
+            sri.open_price as openPrice,
+            sri.trade_volume as tradeVol,
+            sri.cur_price as tradePrice
+        from stock_rt_info as sri
+        where sri.stock_code = #{code}
+          and sri.cur_time between #{startTime} and #{endTime};
+    </select>
+    <select id="getStockInfo4EvrDay" resultType="com.shf.stock.common.domain.Stock4EvrDayDomain">
+        select
+            date_format(sri2.cur_time,'%Y%m%d') as date,
+            sri2.trade_amount as tradeAmt,
+            sri2.stock_code as code,
+            sri2.min_price as lowPrice,
+            sri2.stock_name as name,
+            sri2.max_price as highPrice,
+            sri2.open_price as openPrice,
+            sri2.trade_volume as tradeVol,
+            sri2.cur_price as closePrice,
+            sri2.pre_close_price as preClosePrice
+                from stock_rt_info as sri2
+                where sri2.stock_code=#{stockCode}
+                  and sri2.cur_time in(
+                    select
+                    max(cur_time) as max_time
+                    from stock_rt_info as sri
+                    where sri.stock_code=#{stockCode}
+                  and sri.cur_time between #{startTime} and #{endTime}
+                    group by date_format(sri.cur_time,'%Y%m%d')
+                    )
+                order by sri2.cur_time;
+    </select>
 
     <delete id="deleteByPrimaryKey" parameterType="java.lang.Long">
         delete from stock_rt_info

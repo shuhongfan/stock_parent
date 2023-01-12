@@ -1,4 +1,4 @@
-package com.shf.stock.common.domain;
+package com.shf.stock.config.vo;
 
 import lombok.Data;
 import org.springframework.boot.context.properties.ConfigurationProperties;
@@ -18,4 +18,9 @@ public class StockInfoConfig {
      * 外盘ID集合
      */
     private List<String> outer;
+
+    /**
+     * 股票涨幅区间顺序定义
+     */
+    private List<String> upDownRange;
 }
