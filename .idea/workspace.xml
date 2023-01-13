@@ -4,19 +4,35 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d12776b0-676e-4f33-b403-07f5601aa687" name="变更" comment="day03&#10;1. 理解涨幅榜业务需求;&#10;2. 理解涨停跌停概念，并涨停跌停基本实现;&#10;3. 理解涨停跌停SQL分析流程，并根据接口文档自定义实现;&#10;4. 理解echarts基本使用;&#10;5. 掌握easyExcel基本使用,并实现涨幅榜数据导出功能;">
-      <change afterPath="$PROJECT_DIR$/stock_backend/src/main/java/com/shf/stock/common/domain/Stock4EvrDayDomain.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/stock_backend/src/main/java/com/shf/stock/common/domain/Stock4MinuteDomain.java" afterDir="false" />
+    <list default="true" id="d12776b0-676e-4f33-b403-07f5601aa687" name="变更" comment="day04&#10;1.理解股票T和T-1概念，实现成交量对比功能;&#10;2.理解个股涨跌幅度统计功能;&#10;   2.1 分析业务，SQL落地;&#10;   2.2 完善不存在数据的区间默认回显功能;&#10;3.理解个股分时K线业务，并实现功能;&#10;4.理解个股日K线业务，并实现功能;">
+      <change afterPath="$PROJECT_DIR$/stock_backend/src/main/java/com/shf/stock/config/HttpClientConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/stock_backend/src/main/java/com/shf/stock/service/StockTimerTaskService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/stock_backend/src/main/java/com/shf/stock/service/impl/StockTimerTaskServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/stock_backend/src/main/java/com/shf/stock/utils/ParseType.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/stock_backend/src/main/java/com/shf/stock/utils/ParserStockInfoUtil.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/stock_backend/src/test/java/com/shf/stock/TestRestTemplate.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/stock_backend/src/test/java/com/shf/stock/TestStockCollect.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/fastRequestCurrentParamGroup.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/fastRequestCurrentParamGroup.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/fastRequestHistoryConfig.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/fastRequestHistoryConfig.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/stock_backend/src/main/java/com/shf/stock/common/domain/StockInfoConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/stock_backend/src/main/java/com/shf/stock/config/vo/StockInfoConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/stock_backend/src/main/java/com/shf/stock/controller/StockController.java" beforeDir="false" afterPath="$PROJECT_DIR$/stock_backend/src/main/java/com/shf/stock/controller/StockController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/stock_backend/src/main/java/com/shf/stock/config/CommonConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/stock_backend/src/main/java/com/shf/stock/config/CommonConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/stock_backend/src/main/java/com/shf/stock/config/vo/StockInfoConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/stock_backend/src/main/java/com/shf/stock/config/vo/StockInfoConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/stock_backend/src/main/java/com/shf/stock/mapper/StockBlockRtInfoMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/stock_backend/src/main/java/com/shf/stock/mapper/StockBlockRtInfoMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/stock_backend/src/main/java/com/shf/stock/mapper/StockBusinessMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/stock_backend/src/main/java/com/shf/stock/mapper/StockBusinessMapper.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/stock_backend/src/main/java/com/shf/stock/mapper/StockMarketIndexInfoMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/stock_backend/src/main/java/com/shf/stock/mapper/StockMarketIndexInfoMapper.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/stock_backend/src/main/java/com/shf/stock/mapper/StockRtInfoMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/stock_backend/src/main/java/com/shf/stock/mapper/StockRtInfoMapper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/stock_backend/src/main/java/com/shf/stock/service/StockService.java" beforeDir="false" afterPath="$PROJECT_DIR$/stock_backend/src/main/java/com/shf/stock/service/StockService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/stock_backend/src/main/java/com/shf/stock/service/impl/StockServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/stock_backend/src/main/java/com/shf/stock/service/impl/StockServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/stock_backend/src/main/java/com/shf/stock/pojo/StockBusiness.java" beforeDir="false" afterPath="$PROJECT_DIR$/stock_backend/src/main/java/com/shf/stock/pojo/StockBusiness.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/stock_backend/src/main/java/com/shf/stock/pojo/StockMarketIndexInfo.java" beforeDir="false" afterPath="$PROJECT_DIR$/stock_backend/src/main/java/com/shf/stock/pojo/StockMarketIndexInfo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/stock_backend/src/main/java/com/shf/stock/pojo/StockMarketLogPrice.java" beforeDir="false" afterPath="$PROJECT_DIR$/stock_backend/src/main/java/com/shf/stock/pojo/StockMarketLogPrice.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/stock_backend/src/main/java/com/shf/stock/pojo/StockRtInfo.java" beforeDir="false" afterPath="$PROJECT_DIR$/stock_backend/src/main/java/com/shf/stock/pojo/StockRtInfo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/stock_backend/src/main/java/com/shf/stock/pojo/SysLog.java" beforeDir="false" afterPath="$PROJECT_DIR$/stock_backend/src/main/java/com/shf/stock/pojo/SysLog.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/stock_backend/src/main/java/com/shf/stock/pojo/SysPermission.java" beforeDir="false" afterPath="$PROJECT_DIR$/stock_backend/src/main/java/com/shf/stock/pojo/SysPermission.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/stock_backend/src/main/java/com/shf/stock/pojo/SysRole.java" beforeDir="false" afterPath="$PROJECT_DIR$/stock_backend/src/main/java/com/shf/stock/pojo/SysRole.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/stock_backend/src/main/java/com/shf/stock/pojo/SysRolePermission.java" beforeDir="false" afterPath="$PROJECT_DIR$/stock_backend/src/main/java/com/shf/stock/pojo/SysRolePermission.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/stock_backend/src/main/java/com/shf/stock/pojo/SysUser.java" beforeDir="false" afterPath="$PROJECT_DIR$/stock_backend/src/main/java/com/shf/stock/pojo/SysUser.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/stock_backend/src/main/java/com/shf/stock/pojo/SysUserRole.java" beforeDir="false" afterPath="$PROJECT_DIR$/stock_backend/src/main/java/com/shf/stock/pojo/SysUserRole.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/stock_backend/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/stock_backend/src/main/resources/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/stock_backend/src/main/resources/mapper/StockBlockRtInfoMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/stock_backend/src/main/resources/mapper/StockBlockRtInfoMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/stock_backend/src/main/resources/mapper/StockBusinessMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/stock_backend/src/main/resources/mapper/StockBusinessMapper.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/stock_backend/src/main/resources/mapper/StockMarketIndexInfoMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/stock_backend/src/main/resources/mapper/StockMarketIndexInfoMapper.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/stock_backend/src/main/resources/mapper/StockRtInfoMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/stock_backend/src/main/resources/mapper/StockRtInfoMapper.xml" afterDir="false" />
     </list>
@@ -31,6 +47,7 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
+        <option value="Interface" />
         <option value="Class" />
       </list>
     </option>
@@ -62,35 +79,35 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
-    &quot;RequestMappingsPanelOrder0&quot;: &quot;0&quot;,
-    &quot;RequestMappingsPanelOrder1&quot;: &quot;1&quot;,
-    &quot;RequestMappingsPanelWidth0&quot;: &quot;75&quot;,
-    &quot;RequestMappingsPanelWidth1&quot;: &quot;75&quot;,
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;jdk.selected.JAVA_MODULE&quot;: &quot;1.8&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/shuho/IdeaProjects/stock_parent/stock_backend/src/main/java/com/shf/stock/common/domain&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;,
-    &quot;spring.configuration.checksum&quot;: &quot;66f18be16a655754e2b8100c67504e8a&quot;,
-    &quot;typescript.add.unambiguous.imports.on.the.fly&quot;: &quot;true&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ASKED_ADD_EXTERNAL_FILES": "true",
+    "RequestMappingsPanelOrder0": "0",
+    "RequestMappingsPanelOrder1": "1",
+    "RequestMappingsPanelWidth0": "75",
+    "RequestMappingsPanelWidth1": "75",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "jdk.selected.JAVA_MODULE": "1.8",
+    "last_opened_file_path": "C:/Users/shuho/IdeaProjects/stock_parent/stock_backend/src/main/java/com/shf/stock/utils",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "settings.editor.selected.configurable": "SQL Dialects",
+    "spring.configuration.checksum": "66f18be16a655754e2b8100c67504e8a",
+    "typescript.add.unambiguous.imports.on.the.fly": "true",
+    "vue.rearranger.settings.migration": "true"
   },
-  &quot;keyToStringList&quot;: {
-    &quot;DatabaseDriversLRU&quot;: [
-      &quot;redis&quot;,
-      &quot;mysql&quot;
+  "keyToStringList": {
+    "DatabaseDriversLRU": [
+      "redis",
+      "mysql"
     ]
   }
-}</component>
+}]]></component>
   <component name="ReactorSettings">
     <option name="notificationShown" value="true" />
   </component>
@@ -100,62 +117,14 @@
       <recent name="com.shf.stock.service" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\Users\shuho\IdeaProjects\stock_parent\stock_backend\src\main\java\com\shf\stock\common\domain" />
       <recent name="C:\Users\shuho\IdeaProjects\stock_parent\stock_backend\src\main\java\com\shf\stock\utils" />
+      <recent name="C:\Users\shuho\IdeaProjects\stock_parent\stock_backend\src\main\java\com\shf\stock\common\domain" />
     </key>
     <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
       <recent name="com.shf.stock" />
     </key>
   </component>
-  <component name="RunManager" selected="Spring Boot.StockAPP">
-    <configuration name="TestEasyExcel.readExcel" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="stock_backend" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.shf.stock.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="com.shf.stock" />
-      <option name="MAIN_CLASS_NAME" value="com.shf.stock.TestEasyExcel" />
-      <option name="METHOD_NAME" value="readExcel" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="TestEasyExcel.test02" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="stock_backend" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.shf.stock.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="com.shf.stock" />
-      <option name="MAIN_CLASS_NAME" value="com.shf.stock.TestEasyExcel" />
-      <option name="METHOD_NAME" value="test02" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="TestEasyExcel.writeExcel" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="stock_backend" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.shf.stock.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="com.shf.stock" />
-      <option name="MAIN_CLASS_NAME" value="com.shf.stock.TestEasyExcel" />
-      <option name="METHOD_NAME" value="writeExcel" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
+  <component name="RunManager" selected="JUnit.TestStockCollect.testCollect">
     <configuration name="TestPasswordEncoder.test1" type="JUnit" factoryName="JUnit" nameIsGenerated="true">
       <module name="stock_backend" />
       <extension name="coverage">
@@ -172,7 +141,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="TestRedisDemo.test01" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="TestRestTemplate.test4" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="stock_backend" />
       <extension name="coverage">
         <pattern>
@@ -181,8 +150,72 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="com.shf.stock" />
-      <option name="MAIN_CLASS_NAME" value="com.shf.stock.TestRedisDemo" />
-      <option name="METHOD_NAME" value="test01" />
+      <option name="MAIN_CLASS_NAME" value="com.shf.stock.TestRestTemplate" />
+      <option name="METHOD_NAME" value="test4" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="TestRestTemplate.testRep2" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="stock_backend" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.shf.stock.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.shf.stock" />
+      <option name="MAIN_CLASS_NAME" value="com.shf.stock.TestRestTemplate" />
+      <option name="METHOD_NAME" value="testRep2" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="TestStockCollect.testCollect" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="stock_backend" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.shf.stock.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.shf.stock" />
+      <option name="MAIN_CLASS_NAME" value="com.shf.stock.TestStockCollect" />
+      <option name="METHOD_NAME" value="testCollect" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="TestStockCollect.testCollectAShare" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="stock_backend" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.shf.stock.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.shf.stock" />
+      <option name="MAIN_CLASS_NAME" value="com.shf.stock.TestStockCollect" />
+      <option name="METHOD_NAME" value="testCollectAShare" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="TestStockCollect.testCollectInner" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="stock_backend" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.shf.stock.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.shf.stock" />
+      <option name="MAIN_CLASS_NAME" value="com.shf.stock.TestStockCollect" />
+      <option name="METHOD_NAME" value="testCollectInner" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -197,18 +230,20 @@
     </configuration>
     <list>
       <item itemvalue="JUnit.TestPasswordEncoder.test1" />
-      <item itemvalue="JUnit.TestEasyExcel.readExcel" />
-      <item itemvalue="JUnit.TestEasyExcel.test02" />
-      <item itemvalue="JUnit.TestEasyExcel.writeExcel" />
-      <item itemvalue="JUnit.TestRedisDemo.test01" />
+      <item itemvalue="JUnit.TestRestTemplate.test4" />
+      <item itemvalue="JUnit.TestRestTemplate.testRep2" />
+      <item itemvalue="JUnit.TestStockCollect.testCollect" />
+      <item itemvalue="JUnit.TestStockCollect.testCollectAShare" />
+      <item itemvalue="JUnit.TestStockCollect.testCollectInner" />
       <item itemvalue="Spring Boot.StockAPP" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.TestEasyExcel.readExcel" />
-        <item itemvalue="JUnit.TestEasyExcel.writeExcel" />
-        <item itemvalue="JUnit.TestEasyExcel.test02" />
-        <item itemvalue="JUnit.TestRedisDemo.test01" />
+        <item itemvalue="JUnit.TestStockCollect.testCollect" />
+        <item itemvalue="JUnit.TestStockCollect.testCollectAShare" />
+        <item itemvalue="JUnit.TestStockCollect.testCollectInner" />
+        <item itemvalue="JUnit.TestRestTemplate.testRep2" />
+        <item itemvalue="JUnit.TestRestTemplate.test4" />
       </list>
     </recent_temporary>
   </component>
@@ -230,7 +265,7 @@
       <workItem from="1673339148439" duration="12010000" />
       <workItem from="1673415154215" duration="9610000" />
       <workItem from="1673429583848" duration="50000" />
-      <workItem from="1673429644691" duration="17369000" />
+      <workItem from="1673429644691" duration="31186000" />
     </task>
     <task id="LOCAL-00001" summary="init">
       <created>1673176360652</created>
@@ -260,7 +295,14 @@
       <option name="project" value="LOCAL" />
       <updated>1673432808464</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="day04&#10;1.理解股票T和T-1概念，实现成交量对比功能;&#10;2.理解个股涨跌幅度统计功能;&#10;   2.1 分析业务，SQL落地;&#10;   2.2 完善不存在数据的区间默认回显功能;&#10;3.理解个股分时K线业务，并实现功能;&#10;4.理解个股日K线业务，并实现功能;">
+      <created>1673509169339</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1673509169339</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -283,7 +325,8 @@
     <MESSAGE value="day01&#10;1. 能说出项目的基本概述;&#10;2. 能说出股票相关的核心概念;&#10;   2.1 股票、板块、大盘的概念;&#10;   2.2 股票涨幅、涨跌、振幅、开盘、收盘、涨停|跌停概念;&#10;3. 能说出项目的技术架构;&#10;4. 能说出项目开发的基本流程;&#10;5. 能够动手搭建开发环境;&#10;   5.1 搭建后端开发环境;&#10;   5.2 搭建前端环境;&#10;6. 能够完成用户登录功能;" />
     <MESSAGE value="day02&#10;1. 完善基于前后端分用户验证码登录功能;&#10;2. 理解验证码生成流程,并使用postman测试;&#10;3. 理解并实现国内大盘数据展示功能;&#10;4. 理解并实现国内板块数据展示功能;&#10;5. 理解后端接口调试和前后端联调的概念;" />
     <MESSAGE value="day03&#10;1. 理解涨幅榜业务需求;&#10;2. 理解涨停跌停概念，并涨停跌停基本实现;&#10;3. 理解涨停跌停SQL分析流程，并根据接口文档自定义实现;&#10;4. 理解echarts基本使用;&#10;5. 掌握easyExcel基本使用,并实现涨幅榜数据导出功能;" />
-    <option name="LAST_COMMIT_MESSAGE" value="day03&#10;1. 理解涨幅榜业务需求;&#10;2. 理解涨停跌停概念，并涨停跌停基本实现;&#10;3. 理解涨停跌停SQL分析流程，并根据接口文档自定义实现;&#10;4. 理解echarts基本使用;&#10;5. 掌握easyExcel基本使用,并实现涨幅榜数据导出功能;" />
+    <MESSAGE value="day04&#10;1.理解股票T和T-1概念，实现成交量对比功能;&#10;2.理解个股涨跌幅度统计功能;&#10;   2.1 分析业务，SQL落地;&#10;   2.2 完善不存在数据的区间默认回显功能;&#10;3.理解个股分时K线业务，并实现功能;&#10;4.理解个股日K线业务，并实现功能;" />
+    <option name="LAST_COMMIT_MESSAGE" value="day04&#10;1.理解股票T和T-1概念，实现成交量对比功能;&#10;2.理解个股涨跌幅度统计功能;&#10;   2.1 分析业务，SQL落地;&#10;   2.2 完善不存在数据的区间默认回显功能;&#10;3.理解个股分时K线业务，并实现功能;&#10;4.理解个股日K线业务，并实现功能;" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

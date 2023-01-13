@@ -1,14 +1,21 @@
 package com.shf.stock.pojo;
 
+import lombok.AllArgsConstructor;
+import lombok.Builder;
+import lombok.Data;
+import lombok.NoArgsConstructor;
+
 import java.io.Serializable;
 import java.util.Date;
-import lombok.Data;
 
 /**
  * 主营业务表
  * @TableName stock_business
  */
 @Data
+@AllArgsConstructor
+@NoArgsConstructor
+@Builder
 public class StockBusiness implements Serializable {
     /**
      *  股票编码

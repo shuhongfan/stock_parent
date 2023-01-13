@@ -223,6 +223,20 @@
                 <if test="tradeVolume != null">#{tradeVolume,jdbcType=DECIMAL},</if>
         </trim>
     </insert>
+    <insert id="insertBatch">
+        insert into stock_rt_info
+        ( id,stock_code,cur_time
+        ,stock_name,open_price,pre_close_price
+        ,cur_price,max_price,min_price
+        ,trade_amount,trade_volume)
+        values
+        <foreach collection="list" separator="," item="sri">
+            (#{sri.id,jdbcType=VARCHAR},#{sri.stockCode,jdbcType=CHAR},#{sri.curTime,jdbcType=TIMESTAMP}
+            ,#{sri.stockName,jdbcType=VARCHAR},#{sri.openPrice,jdbcType=DECIMAL},#{sri.preClosePrice,jdbcType=DECIMAL}
+            ,#{sri.curPrice,jdbcType=DECIMAL},#{sri.maxPrice,jdbcType=DECIMAL},#{sri.minPrice,jdbcType=DECIMAL}
+            ,#{sri.tradeAmount,jdbcType=BIGINT},#{sri.tradeVolume,jdbcType=DECIMAL})
+        </foreach>
+    </insert>
     <update id="updateByPrimaryKeySelective" parameterType="com.shf.stock.pojo.StockRtInfo">
         update stock_rt_info
         <set>

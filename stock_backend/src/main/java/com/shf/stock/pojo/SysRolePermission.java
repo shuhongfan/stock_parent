@@ -1,14 +1,21 @@
 package com.shf.stock.pojo;
 
+import lombok.AllArgsConstructor;
+import lombok.Builder;
+import lombok.Data;
+import lombok.NoArgsConstructor;
+
 import java.io.Serializable;
 import java.util.Date;
-import lombok.Data;
 
 /**
  * 角色权限表
  * @TableName sys_role_permission
  */
 @Data
+@AllArgsConstructor
+@NoArgsConstructor
+@Builder
 public class SysRolePermission implements Serializable {
     /**
      * 主键

@@ -92,3 +92,5 @@ stock:
     - "3~5%"
     - "5~7%"
     - ">7%"
+  marketUrl: http://hq.sinajs.cn/list=
+  blockUrl: http://vip.stock.finance.sina.com.cn/q/view/newSinaHy.php

@@ -27,4 +27,10 @@ public interface StockBusinessMapper {
     int updateByPrimaryKey(StockBusiness record);
 
     List<StockBusiness> getAll();
+
+    /**
+     * 获取所有股票的Code
+     * @return
+     */
+    List<String> getStockIds();
 }

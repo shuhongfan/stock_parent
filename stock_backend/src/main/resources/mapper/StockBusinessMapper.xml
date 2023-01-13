@@ -29,6 +29,9 @@
         <include refid="Base_Column_List" />
         from stock_business
     </select>
+    <select id="getStockIds" resultType="java.lang.String">
+        select sec_code from stock_business
+    </select>
 
     <delete id="deleteByPrimaryKey" parameterType="java.lang.Long">
         delete from stock_business

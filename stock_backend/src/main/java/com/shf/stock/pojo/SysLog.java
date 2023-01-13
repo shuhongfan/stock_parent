@@ -1,14 +1,21 @@
 package com.shf.stock.pojo;
 
+import lombok.AllArgsConstructor;
+import lombok.Builder;
+import lombok.Data;
+import lombok.NoArgsConstructor;
+
 import java.io.Serializable;
 import java.util.Date;
-import lombok.Data;
 
 /**
  * 系统日志
  * @TableName sys_log
  */
 @Data
+@AllArgsConstructor
+@NoArgsConstructor
+@Builder
 public class SysLog implements Serializable {
     /**
      * 主键

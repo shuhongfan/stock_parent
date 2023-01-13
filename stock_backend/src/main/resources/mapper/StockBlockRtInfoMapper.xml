@@ -84,6 +84,20 @@
                 <if test="curTime != null">#{curTime,jdbcType=TIMESTAMP},</if>
         </trim>
     </insert>
+    <insert id="insertBatch">
+        insert into stock_block_rt_info
+        ( id,label,block_name
+        ,company_num,avg_price,updown_rate
+        ,trade_amount,trade_volume,cur_time
+        )
+        values
+        <foreach collection="list" item="sbri" separator=",">
+            (#{sbri.id,jdbcType=VARCHAR},#{sbri.label,jdbcType=VARCHAR},#{sbri.blockName,jdbcType=VARCHAR}
+            ,#{sbri.companyNum,jdbcType=INTEGER},#{sbri.avgPrice,jdbcType=DECIMAL},#{sbri.updownRate,jdbcType=DECIMAL}
+            ,#{sbri.tradeAmount,jdbcType=BIGINT},#{sbri.tradeVolume,jdbcType=DECIMAL},#{sbri.curTime,jdbcType=TIMESTAMP}
+            )
+        </foreach>
+    </insert>
     <update id="updateByPrimaryKeySelective" parameterType="com.shf.stock.pojo.StockBlockRtInfo">
         update stock_block_rt_info
         <set>

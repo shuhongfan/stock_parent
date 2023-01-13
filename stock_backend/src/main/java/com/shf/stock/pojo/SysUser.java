@@ -1,14 +1,21 @@
 package com.shf.stock.pojo;
 
+import lombok.AllArgsConstructor;
+import lombok.Builder;
+import lombok.Data;
+import lombok.NoArgsConstructor;
+
 import java.io.Serializable;
 import java.util.Date;
-import lombok.Data;
 
 /**
  * 用户表
  * @TableName sys_user
  */
 @Data
+@AllArgsConstructor
+@NoArgsConstructor
+@Builder
 public class SysUser implements Serializable {
     /**
      * 用户id

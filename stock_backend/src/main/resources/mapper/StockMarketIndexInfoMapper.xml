@@ -108,6 +108,16 @@
                 <if test="tradeVolume != null">#{tradeVolume,jdbcType=BIGINT},</if>
         </trim>
     </insert>
+    <insert id="insertBatch">
+        insert into stock_market_index_info( id,mark_Id,cur_time,mark_name,cur_point,current_price,updown_rate,trade_account,trade_volume)
+        values
+            <foreach collection="list" item="item" separator=",">
+                (#{item.id,jdbcType=VARCHAR},#{item.markId,jdbcType=CHAR},#{item.curTime,jdbcType=TIMESTAMP}
+                ,#{item.markName,jdbcType=VARCHAR},#{item.curPoint,jdbcType=DECIMAL},#{item.currentPrice,jdbcType=DECIMAL}
+                ,#{item.updownRate,jdbcType=DECIMAL},#{item.tradeAccount,jdbcType=BIGINT},#{item.tradeVolume,jdbcType=BIGINT}
+                )
+            </foreach>
+    </insert>
     <update id="updateByPrimaryKeySelective" parameterType="com.shf.stock.pojo.StockMarketIndexInfo">
         update stock_market_index_info
         <set>

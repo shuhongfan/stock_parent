@@ -31,4 +31,11 @@ public interface StockBlockRtInfoMapper {
      * @return
      */
     List<StockBlockRtInfo> sectorAllLimit();
+
+    /**
+     * 板块信息批量插入
+     * @param stockBlockRtInfos
+     * @return
+     */
+    int insertBatch(List<StockBlockRtInfo> stockBlockRtInfos);
 }
