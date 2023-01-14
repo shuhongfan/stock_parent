@@ -19,6 +19,7 @@ import org.joda.time.DateTime;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpEntity;
 import org.springframework.http.HttpHeaders;
+import org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor;
 import org.springframework.stereotype.Service;
 import org.springframework.web.client.RestTemplate;
 
@@ -58,6 +59,9 @@ public class StockTimerTaskServiceImpl implements StockTimerTaskService {
     @Autowired
     private StockBlockRtInfoMapper stockBlockRtInfoMapper;
 
+    @Autowired
+    private ThreadPoolTaskExecutor threadPoolTaskExecutor;
+
     /**
      * 采集国内大盘的数据实现
      */
@@ -70,8 +74,8 @@ public class StockTimerTaskServiceImpl implements StockTimerTaskService {
 //        2.1 组装请求头
         HttpHeaders headers = new HttpHeaders();
 //        必须填写，否则数据采集不到
-        headers.add("Referer","https://finance.sina.com.cn/stock/");
-        headers.add("User-Agent","Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/72.0.3626.121 Safari/537.36");
+        headers.add("Referer", "https://finance.sina.com.cn/stock/");
+        headers.add("User-Agent", "Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/72.0.3626.121 Safari/537.36");
 
 //        2.2 组装请求对象
         HttpEntity<Object> entity = new HttpEntity<>(headers);
@@ -134,7 +138,7 @@ public class StockTimerTaskServiceImpl implements StockTimerTaskService {
                     .tradeAccount(tradeAmount)
                     .curTime(date)
                     .build();
-            log.info("封装对象信息：{}",info.toString());
+            log.info("封装对象信息：{}", info.toString());
 
 //            收集封装对象
             list.add(info);
@@ -142,7 +146,7 @@ public class StockTimerTaskServiceImpl implements StockTimerTaskService {
 
 //        批量保存大盘数据
         int count = stockMarketIndexInfoMapper.insertBatch(list);
-        log.info("批量插入了：{}条数据",count);
+        log.info("批量插入了：{}条数据", count);
     }
 
     /**
@@ -165,24 +169,42 @@ public class StockTimerTaskServiceImpl implements StockTimerTaskService {
 
         //设置请求头数据
         HttpHeaders headers = new HttpHeaders();
-        headers.add("Referer","https://finance.sina.com.cn/stock/");
-        headers.add("User-Agent","Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/72.0.3626.121 Safari/537.36");
+        headers.add("Referer", "https://finance.sina.com.cn/stock/");
+        headers.add("User-Agent", "Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/72.0.3626.121 Safari/537.36");
 
 //        组装请求对象
         HttpEntity<Object> entity = new HttpEntity<>(headers);
 
-//        2. 将股票集合分片处理,均等分,比如每份20
-        Lists.partition(stockCodeList, 20).forEach(list->{
+////        2. 将股票集合分片处理,均等分,比如每份20
+//        Lists.partition(stockCodeList, 20).forEach(list -> {
+////          3.为一份动态拼接URL地址
+//            String url = stockInfoConfig.getMarketUrl() + String.join(",", list);
+//            String resultData = restTemplate.postForObject(url, entity, String.class);
+//
+////          4.  解析处理,封装pojo
+//            List<StockRtInfo> stockRtInfos = parserStockInfoUtil.parser4StockOrMarketInfo(resultData, ParseType.ASHARE);
+//            log.info("当前解析的集合数据：", stockRtInfos);
+//
+////            5. 批量插入
+//            stockRtInfoMapper.insertBatch(stockRtInfos);
+//        });
+
+        /**
+         * 多线程处理
+         */
+        Lists.partition(stockCodeList, 20).forEach(list -> {
+            threadPoolTaskExecutor.execute(() -> {
 //          3.为一份动态拼接URL地址
-            String url = stockInfoConfig.getMarketUrl() + String.join(",", list);
-            String resultData = restTemplate.postForObject(url, entity, String.class);
+                String url = stockInfoConfig.getMarketUrl() + String.join(",", list);
+                String resultData = restTemplate.postForObject(url, entity, String.class);
 
 //          4.  解析处理,封装pojo
-            List<StockRtInfo> stockRtInfos = parserStockInfoUtil.parser4StockOrMarketInfo(resultData, ParseType.ASHARE);
-            log.info("当前解析的集合数据：", stockRtInfos);
+                List<StockRtInfo> stockRtInfos = parserStockInfoUtil.parser4StockOrMarketInfo(resultData, ParseType.ASHARE);
+                log.info("当前解析的集合数据：", stockRtInfos);
 
 //            5. 批量插入
-            stockRtInfoMapper.insertBatch(stockRtInfos);
+                stockRtInfoMapper.insertBatch(stockRtInfos);
+            });
         });
 
     }
@@ -198,9 +220,18 @@ public class StockTimerTaskServiceImpl implements StockTimerTaskService {
 
 //        响应结果转板块集合数据
         List<StockBlockRtInfo> infos = parserStockInfoUtil.parse4StockBlock(result);
-        log.info("板块数据量：{}",infos.size());
+        log.info("板块数据量：{}", infos.size());
 
 //        数据分片保存到数据库下 行业板块类目大概50个，可每小时查询一次即可
-        Lists.partition(infos,20).forEach(info->stockBlockRtInfoMapper.insertBatch(info));
+//        Lists.partition(infos, 20).forEach(info -> stockBlockRtInfoMapper.insertBatch(info));
+
+        /**
+         * 多线程版
+         */
+        Lists.partition(infos, 20).forEach(info -> {
+            threadPoolTaskExecutor.execute(() -> {
+                stockBlockRtInfoMapper.insertBatch(info);
+            });
+        });
     }
 }

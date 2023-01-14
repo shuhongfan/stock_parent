@@ -1,0 +1,7 @@
+# 定时任务线程池基础参数
+task:
+  pool:
+    corePoolSize: 5 # 核心线程数
+    maxPoolSize: 10 # 设置最大线程数
+    keepAliveSeconds: 4 # 设置线程活跃时间，单位秒
+    queueCapacity: 10 # 设置队列容量

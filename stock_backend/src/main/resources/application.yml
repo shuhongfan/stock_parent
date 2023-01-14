@@ -94,3 +94,26 @@ stock:
     - ">7%"
   marketUrl: http://hq.sinajs.cn/list=
   blockUrl: http://vip.stock.finance.sina.com.cn/q/view/newSinaHy.php
+
+# XXJOB参数配置
+xxl:
+  job:
+    accessToken:
+    admin:
+      addresses: http://127.0.0.1:8082/heima-job-admin
+    executor:
+      appname: heima-stock-job-executor
+      address:
+      ip:
+      port: 6666
+      logpath: /joblog
+      logretentiondays: 30
+
+
+# 定时任务线程池基础参数
+task:
+  pool:
+    corePoolSize: 5 # 核心线程数
+    maxPoolSize: 20 # 设置最大线程数
+    keepAliveSeconds: 300 # 设置线程活跃时间
+    queueCapacity: 100 # 设置队列容量

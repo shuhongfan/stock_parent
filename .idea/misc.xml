@@ -5,6 +5,8 @@
     <option name="originalFiles">
       <list>
         <option value="$PROJECT_DIR$/pom.xml" />
+        <option value="$PROJECT_DIR$/xxl-job-2.3.1/pom.xml" />
+        <option value="$PROJECT_DIR$/threadpooltest/pom.xml" />
       </list>
     </option>
   </component>

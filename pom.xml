@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<project xmlns="http://maven.apache.org/POM/4.0.0"
-         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+<project xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xmlns="http://maven.apache.org/POM/4.0.0"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
@@ -10,6 +10,7 @@
     <packaging>pom</packaging>
     <modules>
         <module>stock_backend</module>
+        <module>stock-xxl-job-admin</module>
     </modules>
 
     <properties>
@@ -28,7 +29,7 @@
         <sharding-jdbc.version>4.0.0-RC1</sharding-jdbc.version>
         <jjwt.version>0.9.1</jjwt.version>
         <easyExcel.version>3.0.4</easyExcel.version>
-        <xxl-job-core.version>2.3.0</xxl-job-core.version>
+        <xxl-job-core.version>2.3.1</xxl-job-core.version>
         <spring-boot.version>2.5.3</spring-boot.version>
         <joda-time.version>2.10.5</joda-time.version>
         <google.guava.version>30.0-jre</google.guava.version>
@@ -133,7 +134,7 @@
     <build>
         <pluginManagement>
             <plugins>
-              	<!--Springboot核心插件-->
+                <!--Springboot核心插件-->
                 <plugin>
                     <groupId>org.springframework.boot</groupId>
                     <artifactId>spring-boot-maven-plugin</artifactId>
