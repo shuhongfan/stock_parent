@@ -1,0 +1,93 @@
+spring:
+  shardingsphere:
+    datasource:
+      names: m-2021,m-2022,ds-sys
+      # 配置默认数据源
+      ds-sys:
+        username: root
+        password: root
+        driver-class-name: com.mysql.jdbc.Driver
+        type: com.alibaba.druid.pool.DruidDataSource
+        url: jdbc:mysql://127.0.0.1:3306/stock_sys_db?useUnicode=true&characterEncoding=UTF-8&allowMultiQueries=true&useSSL=false&serverTimezone=Asia/Shanghai
+      # 配置2021数据源
+      m-2021:
+        username: root
+        password: root
+        driver-class-name: com.mysql.jdbc.Driver
+        type: com.alibaba.druid.pool.DruidDataSource
+        url: jdbc:mysql://127.0.0.1:3306/stock_db_2021?useUnicode=true&characterEncoding=UTF-8&allowMultiQueries=true&useSSL=false&serverTimezone=Asia/Shanghai
+      # 配置2022数据源
+      m-2022:
+        username: root
+        password: root
+        driver-class-name: com.mysql.jdbc.Driver
+        type: com.alibaba.druid.pool.DruidDataSource
+        url: jdbc:mysql://127.0.0.1:3306/stock_db_2022?useUnicode=true&characterEncoding=UTF-8&allowMultiQueries=true&useSSL=false&serverTimezone=Asia/Shanghai
+    props:
+      # 工作线程数量，默认值: CPU 核数
+      executor:
+        size: 8
+      # 是否开启 SQL 显示，默认值: false
+      sql:
+        show: true
+    sharding:
+      # 广播表
+      broadcast-tables: stock_business,stock_market_log_price
+      # 配置默认数据源(未配置分片规则的表将通过默认数据源定位)
+      default-data-source-name: ds-sys
+      tables:
+        stock_rt_info:
+          # 主键生成策略
+          key-generator:
+            column: id
+            type: SNOWFLAKE
+          actual-data-nodes: m-2021.stock_rt_info_$->{202101..202112},m-2022.stock_rt_info_$->{202201..202212}
+          # 配置股票流水的库分片策略
+          database-strategy:
+            standard:
+              # 指定精准查询库
+              precise-algorithm-class-name: com.shf.stock.sharding.StockRtInfoDbPreciseHandler
+              # 指定范围查询库
+              range-algorithm-class-name: com.shf.stock.sharding.StockRtInfoDbRangeHandler
+              # 指定库的分片键
+              sharding-column: cur_time
+          # 配置股票流水的表分片策略
+          table-strategy:
+            standard:
+              # 指定精确分片键
+              precise-algorithm-class-name: com.shf.stock.sharding.StockRtInfoTablePreciseHandler
+              # 指定范围分片键
+              range-algorithm-class-name: com.shf.stock.sharding.StockRtInfoTableRangeHandler
+              # 指定分片键
+              sharding-column: cur_time
+        #股票板块水表
+        stock_block_rt_info:
+          actual-data-nodes: m-$->{2021..2022}.stock_block_rt_info
+          database-strategy:
+            standard:
+              precise-algorithm-class-name: com.shf.stock.sharding.CommonTbPreciseShardingAlgorithm
+              range-algorithm-class-name: com.shf.stock.sharding.CommonTbRangeShardingAlgorithm
+              sharding-column: cur_time
+          key-generator:
+            column: id
+            type: SNOWFLAKE
+          table-strategy:
+            inline:
+              algorithm-expression: stock_block_rt_info
+              sharding-column: cur_time
+        #股票板块流水表
+        stock_market_index_info:
+          actual-data-nodes: m-$->{2021..2022}.stock_market_index_info
+          database-strategy:
+            standard:
+              precise-algorithm-class-name: com.shf.stock.sharding.CommonTbPreciseShardingAlgorithm
+              range-algorithm-class-name: com.shf.stock.sharding.CommonTbRangeShardingAlgorithm
+              sharding-column: cur_time
+          key-generator:
+            column: id
+            type: SNOWFLAKE
+          table-strategy:
+            standard:
+              precise-algorithm-class-name: com.itheima.stock.algorithm.PreciseTableShardingAlgorithm4MarketInfos
+              range-algorithm-class-name: com.itheima.stock.algorithm.RangeTableShardingAlgorithm4MarketInfos
+              sharding-column: cur_time

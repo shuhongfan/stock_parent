@@ -3,13 +3,17 @@ server:
   port: 8081
 
 spring:
+  main:
+    allow-bean-definition-overriding: true
+    profiles:
+      active: dev
   # 配置mysql数据源
   datasource:
     druid:
-      username: root
-      password: root
-      url: jdbc:mysql://127.0.0.1:3307/stock?useUnicode=true&characterEncoding=UTF-8&allowMultiQueries=true&useSSL=false&serverTimezone=Asia/Shanghai
-      driver-class-name: com.mysql.jdbc.Driver
+      #      username: root
+      #      password: root
+      #      url: jdbc:mysql://127.0.0.1:3307/stock?useUnicode=true&characterEncoding=UTF-8&allowMultiQueries=true&useSSL=false&serverTimezone=Asia/Shanghai
+      #      driver-class-name: com.mysql.jdbc.Driver
       # 初始化时建立物理连接的个数。初始化发生在显示调用 init 方法，或者第一次 getConnection 时
       initialSize: 6
       # 最小连接池数量

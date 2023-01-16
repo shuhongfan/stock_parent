@@ -5,6 +5,8 @@ import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
+import java.util.List;
+
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
@@ -26,5 +28,7 @@ public class LoginRespVo {
      * 昵称
      */
     private String nickName;
-
+    private List<PermissionRespNodeVo> menus;
+    private List<String> permissions;
+    private String accessToken;
 }

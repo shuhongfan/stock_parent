@@ -4,426 +4,38 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d12776b0-676e-4f33-b403-07f5601aa687" name="变更" comment="更新笔记">
-      <change afterPath="$PROJECT_DIR$/stock-xxl-job-admin/Dockerfile" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/stock-xxl-job-admin/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/stock-xxl-job-admin/src/main/java/com/xxl/job/admin/StockXxlJobAdminApplication.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/stock-xxl-job-admin/src/main/java/com/xxl/job/admin/controller/IndexController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/stock-xxl-job-admin/src/main/java/com/xxl/job/admin/controller/JobApiController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/stock-xxl-job-admin/src/main/java/com/xxl/job/admin/controller/JobCodeController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/stock-xxl-job-admin/src/main/java/com/xxl/job/admin/controller/JobGroupController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/stock-xxl-job-admin/src/main/java/com/xxl/job/admin/controller/JobInfoController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/stock-xxl-job-admin/src/main/java/com/xxl/job/admin/controller/JobLogController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/stock-xxl-job-admin/src/main/java/com/xxl/job/admin/controller/UserController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/stock-xxl-job-admin/src/main/java/com/xxl/job/admin/controller/annotation/PermissionLimit.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/stock-xxl-job-admin/src/main/java/com/xxl/job/admin/controller/interceptor/CookieInterceptor.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/stock-xxl-job-admin/src/main/java/com/xxl/job/admin/controller/interceptor/PermissionInterceptor.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/stock-xxl-job-admin/src/main/java/com/xxl/job/admin/controller/interceptor/WebMvcConfig.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/stock-xxl-job-admin/src/main/java/com/xxl/job/admin/controller/resolver/WebExceptionResolver.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/stock-xxl-job-admin/src/main/java/com/xxl/job/admin/core/alarm/JobAlarm.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/stock-xxl-job-admin/src/main/java/com/xxl/job/admin/core/alarm/JobAlarmer.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/stock-xxl-job-admin/src/main/java/com/xxl/job/admin/core/alarm/impl/EmailJobAlarm.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/stock-xxl-job-admin/src/main/java/com/xxl/job/admin/core/complete/XxlJobCompleter.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/stock-xxl-job-admin/src/main/java/com/xxl/job/admin/core/conf/XxlJobAdminConfig.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/stock-xxl-job-admin/src/main/java/com/xxl/job/admin/core/cron/CronExpression.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/stock-xxl-job-admin/src/main/java/com/xxl/job/admin/core/exception/XxlJobException.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/stock-xxl-job-admin/src/main/java/com/xxl/job/admin/core/model/XxlJobGroup.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/stock-xxl-job-admin/src/main/java/com/xxl/job/admin/core/model/XxlJobInfo.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/stock-xxl-job-admin/src/main/java/com/xxl/job/admin/core/model/XxlJobLog.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/stock-xxl-job-admin/src/main/java/com/xxl/job/admin/core/model/XxlJobLogGlue.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/stock-xxl-job-admin/src/main/java/com/xxl/job/admin/core/model/XxlJobLogReport.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/stock-xxl-job-admin/src/main/java/com/xxl/job/admin/core/model/XxlJobRegistry.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/stock-xxl-job-admin/src/main/java/com/xxl/job/admin/core/model/XxlJobUser.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/stock-xxl-job-admin/src/main/java/com/xxl/job/admin/core/old/RemoteHttpJobBean.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/stock-xxl-job-admin/src/main/java/com/xxl/job/admin/core/old/XxlJobDynamicScheduler.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/stock-xxl-job-admin/src/main/java/com/xxl/job/admin/core/old/XxlJobThreadPool.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/stock-xxl-job-admin/src/main/java/com/xxl/job/admin/core/route/ExecutorRouteStrategyEnum.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/stock-xxl-job-admin/src/main/java/com/xxl/job/admin/core/route/ExecutorRouter.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/stock-xxl-job-admin/src/main/java/com/xxl/job/admin/core/route/strategy/ExecutorRouteBusyover.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/stock-xxl-job-admin/src/main/java/com/xxl/job/admin/core/route/strategy/ExecutorRouteConsistentHash.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/stock-xxl-job-admin/src/main/java/com/xxl/job/admin/core/route/strategy/ExecutorRouteFailover.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/stock-xxl-job-admin/src/main/java/com/xxl/job/admin/core/route/strategy/ExecutorRouteFirst.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/stock-xxl-job-admin/src/main/java/com/xxl/job/admin/core/route/strategy/ExecutorRouteLFU.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/stock-xxl-job-admin/src/main/java/com/xxl/job/admin/core/route/strategy/ExecutorRouteLRU.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/stock-xxl-job-admin/src/main/java/com/xxl/job/admin/core/route/strategy/ExecutorRouteLast.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/stock-xxl-job-admin/src/main/java/com/xxl/job/admin/core/route/strategy/ExecutorRouteRandom.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/stock-xxl-job-admin/src/main/java/com/xxl/job/admin/core/route/strategy/ExecutorRouteRound.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/stock-xxl-job-admin/src/main/java/com/xxl/job/admin/core/scheduler/MisfireStrategyEnum.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/stock-xxl-job-admin/src/main/java/com/xxl/job/admin/core/scheduler/ScheduleTypeEnum.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/stock-xxl-job-admin/src/main/java/com/xxl/job/admin/core/scheduler/XxlJobScheduler.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/stock-xxl-job-admin/src/main/java/com/xxl/job/admin/core/thread/JobCompleteHelper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/stock-xxl-job-admin/src/main/java/com/xxl/job/admin/core/thread/JobFailMonitorHelper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/stock-xxl-job-admin/src/main/java/com/xxl/job/admin/core/thread/JobLogReportHelper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/stock-xxl-job-admin/src/main/java/com/xxl/job/admin/core/thread/JobRegistryHelper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/stock-xxl-job-admin/src/main/java/com/xxl/job/admin/core/thread/JobScheduleHelper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/stock-xxl-job-admin/src/main/java/com/xxl/job/admin/core/thread/JobTriggerPoolHelper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/stock-xxl-job-admin/src/main/java/com/xxl/job/admin/core/trigger/TriggerTypeEnum.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/stock-xxl-job-admin/src/main/java/com/xxl/job/admin/core/trigger/XxlJobTrigger.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/stock-xxl-job-admin/src/main/java/com/xxl/job/admin/core/util/CookieUtil.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/stock-xxl-job-admin/src/main/java/com/xxl/job/admin/core/util/FtlUtil.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/stock-xxl-job-admin/src/main/java/com/xxl/job/admin/core/util/I18nUtil.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/stock-xxl-job-admin/src/main/java/com/xxl/job/admin/core/util/JacksonUtil.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/stock-xxl-job-admin/src/main/java/com/xxl/job/admin/core/util/LocalCacheUtil.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/stock-xxl-job-admin/src/main/java/com/xxl/job/admin/dao/XxlJobGroupDao.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/stock-xxl-job-admin/src/main/java/com/xxl/job/admin/dao/XxlJobInfoDao.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/stock-xxl-job-admin/src/main/java/com/xxl/job/admin/dao/XxlJobLogDao.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/stock-xxl-job-admin/src/main/java/com/xxl/job/admin/dao/XxlJobLogGlueDao.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/stock-xxl-job-admin/src/main/java/com/xxl/job/admin/dao/XxlJobLogReportDao.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/stock-xxl-job-admin/src/main/java/com/xxl/job/admin/dao/XxlJobRegistryDao.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/stock-xxl-job-admin/src/main/java/com/xxl/job/admin/dao/XxlJobUserDao.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/stock-xxl-job-admin/src/main/java/com/xxl/job/admin/service/LoginService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/stock-xxl-job-admin/src/main/java/com/xxl/job/admin/service/XxlJobService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/stock-xxl-job-admin/src/main/java/com/xxl/job/admin/service/impl/AdminBizImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/stock-xxl-job-admin/src/main/java/com/xxl/job/admin/service/impl/XxlJobServiceImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/stock-xxl-job-admin/src/main/resources/application.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/stock-xxl-job-admin/src/main/resources/i18n/message_en.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/stock-xxl-job-admin/src/main/resources/i18n/message_zh_CN.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/stock-xxl-job-admin/src/main/resources/i18n/message_zh_TC.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/stock-xxl-job-admin/src/main/resources/logback.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/stock-xxl-job-admin/src/main/resources/mybatis-mapper/XxlJobGroupMapper.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/stock-xxl-job-admin/src/main/resources/mybatis-mapper/XxlJobInfoMapper.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/stock-xxl-job-admin/src/main/resources/mybatis-mapper/XxlJobLogGlueMapper.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/stock-xxl-job-admin/src/main/resources/mybatis-mapper/XxlJobLogMapper.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/stock-xxl-job-admin/src/main/resources/mybatis-mapper/XxlJobLogReportMapper.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/stock-xxl-job-admin/src/main/resources/mybatis-mapper/XxlJobRegistryMapper.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/stock-xxl-job-admin/src/main/resources/mybatis-mapper/XxlJobUserMapper.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/stock-xxl-job-admin/src/main/resources/static/adminlte/dist/css/AdminLTE.min.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/stock-xxl-job-admin/src/main/resources/static/adminlte/dist/css/skins/_all-skins.min.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/stock-xxl-job-admin/src/main/resources/static/adminlte/dist/js/adminlte.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/stock-xxl-job-admin/src/main/resources/static/adminlte/plugins/iCheck/icheck.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/stock-xxl-job-admin/src/main/resources/static/adminlte/plugins/iCheck/square/blue.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/stock-xxl-job-admin/src/main/resources/static/adminlte/plugins/iCheck/square/blue.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/stock-xxl-job-admin/src/main/resources/static/adminlte/plugins/iCheck/square/blue@2x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/stock-xxl-job-admin/src/main/resources/static/favicon.ico" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/stock-xxl-job-admin/src/main/resources/static/js/common.1.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/stock-xxl-job-admin/src/main/resources/static/js/index.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/stock-xxl-job-admin/src/main/resources/static/js/jobcode.index.1.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/stock-xxl-job-admin/src/main/resources/static/js/jobgroup.index.1.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/stock-xxl-job-admin/src/main/resources/static/js/jobinfo.index.1.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/stock-xxl-job-admin/src/main/resources/static/js/joblog.detail.1.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/stock-xxl-job-admin/src/main/resources/static/js/joblog.index.1.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/stock-xxl-job-admin/src/main/resources/static/js/login.1.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/stock-xxl-job-admin/src/main/resources/static/js/user.index.1.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/stock-xxl-job-admin/src/main/resources/static/plugins/codemirror/addon/hint/anyword-hint.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/stock-xxl-job-admin/src/main/resources/static/plugins/codemirror/addon/hint/show-hint.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/stock-xxl-job-admin/src/main/resources/static/plugins/codemirror/addon/hint/show-hint.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/stock-xxl-job-admin/src/main/resources/static/plugins/codemirror/lib/codemirror.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/stock-xxl-job-admin/src/main/resources/static/plugins/codemirror/lib/codemirror.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/stock-xxl-job-admin/src/main/resources/static/plugins/codemirror/mode/clike/clike.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/stock-xxl-job-admin/src/main/resources/static/plugins/codemirror/mode/javascript/javascript.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/stock-xxl-job-admin/src/main/resources/static/plugins/codemirror/mode/php/php.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/stock-xxl-job-admin/src/main/resources/static/plugins/codemirror/mode/powershell/powershell.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/stock-xxl-job-admin/src/main/resources/static/plugins/codemirror/mode/python/python.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/stock-xxl-job-admin/src/main/resources/static/plugins/codemirror/mode/shell/shell.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/stock-xxl-job-admin/src/main/resources/static/plugins/cronGen/cronGen.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/stock-xxl-job-admin/src/main/resources/static/plugins/cronGen/cronGen_en.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/stock-xxl-job-admin/src/main/resources/static/plugins/echarts/echarts.common.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/stock-xxl-job-admin/src/main/resources/static/plugins/jquery/jquery.cookie.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/stock-xxl-job-admin/src/main/resources/static/plugins/jquery/jquery.validate.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/stock-xxl-job-admin/src/main/resources/static/plugins/layer/layer.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/stock-xxl-job-admin/src/main/resources/static/plugins/layer/theme/default/icon-ext.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/stock-xxl-job-admin/src/main/resources/static/plugins/layer/theme/default/icon.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/stock-xxl-job-admin/src/main/resources/static/plugins/layer/theme/default/layer.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/stock-xxl-job-admin/src/main/resources/static/plugins/layer/theme/default/loading-0.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/stock-xxl-job-admin/src/main/resources/static/plugins/layer/theme/default/loading-1.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/stock-xxl-job-admin/src/main/resources/static/plugins/layer/theme/default/loading-2.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/stock-xxl-job-admin/src/main/resources/templates/common/common.exception.ftl" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/stock-xxl-job-admin/src/main/resources/templates/common/common.macro.ftl" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/stock-xxl-job-admin/src/main/resources/templates/help.ftl" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/stock-xxl-job-admin/src/main/resources/templates/index.ftl" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/stock-xxl-job-admin/src/main/resources/templates/jobcode/jobcode.index.ftl" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/stock-xxl-job-admin/src/main/resources/templates/jobgroup/jobgroup.index.ftl" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/stock-xxl-job-admin/src/main/resources/templates/jobinfo/jobinfo.index.ftl" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/stock-xxl-job-admin/src/main/resources/templates/joblog/joblog.detail.ftl" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/stock-xxl-job-admin/src/main/resources/templates/joblog/joblog.index.ftl" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/stock-xxl-job-admin/src/main/resources/templates/login.ftl" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/stock-xxl-job-admin/src/main/resources/templates/user/user.index.ftl" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/stock-xxl-job-admin/src/test/java/com/xxl/job/admin/controller/AbstractSpringMvcTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/stock-xxl-job-admin/src/test/java/com/xxl/job/admin/controller/JobInfoControllerTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/stock-xxl-job-admin/src/test/java/com/xxl/job/admin/core/util/JacksonUtilTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/stock-xxl-job-admin/src/test/java/com/xxl/job/admin/dao/XxlJobGroupDaoTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/stock-xxl-job-admin/src/test/java/com/xxl/job/admin/dao/XxlJobInfoDaoTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/stock-xxl-job-admin/src/test/java/com/xxl/job/admin/dao/XxlJobLogDaoTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/stock-xxl-job-admin/src/test/java/com/xxl/job/admin/dao/XxlJobLogGlueDaoTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/stock-xxl-job-admin/src/test/java/com/xxl/job/admin/dao/XxlJobRegistryDaoTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/stock-xxl-job-admin/src/test/java/com/xxl/job/admin/util/I18nUtilTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/stock-xxl-job-admin/src/test/java/com/xxl/job/adminbiz/AdminBizTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/stock-xxl-job-admin/src/test/java/com/xxl/job/executorbiz/ExecutorBizTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/stock_backend/src/main/java/com/shf/stock/config/StockTaskRejectedExecutionHandler.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/stock_backend/src/main/java/com/shf/stock/config/TaskExecutePoolConfig.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/stock_backend/src/main/java/com/shf/stock/config/vo/TaskThreadPoolInfo.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/stock_backend/src/main/java/com/shf/stock/job/StockTimerJob.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/stock_backend/src/main/java/com/shf/stock/job/XxlJobConfig.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/threadpooltest/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/threadpooltest/src/main/java/com/itheima/ThreadpooltestApplication.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/threadpooltest/src/main/java/com/itheima/config/MyStockRunable.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/threadpooltest/src/main/java/com/itheima/config/StockTaskRejectedExecutionHandler.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/threadpooltest/src/main/java/com/itheima/config/TaskExecutePool.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/threadpooltest/src/main/java/com/itheima/config/TaskThreadPoolInfo.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/threadpooltest/src/main/java/com/itheima/service/StockTimerService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/threadpooltest/src/main/resources/application.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/threadpooltest/src/test/java/com/itheima/ThreadpooltestApplicationTests.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/xxl-job-2.3.1/.github/FUNDING.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/xxl-job-2.3.1/.github/ISSUE_TEMPLATE" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/xxl-job-2.3.1/.github/PULL_REQUEST_TEMPLATE" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/xxl-job-2.3.1/.github/workflows/maven.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/xxl-job-2.3.1/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/xxl-job-2.3.1/LICENSE" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/xxl-job-2.3.1/NOTICE" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/xxl-job-2.3.1/README.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/xxl-job-2.3.1/doc/XXL-JOB-English-Documentation.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/xxl-job-2.3.1/doc/XXL-JOB官方文档.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/xxl-job-2.3.1/doc/XXL-JOB架构图.pptx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/xxl-job-2.3.1/doc/db/tables_xxl_job.sql" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/xxl-job-2.3.1/doc/images/cnblog-首页-每日一博-第一.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/xxl-job-2.3.1/doc/images/cnblog-首页-热门动弹-第一.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/xxl-job-2.3.1/doc/images/donate-alipay.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/xxl-job-2.3.1/doc/images/donate-paypal.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/xxl-job-2.3.1/doc/images/donate-wechat.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/xxl-job-2.3.1/doc/images/gitee-gvp.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/xxl-job-2.3.1/doc/images/img_1001.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/xxl-job-2.3.1/doc/images/img_1002.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/xxl-job-2.3.1/doc/images/img_6yC0.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/xxl-job-2.3.1/doc/images/img_BPLG.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/xxl-job-2.3.1/doc/images/img_EB65.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/xxl-job-2.3.1/doc/images/img_Fgql.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/xxl-job-2.3.1/doc/images/img_Hr2T.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/xxl-job-2.3.1/doc/images/img_Qohm.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/xxl-job-2.3.1/doc/images/img_UDSo.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/xxl-job-2.3.1/doc/images/img_V3vF.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/xxl-job-2.3.1/doc/images/img_Wb2o.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/xxl-job-2.3.1/doc/images/img_Ypik.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/xxl-job-2.3.1/doc/images/img_Z9Qr.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/xxl-job-2.3.1/doc/images/img_ZAhX.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/xxl-job-2.3.1/doc/images/img_ZAsz.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/xxl-job-2.3.1/doc/images/img_dNUJ.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/xxl-job-2.3.1/doc/images/img_eYrv.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/xxl-job-2.3.1/doc/images/img_hIci.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/xxl-job-2.3.1/doc/images/img_iUw0.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/xxl-job-2.3.1/doc/images/img_inc8.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/xxl-job-2.3.1/doc/images/img_jOAU.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/xxl-job-2.3.1/doc/images/img_jrdI.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/xxl-job-2.3.1/doc/images/img_o8HQ.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/xxl-job-2.3.1/doc/images/img_tJOq.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/xxl-job-2.3.1/doc/images/img_tvGI.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/xxl-job-2.3.1/doc/images/qq群-一个xxl同学进了58.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/xxl-job-2.3.1/doc/images/xxl-logo.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/xxl-job-2.3.1/doc/images/xxl-logo.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/xxl-job-2.3.1/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/xxl-job-2.3.1/xxl-job-admin/Dockerfile" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/xxl-job-2.3.1/xxl-job-admin/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/xxl-job-2.3.1/xxl-job-admin/src/main/java/com/xxl/job/admin/XxlJobAdminApplication.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/xxl-job-2.3.1/xxl-job-admin/src/main/java/com/xxl/job/admin/controller/IndexController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/xxl-job-2.3.1/xxl-job-admin/src/main/java/com/xxl/job/admin/controller/JobApiController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/xxl-job-2.3.1/xxl-job-admin/src/main/java/com/xxl/job/admin/controller/JobCodeController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/xxl-job-2.3.1/xxl-job-admin/src/main/java/com/xxl/job/admin/controller/JobGroupController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/xxl-job-2.3.1/xxl-job-admin/src/main/java/com/xxl/job/admin/controller/JobInfoController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/xxl-job-2.3.1/xxl-job-admin/src/main/java/com/xxl/job/admin/controller/JobLogController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/xxl-job-2.3.1/xxl-job-admin/src/main/java/com/xxl/job/admin/controller/UserController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/xxl-job-2.3.1/xxl-job-admin/src/main/java/com/xxl/job/admin/controller/annotation/PermissionLimit.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/xxl-job-2.3.1/xxl-job-admin/src/main/java/com/xxl/job/admin/controller/interceptor/CookieInterceptor.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/xxl-job-2.3.1/xxl-job-admin/src/main/java/com/xxl/job/admin/controller/interceptor/PermissionInterceptor.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/xxl-job-2.3.1/xxl-job-admin/src/main/java/com/xxl/job/admin/controller/interceptor/WebMvcConfig.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/xxl-job-2.3.1/xxl-job-admin/src/main/java/com/xxl/job/admin/controller/resolver/WebExceptionResolver.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/xxl-job-2.3.1/xxl-job-admin/src/main/java/com/xxl/job/admin/core/alarm/JobAlarm.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/xxl-job-2.3.1/xxl-job-admin/src/main/java/com/xxl/job/admin/core/alarm/JobAlarmer.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/xxl-job-2.3.1/xxl-job-admin/src/main/java/com/xxl/job/admin/core/alarm/impl/EmailJobAlarm.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/xxl-job-2.3.1/xxl-job-admin/src/main/java/com/xxl/job/admin/core/complete/XxlJobCompleter.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/xxl-job-2.3.1/xxl-job-admin/src/main/java/com/xxl/job/admin/core/conf/XxlJobAdminConfig.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/xxl-job-2.3.1/xxl-job-admin/src/main/java/com/xxl/job/admin/core/cron/CronExpression.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/xxl-job-2.3.1/xxl-job-admin/src/main/java/com/xxl/job/admin/core/exception/XxlJobException.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/xxl-job-2.3.1/xxl-job-admin/src/main/java/com/xxl/job/admin/core/model/XxlJobGroup.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/xxl-job-2.3.1/xxl-job-admin/src/main/java/com/xxl/job/admin/core/model/XxlJobInfo.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/xxl-job-2.3.1/xxl-job-admin/src/main/java/com/xxl/job/admin/core/model/XxlJobLog.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/xxl-job-2.3.1/xxl-job-admin/src/main/java/com/xxl/job/admin/core/model/XxlJobLogGlue.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/xxl-job-2.3.1/xxl-job-admin/src/main/java/com/xxl/job/admin/core/model/XxlJobLogReport.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/xxl-job-2.3.1/xxl-job-admin/src/main/java/com/xxl/job/admin/core/model/XxlJobRegistry.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/xxl-job-2.3.1/xxl-job-admin/src/main/java/com/xxl/job/admin/core/model/XxlJobUser.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/xxl-job-2.3.1/xxl-job-admin/src/main/java/com/xxl/job/admin/core/old/RemoteHttpJobBean.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/xxl-job-2.3.1/xxl-job-admin/src/main/java/com/xxl/job/admin/core/old/XxlJobDynamicScheduler.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/xxl-job-2.3.1/xxl-job-admin/src/main/java/com/xxl/job/admin/core/old/XxlJobThreadPool.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/xxl-job-2.3.1/xxl-job-admin/src/main/java/com/xxl/job/admin/core/route/ExecutorRouteStrategyEnum.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/xxl-job-2.3.1/xxl-job-admin/src/main/java/com/xxl/job/admin/core/route/ExecutorRouter.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/xxl-job-2.3.1/xxl-job-admin/src/main/java/com/xxl/job/admin/core/route/strategy/ExecutorRouteBusyover.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/xxl-job-2.3.1/xxl-job-admin/src/main/java/com/xxl/job/admin/core/route/strategy/ExecutorRouteConsistentHash.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/xxl-job-2.3.1/xxl-job-admin/src/main/java/com/xxl/job/admin/core/route/strategy/ExecutorRouteFailover.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/xxl-job-2.3.1/xxl-job-admin/src/main/java/com/xxl/job/admin/core/route/strategy/ExecutorRouteFirst.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/xxl-job-2.3.1/xxl-job-admin/src/main/java/com/xxl/job/admin/core/route/strategy/ExecutorRouteLFU.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/xxl-job-2.3.1/xxl-job-admin/src/main/java/com/xxl/job/admin/core/route/strategy/ExecutorRouteLRU.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/xxl-job-2.3.1/xxl-job-admin/src/main/java/com/xxl/job/admin/core/route/strategy/ExecutorRouteLast.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/xxl-job-2.3.1/xxl-job-admin/src/main/java/com/xxl/job/admin/core/route/strategy/ExecutorRouteRandom.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/xxl-job-2.3.1/xxl-job-admin/src/main/java/com/xxl/job/admin/core/route/strategy/ExecutorRouteRound.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/xxl-job-2.3.1/xxl-job-admin/src/main/java/com/xxl/job/admin/core/scheduler/MisfireStrategyEnum.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/xxl-job-2.3.1/xxl-job-admin/src/main/java/com/xxl/job/admin/core/scheduler/ScheduleTypeEnum.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/xxl-job-2.3.1/xxl-job-admin/src/main/java/com/xxl/job/admin/core/scheduler/XxlJobScheduler.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/xxl-job-2.3.1/xxl-job-admin/src/main/java/com/xxl/job/admin/core/thread/JobCompleteHelper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/xxl-job-2.3.1/xxl-job-admin/src/main/java/com/xxl/job/admin/core/thread/JobFailMonitorHelper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/xxl-job-2.3.1/xxl-job-admin/src/main/java/com/xxl/job/admin/core/thread/JobLogReportHelper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/xxl-job-2.3.1/xxl-job-admin/src/main/java/com/xxl/job/admin/core/thread/JobRegistryHelper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/xxl-job-2.3.1/xxl-job-admin/src/main/java/com/xxl/job/admin/core/thread/JobScheduleHelper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/xxl-job-2.3.1/xxl-job-admin/src/main/java/com/xxl/job/admin/core/thread/JobTriggerPoolHelper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/xxl-job-2.3.1/xxl-job-admin/src/main/java/com/xxl/job/admin/core/trigger/TriggerTypeEnum.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/xxl-job-2.3.1/xxl-job-admin/src/main/java/com/xxl/job/admin/core/trigger/XxlJobTrigger.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/xxl-job-2.3.1/xxl-job-admin/src/main/java/com/xxl/job/admin/core/util/CookieUtil.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/xxl-job-2.3.1/xxl-job-admin/src/main/java/com/xxl/job/admin/core/util/FtlUtil.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/xxl-job-2.3.1/xxl-job-admin/src/main/java/com/xxl/job/admin/core/util/I18nUtil.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/xxl-job-2.3.1/xxl-job-admin/src/main/java/com/xxl/job/admin/core/util/JacksonUtil.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/xxl-job-2.3.1/xxl-job-admin/src/main/java/com/xxl/job/admin/core/util/LocalCacheUtil.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/xxl-job-2.3.1/xxl-job-admin/src/main/java/com/xxl/job/admin/dao/XxlJobGroupDao.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/xxl-job-2.3.1/xxl-job-admin/src/main/java/com/xxl/job/admin/dao/XxlJobInfoDao.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/xxl-job-2.3.1/xxl-job-admin/src/main/java/com/xxl/job/admin/dao/XxlJobLogDao.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/xxl-job-2.3.1/xxl-job-admin/src/main/java/com/xxl/job/admin/dao/XxlJobLogGlueDao.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/xxl-job-2.3.1/xxl-job-admin/src/main/java/com/xxl/job/admin/dao/XxlJobLogReportDao.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/xxl-job-2.3.1/xxl-job-admin/src/main/java/com/xxl/job/admin/dao/XxlJobRegistryDao.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/xxl-job-2.3.1/xxl-job-admin/src/main/java/com/xxl/job/admin/dao/XxlJobUserDao.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/xxl-job-2.3.1/xxl-job-admin/src/main/java/com/xxl/job/admin/service/LoginService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/xxl-job-2.3.1/xxl-job-admin/src/main/java/com/xxl/job/admin/service/XxlJobService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/xxl-job-2.3.1/xxl-job-admin/src/main/java/com/xxl/job/admin/service/impl/AdminBizImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/xxl-job-2.3.1/xxl-job-admin/src/main/java/com/xxl/job/admin/service/impl/XxlJobServiceImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/xxl-job-2.3.1/xxl-job-admin/src/main/resources/application.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/xxl-job-2.3.1/xxl-job-admin/src/main/resources/i18n/message_en.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/xxl-job-2.3.1/xxl-job-admin/src/main/resources/i18n/message_zh_CN.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/xxl-job-2.3.1/xxl-job-admin/src/main/resources/i18n/message_zh_TC.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/xxl-job-2.3.1/xxl-job-admin/src/main/resources/logback.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/xxl-job-2.3.1/xxl-job-admin/src/main/resources/mybatis-mapper/XxlJobGroupMapper.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/xxl-job-2.3.1/xxl-job-admin/src/main/resources/mybatis-mapper/XxlJobInfoMapper.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/xxl-job-2.3.1/xxl-job-admin/src/main/resources/mybatis-mapper/XxlJobLogGlueMapper.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/xxl-job-2.3.1/xxl-job-admin/src/main/resources/mybatis-mapper/XxlJobLogMapper.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/xxl-job-2.3.1/xxl-job-admin/src/main/resources/mybatis-mapper/XxlJobLogReportMapper.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/xxl-job-2.3.1/xxl-job-admin/src/main/resources/mybatis-mapper/XxlJobRegistryMapper.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/xxl-job-2.3.1/xxl-job-admin/src/main/resources/mybatis-mapper/XxlJobUserMapper.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/xxl-job-2.3.1/xxl-job-admin/src/main/resources/static/adminlte/dist/css/AdminLTE.min.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/xxl-job-2.3.1/xxl-job-admin/src/main/resources/static/adminlte/dist/css/skins/_all-skins.min.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/xxl-job-2.3.1/xxl-job-admin/src/main/resources/static/adminlte/dist/js/adminlte.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/xxl-job-2.3.1/xxl-job-admin/src/main/resources/static/adminlte/plugins/iCheck/icheck.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/xxl-job-2.3.1/xxl-job-admin/src/main/resources/static/adminlte/plugins/iCheck/square/blue.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/xxl-job-2.3.1/xxl-job-admin/src/main/resources/static/adminlte/plugins/iCheck/square/blue.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/xxl-job-2.3.1/xxl-job-admin/src/main/resources/static/adminlte/plugins/iCheck/square/blue@2x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/xxl-job-2.3.1/xxl-job-admin/src/main/resources/static/favicon.ico" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/xxl-job-2.3.1/xxl-job-admin/src/main/resources/static/js/common.1.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/xxl-job-2.3.1/xxl-job-admin/src/main/resources/static/js/index.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/xxl-job-2.3.1/xxl-job-admin/src/main/resources/static/js/jobcode.index.1.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/xxl-job-2.3.1/xxl-job-admin/src/main/resources/static/js/jobgroup.index.1.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/xxl-job-2.3.1/xxl-job-admin/src/main/resources/static/js/jobinfo.index.1.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/xxl-job-2.3.1/xxl-job-admin/src/main/resources/static/js/joblog.detail.1.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/xxl-job-2.3.1/xxl-job-admin/src/main/resources/static/js/joblog.index.1.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/xxl-job-2.3.1/xxl-job-admin/src/main/resources/static/js/login.1.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/xxl-job-2.3.1/xxl-job-admin/src/main/resources/static/js/user.index.1.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/xxl-job-2.3.1/xxl-job-admin/src/main/resources/static/plugins/codemirror/addon/hint/anyword-hint.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/xxl-job-2.3.1/xxl-job-admin/src/main/resources/static/plugins/codemirror/addon/hint/show-hint.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/xxl-job-2.3.1/xxl-job-admin/src/main/resources/static/plugins/codemirror/addon/hint/show-hint.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/xxl-job-2.3.1/xxl-job-admin/src/main/resources/static/plugins/codemirror/lib/codemirror.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/xxl-job-2.3.1/xxl-job-admin/src/main/resources/static/plugins/codemirror/lib/codemirror.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/xxl-job-2.3.1/xxl-job-admin/src/main/resources/static/plugins/codemirror/mode/clike/clike.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/xxl-job-2.3.1/xxl-job-admin/src/main/resources/static/plugins/codemirror/mode/javascript/javascript.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/xxl-job-2.3.1/xxl-job-admin/src/main/resources/static/plugins/codemirror/mode/php/php.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/xxl-job-2.3.1/xxl-job-admin/src/main/resources/static/plugins/codemirror/mode/powershell/powershell.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/xxl-job-2.3.1/xxl-job-admin/src/main/resources/static/plugins/codemirror/mode/python/python.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/xxl-job-2.3.1/xxl-job-admin/src/main/resources/static/plugins/codemirror/mode/shell/shell.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/xxl-job-2.3.1/xxl-job-admin/src/main/resources/static/plugins/cronGen/cronGen.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/xxl-job-2.3.1/xxl-job-admin/src/main/resources/static/plugins/cronGen/cronGen_en.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/xxl-job-2.3.1/xxl-job-admin/src/main/resources/static/plugins/echarts/echarts.common.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/xxl-job-2.3.1/xxl-job-admin/src/main/resources/static/plugins/jquery/jquery.cookie.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/xxl-job-2.3.1/xxl-job-admin/src/main/resources/static/plugins/jquery/jquery.validate.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/xxl-job-2.3.1/xxl-job-admin/src/main/resources/static/plugins/layer/layer.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/xxl-job-2.3.1/xxl-job-admin/src/main/resources/static/plugins/layer/theme/default/icon-ext.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/xxl-job-2.3.1/xxl-job-admin/src/main/resources/static/plugins/layer/theme/default/icon.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/xxl-job-2.3.1/xxl-job-admin/src/main/resources/static/plugins/layer/theme/default/layer.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/xxl-job-2.3.1/xxl-job-admin/src/main/resources/static/plugins/layer/theme/default/loading-0.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/xxl-job-2.3.1/xxl-job-admin/src/main/resources/static/plugins/layer/theme/default/loading-1.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/xxl-job-2.3.1/xxl-job-admin/src/main/resources/static/plugins/layer/theme/default/loading-2.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/xxl-job-2.3.1/xxl-job-admin/src/main/resources/templates/common/common.exception.ftl" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/xxl-job-2.3.1/xxl-job-admin/src/main/resources/templates/common/common.macro.ftl" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/xxl-job-2.3.1/xxl-job-admin/src/main/resources/templates/help.ftl" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/xxl-job-2.3.1/xxl-job-admin/src/main/resources/templates/index.ftl" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/xxl-job-2.3.1/xxl-job-admin/src/main/resources/templates/jobcode/jobcode.index.ftl" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/xxl-job-2.3.1/xxl-job-admin/src/main/resources/templates/jobgroup/jobgroup.index.ftl" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/xxl-job-2.3.1/xxl-job-admin/src/main/resources/templates/jobinfo/jobinfo.index.ftl" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/xxl-job-2.3.1/xxl-job-admin/src/main/resources/templates/joblog/joblog.detail.ftl" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/xxl-job-2.3.1/xxl-job-admin/src/main/resources/templates/joblog/joblog.index.ftl" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/xxl-job-2.3.1/xxl-job-admin/src/main/resources/templates/login.ftl" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/xxl-job-2.3.1/xxl-job-admin/src/main/resources/templates/user/user.index.ftl" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/xxl-job-2.3.1/xxl-job-admin/src/test/java/com/xxl/job/admin/controller/AbstractSpringMvcTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/xxl-job-2.3.1/xxl-job-admin/src/test/java/com/xxl/job/admin/controller/JobInfoControllerTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/xxl-job-2.3.1/xxl-job-admin/src/test/java/com/xxl/job/admin/core/util/JacksonUtilTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/xxl-job-2.3.1/xxl-job-admin/src/test/java/com/xxl/job/admin/dao/XxlJobGroupDaoTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/xxl-job-2.3.1/xxl-job-admin/src/test/java/com/xxl/job/admin/dao/XxlJobInfoDaoTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/xxl-job-2.3.1/xxl-job-admin/src/test/java/com/xxl/job/admin/dao/XxlJobLogDaoTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/xxl-job-2.3.1/xxl-job-admin/src/test/java/com/xxl/job/admin/dao/XxlJobLogGlueDaoTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/xxl-job-2.3.1/xxl-job-admin/src/test/java/com/xxl/job/admin/dao/XxlJobRegistryDaoTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/xxl-job-2.3.1/xxl-job-admin/src/test/java/com/xxl/job/admin/util/I18nUtilTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/xxl-job-2.3.1/xxl-job-admin/src/test/java/com/xxl/job/adminbiz/AdminBizTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/xxl-job-2.3.1/xxl-job-admin/src/test/java/com/xxl/job/executorbiz/ExecutorBizTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/xxl-job-2.3.1/xxl-job-core/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/xxl-job-2.3.1/xxl-job-core/src/main/java/com/xxl/job/core/biz/AdminBiz.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/xxl-job-2.3.1/xxl-job-core/src/main/java/com/xxl/job/core/biz/ExecutorBiz.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/xxl-job-2.3.1/xxl-job-core/src/main/java/com/xxl/job/core/biz/client/AdminBizClient.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/xxl-job-2.3.1/xxl-job-core/src/main/java/com/xxl/job/core/biz/client/ExecutorBizClient.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/xxl-job-2.3.1/xxl-job-core/src/main/java/com/xxl/job/core/biz/impl/ExecutorBizImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/xxl-job-2.3.1/xxl-job-core/src/main/java/com/xxl/job/core/biz/model/HandleCallbackParam.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/xxl-job-2.3.1/xxl-job-core/src/main/java/com/xxl/job/core/biz/model/IdleBeatParam.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/xxl-job-2.3.1/xxl-job-core/src/main/java/com/xxl/job/core/biz/model/KillParam.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/xxl-job-2.3.1/xxl-job-core/src/main/java/com/xxl/job/core/biz/model/LogParam.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/xxl-job-2.3.1/xxl-job-core/src/main/java/com/xxl/job/core/biz/model/LogResult.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/xxl-job-2.3.1/xxl-job-core/src/main/java/com/xxl/job/core/biz/model/RegistryParam.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/xxl-job-2.3.1/xxl-job-core/src/main/java/com/xxl/job/core/biz/model/ReturnT.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/xxl-job-2.3.1/xxl-job-core/src/main/java/com/xxl/job/core/biz/model/TriggerParam.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/xxl-job-2.3.1/xxl-job-core/src/main/java/com/xxl/job/core/context/XxlJobContext.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/xxl-job-2.3.1/xxl-job-core/src/main/java/com/xxl/job/core/context/XxlJobHelper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/xxl-job-2.3.1/xxl-job-core/src/main/java/com/xxl/job/core/enums/ExecutorBlockStrategyEnum.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/xxl-job-2.3.1/xxl-job-core/src/main/java/com/xxl/job/core/enums/RegistryConfig.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/xxl-job-2.3.1/xxl-job-core/src/main/java/com/xxl/job/core/executor/XxlJobExecutor.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/xxl-job-2.3.1/xxl-job-core/src/main/java/com/xxl/job/core/executor/impl/XxlJobSimpleExecutor.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/xxl-job-2.3.1/xxl-job-core/src/main/java/com/xxl/job/core/executor/impl/XxlJobSpringExecutor.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/xxl-job-2.3.1/xxl-job-core/src/main/java/com/xxl/job/core/glue/GlueFactory.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/xxl-job-2.3.1/xxl-job-core/src/main/java/com/xxl/job/core/glue/GlueTypeEnum.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/xxl-job-2.3.1/xxl-job-core/src/main/java/com/xxl/job/core/glue/impl/SpringGlueFactory.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/xxl-job-2.3.1/xxl-job-core/src/main/java/com/xxl/job/core/handler/IJobHandler.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/xxl-job-2.3.1/xxl-job-core/src/main/java/com/xxl/job/core/handler/annotation/JobHandler.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/xxl-job-2.3.1/xxl-job-core/src/main/java/com/xxl/job/core/handler/annotation/XxlJob.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/xxl-job-2.3.1/xxl-job-core/src/main/java/com/xxl/job/core/handler/impl/GlueJobHandler.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/xxl-job-2.3.1/xxl-job-core/src/main/java/com/xxl/job/core/handler/impl/MethodJobHandler.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/xxl-job-2.3.1/xxl-job-core/src/main/java/com/xxl/job/core/handler/impl/ScriptJobHandler.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/xxl-job-2.3.1/xxl-job-core/src/main/java/com/xxl/job/core/log/XxlJobFileAppender.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/xxl-job-2.3.1/xxl-job-core/src/main/java/com/xxl/job/core/server/EmbedServer.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/xxl-job-2.3.1/xxl-job-core/src/main/java/com/xxl/job/core/thread/ExecutorRegistryThread.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/xxl-job-2.3.1/xxl-job-core/src/main/java/com/xxl/job/core/thread/JobLogFileCleanThread.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/xxl-job-2.3.1/xxl-job-core/src/main/java/com/xxl/job/core/thread/JobThread.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/xxl-job-2.3.1/xxl-job-core/src/main/java/com/xxl/job/core/thread/TriggerCallbackThread.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/xxl-job-2.3.1/xxl-job-core/src/main/java/com/xxl/job/core/util/DateUtil.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/xxl-job-2.3.1/xxl-job-core/src/main/java/com/xxl/job/core/util/FileUtil.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/xxl-job-2.3.1/xxl-job-core/src/main/java/com/xxl/job/core/util/GsonTool.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/xxl-job-2.3.1/xxl-job-core/src/main/java/com/xxl/job/core/util/IpUtil.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/xxl-job-2.3.1/xxl-job-core/src/main/java/com/xxl/job/core/util/JdkSerializeTool.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/xxl-job-2.3.1/xxl-job-core/src/main/java/com/xxl/job/core/util/NetUtil.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/xxl-job-2.3.1/xxl-job-core/src/main/java/com/xxl/job/core/util/ScriptUtil.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/xxl-job-2.3.1/xxl-job-core/src/main/java/com/xxl/job/core/util/ShardingUtil.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/xxl-job-2.3.1/xxl-job-core/src/main/java/com/xxl/job/core/util/ThrowableUtil.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/xxl-job-2.3.1/xxl-job-core/src/main/java/com/xxl/job/core/util/XxlJobRemotingUtil.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/xxl-job-2.3.1/xxl-job-executor-samples/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/xxl-job-2.3.1/xxl-job-executor-samples/xxl-job-executor-sample-frameless/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/xxl-job-2.3.1/xxl-job-executor-samples/xxl-job-executor-sample-frameless/src/main/java/com/xxl/job/executor/sample/frameless/FramelessApplication.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/xxl-job-2.3.1/xxl-job-executor-samples/xxl-job-executor-sample-frameless/src/main/java/com/xxl/job/executor/sample/frameless/config/FrameLessXxlJobConfig.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/xxl-job-2.3.1/xxl-job-executor-samples/xxl-job-executor-sample-frameless/src/main/java/com/xxl/job/executor/sample/frameless/jobhandler/SampleXxlJob.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/xxl-job-2.3.1/xxl-job-executor-samples/xxl-job-executor-sample-frameless/src/main/resources/log4j.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/xxl-job-2.3.1/xxl-job-executor-samples/xxl-job-executor-sample-frameless/src/main/resources/xxl-job-executor.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/xxl-job-2.3.1/xxl-job-executor-samples/xxl-job-executor-sample-frameless/src/test/java/com/xxl/job/executor/sample/frameless/test/FramelessApplicationTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/xxl-job-2.3.1/xxl-job-executor-samples/xxl-job-executor-sample-springboot/Dockerfile" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/xxl-job-2.3.1/xxl-job-executor-samples/xxl-job-executor-sample-springboot/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/xxl-job-2.3.1/xxl-job-executor-samples/xxl-job-executor-sample-springboot/src/main/java/com/xxl/job/executor/XxlJobExecutorApplication.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/xxl-job-2.3.1/xxl-job-executor-samples/xxl-job-executor-sample-springboot/src/main/java/com/xxl/job/executor/core/config/XxlJobConfig.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/xxl-job-2.3.1/xxl-job-executor-samples/xxl-job-executor-sample-springboot/src/main/java/com/xxl/job/executor/mvc/controller/IndexController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/xxl-job-2.3.1/xxl-job-executor-samples/xxl-job-executor-sample-springboot/src/main/java/com/xxl/job/executor/service/jobhandler/SampleXxlJob.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/xxl-job-2.3.1/xxl-job-executor-samples/xxl-job-executor-sample-springboot/src/main/resources/application.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/xxl-job-2.3.1/xxl-job-executor-samples/xxl-job-executor-sample-springboot/src/main/resources/logback.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/xxl-job-2.3.1/xxl-job-executor-samples/xxl-job-executor-sample-springboot/src/test/java/com/xxl/job/executor/test/XxlJobExecutorExampleBootApplicationTests.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+    <list default="true" id="d12776b0-676e-4f33-b403-07f5601aa687" name="变更" comment="day06&#10;1.分析并理解当前股票采集功能存在的问题;&#10;2.理解XXLJOB的基本使用和使用场景;&#10;  2.1 掌握xxljob的基本使用;&#10;  2.2 理解cron表达式;&#10;3.理解xxljob集成到项目的基本流程;&#10;  3.1 自定义任务执行器;&#10;  3.2 分析国内大盘的开盘周期，自定义适合的cron表达式;&#10;  3.3 完成大盘、股票流水、板块数据定义采集功能; &#10;4.多线程优化股票流水采集功能;&#10;5.理解线程池基本工作原理和参数设置原则;&#10;6.RestTemplate集成HttpClinet连接池(扩展);">
+      <change afterPath="$PROJECT_DIR$/stock_backend/src/main/java/com/shf/stock/config/SecurityConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/stock_backend/src/main/java/com/shf/stock/filter/JwtAuthorizationFilter.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/stock_backend/src/main/java/com/shf/stock/filter/JwtLoginAuthenticationFilter.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/stock_backend/src/main/java/com/shf/stock/handler/AccessAnonymousEntryPoint.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/stock_backend/src/main/java/com/shf/stock/handler/StockAccessDeniedHandler.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/stock_backend/src/main/java/com/shf/stock/service/PermissionService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/stock_backend/src/main/java/com/shf/stock/service/UserDetailsService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/stock_backend/src/main/java/com/shf/stock/service/impl/PermissionServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/stock_backend/src/main/java/com/shf/stock/service/impl/UserDetailsServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/stock_backend/src/main/java/com/shf/stock/sharding/CommonTbPreciseShardingAlgorithm.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/stock_backend/src/main/java/com/shf/stock/sharding/CommonTbRangeShardingAlgorithm.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/stock_backend/src/main/java/com/shf/stock/sharding/StockRtInfoDbPreciseHandler.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/stock_backend/src/main/java/com/shf/stock/sharding/StockRtInfoDbRangeHandler.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/stock_backend/src/main/java/com/shf/stock/sharding/StockRtInfoTablePreciseHandler.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/stock_backend/src/main/java/com/shf/stock/sharding/StockRtInfoTableRangeHandler.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/stock_backend/src/main/java/com/shf/stock/utils/JwtTokenUtil.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/stock_backend/src/main/java/com/shf/stock/vo/resp/PermissionRespNodeVo.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/stock_backend/src/main/resources/application-dev.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/今日指数分库分表SQL脚本/JRZS分库分表.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/今日指数分库分表SQL脚本/stock_db_2021.sql" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/今日指数分库分表SQL脚本/stock_db_2022.sql" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/今日指数分库分表SQL脚本/stock_sys_db.sql" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/stock_backend/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/stock_backend/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/stock_backend/src/main/java/com/shf/stock/service/impl/StockTimerTaskServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/stock_backend/src/main/java/com/shf/stock/service/impl/StockTimerTaskServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/stock_backend/src/main/java/com/shf/stock/mapper/SysPermissionMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/stock_backend/src/main/java/com/shf/stock/mapper/SysPermissionMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/stock_backend/src/main/java/com/shf/stock/mapper/SysRoleMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/stock_backend/src/main/java/com/shf/stock/mapper/SysRoleMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/stock_backend/src/main/java/com/shf/stock/pojo/SysUser.java" beforeDir="false" afterPath="$PROJECT_DIR$/stock_backend/src/main/java/com/shf/stock/pojo/SysUser.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/stock_backend/src/main/java/com/shf/stock/vo/resp/LoginRespVo.java" beforeDir="false" afterPath="$PROJECT_DIR$/stock_backend/src/main/java/com/shf/stock/vo/resp/LoginRespVo.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/stock_backend/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/stock_backend/src/main/resources/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/stock_backend/src/main/resources/mapper/SysPermissionMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/stock_backend/src/main/resources/mapper/SysPermissionMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/stock_backend/src/main/resources/mapper/SysRoleMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/stock_backend/src/main/resources/mapper/SysRoleMapper.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -491,7 +103,7 @@
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "WebServerToolWindowFactoryState": "false",
     "jdk.selected.JAVA_MODULE": "1.8",
-    "last_opened_file_path": "C:/Users/shuho/IdeaProjects/stock_parent",
+    "last_opened_file_path": "C:/Users/shuho/IdeaProjects/stock_parent/stock_backend/src/main/java/com/shf/stock/utils",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -502,7 +114,7 @@
     "project.structure.side.proportion": "0.0",
     "rearrange.code.on.save": "true",
     "settings.editor.selected.configurable": "advanced.settings",
-    "spring.configuration.checksum": "018fbe3b836ff9e399c61d734e63c3a2",
+    "spring.configuration.checksum": "f48c9ec7db1fd9be0a0bb29239aa76b2",
     "typescript.add.unambiguous.imports.on.the.fly": "true",
     "vue.rearranger.settings.migration": "true"
   },
@@ -525,14 +137,15 @@
       <recent name="com.shf.stock.service" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\Users\shuho\IdeaProjects\stock_parent" />
       <recent name="C:\Users\shuho\IdeaProjects\stock_parent\stock_backend\src\main\java\com\shf\stock\utils" />
+      <recent name="C:\Users\shuho\IdeaProjects\stock_parent" />
       <recent name="C:\Users\shuho\IdeaProjects\stock_parent\stock_backend\src\main\java\com\shf\stock\common\domain" />
     </key>
     <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
       <recent name="com.shf.stock" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.shf.stock.sharding" />
       <recent name="com.shf.stock.config" />
     </key>
   </component>
@@ -712,7 +325,8 @@
       <workItem from="1673415154215" duration="9610000" />
       <workItem from="1673429583848" duration="50000" />
       <workItem from="1673429644691" duration="36183000" />
-      <workItem from="1673609741440" duration="7980000" />
+      <workItem from="1673609741440" duration="15081000" />
+      <workItem from="1673838138952" duration="11730000" />
     </task>
     <task id="LOCAL-00001" summary="init">
       <created>1673176360652</created>
@@ -763,7 +377,14 @@
       <option name="project" value="LOCAL" />
       <updated>1673605052341</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="day06&#10;1.分析并理解当前股票采集功能存在的问题;&#10;2.理解XXLJOB的基本使用和使用场景;&#10;  2.1 掌握xxljob的基本使用;&#10;  2.2 理解cron表达式;&#10;3.理解xxljob集成到项目的基本流程;&#10;  3.1 自定义任务执行器;&#10;  3.2 分析国内大盘的开盘周期，自定义适合的cron表达式;&#10;  3.3 完成大盘、股票流水、板块数据定义采集功能; &#10;4.多线程优化股票流水采集功能;&#10;5.理解线程池基本工作原理和参数设置原则;&#10;6.RestTemplate集成HttpClinet连接池(扩展);">
+      <created>1673689222688</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1673689222690</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -781,6 +402,8 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
+    <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
+    <option name="CHECK_NEW_TODO" value="false" />
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <MESSAGE value="init" />
     <MESSAGE value="day01&#10;1. 能说出项目的基本概述;&#10;2. 能说出股票相关的核心概念;&#10;   2.1 股票、板块、大盘的概念;&#10;   2.2 股票涨幅、涨跌、振幅、开盘、收盘、涨停|跌停概念;&#10;3. 能说出项目的技术架构;&#10;4. 能说出项目开发的基本流程;&#10;5. 能够动手搭建开发环境;&#10;   5.1 搭建后端开发环境;&#10;   5.2 搭建前端环境;&#10;6. 能够完成用户登录功能;" />
@@ -789,7 +412,8 @@
     <MESSAGE value="day04&#10;1.理解股票T和T-1概念，实现成交量对比功能;&#10;2.理解个股涨跌幅度统计功能;&#10;   2.1 分析业务，SQL落地;&#10;   2.2 完善不存在数据的区间默认回显功能;&#10;3.理解个股分时K线业务，并实现功能;&#10;4.理解个股日K线业务，并实现功能;" />
     <MESSAGE value="day05&#10;1.掌握RestTemplate基本使用;&#10;2.阅读并理解第三方股票接口API;&#10;3.基于RestTemplate实现国内大盘数据采集功能;&#10;   3.1 项目集成RestTemplate;&#10;   3.2 理解基于正则解析响应数据原理;&#10;   3.3 掌握常用lambda集合流操作;&#10;4.基于RestTemplate实现国内板块和股票流水数据采集功能;&#10;5.熟悉mybatis批量插入实现;" />
     <MESSAGE value="更新笔记" />
-    <option name="LAST_COMMIT_MESSAGE" value="更新笔记" />
+    <MESSAGE value="day06&#10;1.分析并理解当前股票采集功能存在的问题;&#10;2.理解XXLJOB的基本使用和使用场景;&#10;  2.1 掌握xxljob的基本使用;&#10;  2.2 理解cron表达式;&#10;3.理解xxljob集成到项目的基本流程;&#10;  3.1 自定义任务执行器;&#10;  3.2 分析国内大盘的开盘周期，自定义适合的cron表达式;&#10;  3.3 完成大盘、股票流水、板块数据定义采集功能; &#10;4.多线程优化股票流水采集功能;&#10;5.理解线程池基本工作原理和参数设置原则;&#10;6.RestTemplate集成HttpClinet连接池(扩展);" />
+    <option name="LAST_COMMIT_MESSAGE" value="day06&#10;1.分析并理解当前股票采集功能存在的问题;&#10;2.理解XXLJOB的基本使用和使用场景;&#10;  2.1 掌握xxljob的基本使用;&#10;  2.2 理解cron表达式;&#10;3.理解xxljob集成到项目的基本流程;&#10;  3.1 自定义任务执行器;&#10;  3.2 分析国内大盘的开盘周期，自定义适合的cron表达式;&#10;  3.3 完成大盘、股票流水、板块数据定义采集功能; &#10;4.多线程优化股票流水采集功能;&#10;5.理解线程池基本工作原理和参数设置原则;&#10;6.RestTemplate集成HttpClinet连接池(扩展);" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
